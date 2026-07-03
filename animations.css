@@ -1,0 +1,36 @@
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes vaultReveal {
+  from { clip-path: circle(0% at 50% 45%); }
+  to { clip-path: circle(140% at 50% 45%); }
+}
+
+@keyframes grainShift {
+  0% { background-position: 0 0; }
+  25% { background-position: -18px 12px; }
+  50% { background-position: 14px -14px; }
+  75% { background-position: -10px -22px; }
+  100% { background-position: 0 0; }
+}
+
+@keyframes fractureDraw {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes fracturePulse {
+  0%, 100% { opacity: 0.4; filter: drop-shadow(0 0 6px rgba(182,58,80,0.5)); }
+  50% { opacity: 0.65; filter: drop-shadow(0 0 15px rgba(182,58,80,0.85)); }
+}
+
+.hero-content,
+.page-content,
+.release-card,
+.site-footer,
+.archive-panel,
+.info-panel {
+  animation: fadeUp 650ms ease both;
+}
+
