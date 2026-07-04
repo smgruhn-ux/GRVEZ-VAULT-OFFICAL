@@ -1,6 +1,5 @@
-import React from 'react';
+import { Layout } from './Layout';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { Layout } from './components/Layout';
 import { HomePage } from './pages/HomePage';
 import { AboutPage } from './pages/AboutPage';
 import { MusicPage } from './pages/MusicPage';
