@@ -3,7 +3,6 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { HomePage } from './pages/HomePage';
 import { AboutPage } from './pages/AboutPage';
 import { MusicPage } from './pages/MusicPage';
-import { ManuscriptsPage } from './pages/ManuscriptsPage';
 import { VaultlinePage } from './pages/VaultlinePage';
 import { ContactPage } from './pages/ContactPage';
 import { ArchivePage } from './pages/ArchivePage';
@@ -20,7 +19,6 @@ export function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/music" element={<MusicPage />} />
           <Route path="/archive" element={<ArchivePage />} />
-          <Route path="/manuscripts" element={<ManuscriptsPage />} />
           <Route path="/vaultline" element={<VaultlinePage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
