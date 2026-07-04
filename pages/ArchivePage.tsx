@@ -49,6 +49,14 @@ export function ArchivePage() {
             Fragments recovered from the Relational Continuity Hypothesis.
             Twelve stages. One evolving bond. No fragment exists alone.
           </p>
+          <div className="manuscript-coming-soon">
+  <p className="eyebrow">THE MANUSCRIPT</p>
+  <h2>RELATIONAL CONTINUITY HYPOTHESIS</h2>
+  <p>
+    The complete manuscript is currently being prepared for release.
+  </p>
+  <span className="manuscript-status">COMING SOON</span>
+</div>
         </div>
 
         <div className="archive-grid">
