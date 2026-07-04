@@ -4,5 +4,4 @@ export const artistLinks = [
   { label: 'YouTube', url: 'https://www.youtube.com/@gizzygraves' },
   { label: 'SoundCloud', url: 'https://soundcloud.com/sheldyn-gruhn' },
   { label: 'Instagram', url: 'https://www.instagram.com/grvezvault/' },
-  { label: 'Facebook', url: 'https://www.facebook.com/gravezvault/' }
 ];
