@@ -306,6 +306,18 @@ h2 { font-size: clamp(1.4rem, 2.4vw, 1.9rem); }
   border-radius: 28px;
   box-shadow: var(--shadow);
 }
+
+.music-page .page-hero {
+  height: auto;
+  overflow: visible;
+}
+
+.music-page .page-hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
 .page-content { padding: 2rem 0 0; }
 .page-intro { padding-bottom: 1.3rem; }
 .content-grid,
