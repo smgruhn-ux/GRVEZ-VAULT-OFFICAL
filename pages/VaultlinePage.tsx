@@ -13,6 +13,21 @@ export function VaultlinePage() {
           <h1 id="vaultline-heading">Vaultline by Gizzy Graves</h1>
           <p>A parallel lane of the GRVEZ VAULT universe, rooted in editorial storytelling and refined sonic expression.</p>
         </div>
+        <a
+  className="vaultline-latest"
+  href="https://vaultlineofficial.us/collections/all"
+  target="_blank"
+  rel="noreferrer"
+>
+  <div className="vaultline-latest-copy">
+    <p className="eyebrow">NEWEST RELEASES</p>
+    <h2>Enter the latest Vaultline drop.</h2>
+    <p>
+      Explore the newest pieces released from Vaultline by Gizzy Graves.
+    </p>
+    <span className="metal-button">VIEW THE RELEASES</span>
+  </div>
+</a>
         <div className="vaultline-grid">
           <article className="detail-card wide">
             <h2>Collections</h2>

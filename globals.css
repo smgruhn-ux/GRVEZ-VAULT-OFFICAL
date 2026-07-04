@@ -507,4 +507,41 @@ h2 { font-size: clamp(1.4rem, 2.4vw, 1.9rem); }
   .hero-fracture path { animation: none; }
   .reveal-pending { opacity: 1; transform: none; transition: none; }
 }
+.vaultline-latest {
+  display: block;
+  position: relative;
+  min-height: 360px;
+  margin: 2rem 0;
+  padding: 2rem;
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--text);
+  background:
+    linear-gradient(
+      90deg,
+      rgba(6, 6, 8, 0.96) 0%,
+      rgba(6, 6, 8, 0.78) 45%,
+      rgba(6, 6, 8, 0.18) 100%
+    ),
+    url('/vaultline-hero.jpg') center / cover no-repeat;
+  box-shadow: var(--shadow);
+}
+
+.vaultline-latest-copy {
+  position: relative;
+  z-index: 2;
+  max-width: 520px;
+}
+
+.vaultline-latest h2 {
+  margin: 0.5rem 0 1rem;
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1;
+}
+
+.vaultline-latest p {
+  max-width: 480px;
+}
 
