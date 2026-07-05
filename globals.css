@@ -707,3 +707,23 @@ h2 { font-size: clamp(1.4rem, 2.4vw, 1.9rem); }
     letter-spacing: 0.2em;
   }
 }
+/* HOME HERO — image only, no dead space */
+.home-hero {
+  min-height: 0 !important;
+  height: auto !important;
+  display: block !important;
+  padding: 0 !important;
+}
+
+.home-hero .hero-frame {
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+.home-hero .hero-image {
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  display: block !important;
+}
