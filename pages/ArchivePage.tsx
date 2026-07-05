@@ -4,20 +4,20 @@ import { HeroArtwork } from '../HeroArtwork';
 const archiveSections = [
   {
     title: 'FRAGMENT 001 // THE FIRST FRACTURE',
-    body: 'The pair begins in unity and then loses it. Awareness is the first fracture in the unified field of unconscious union. It is the moment when perception arrives and innocence ends.'
+    body: 'The pair begins in unity and then loses it. Awareness is the first fracture.',
   },
   {
     title: 'FRAGMENT 002 // THE WRITTEN BODY',
-    body: 'The written word becomes the body of the relationship. The bond survives through language, memory, and internalization. The individuals carry each other within their inner worlds.'
+    body: 'The written word becomes the body of the relationship. The bond survives through language.',
   },
   {
     title: 'FRAGMENT 003 // THE MIRROR HALL',
-    body: 'The relationship becomes a mirror in which each partner sees aspects of the self that cannot be seen alone. The reflection is not always comfortable. It reveals shadow and light.'
+    body: 'The relationship becomes a mirror in which each partner sees aspects of the self that cannot remain hidden.',
   },
   {
     title: 'FRAGMENT 012 // CONSCIOUS CO-AUTHORSHIP',
-    body: 'The individuals become aware that they are participating in a symbolic system that they are also creating. They become both participants and authors of a shared narrative.'
-  }
+    body: 'The individuals become aware that they are participating in a symbolic system that they are actively creating together.',
+  },
 ];
 
 export function ArchivePage() {
@@ -49,14 +49,33 @@ export function ArchivePage() {
             Fragments recovered from the Relational Continuity Hypothesis.
             Twelve stages. One evolving bond. No fragment exists alone.
           </p>
-          <div className="manuscript-coming-soon">
-  <p className="eyebrow">THE MANUSCRIPT</p>
-  <h2>RELATIONAL CONTINUITY HYPOTHESIS</h2>
-  <p>
-    The complete manuscript is currently being prepared for release.
-  </p>
-  <span className="manuscript-status">COMING SOON</span>
-</div>
+        </div>
+
+        <div className="continuity-chamber">
+          <div className="continuity-orbit orbit-one"></div>
+          <div className="continuity-orbit orbit-two"></div>
+          <div className="continuity-orbit orbit-three"></div>
+
+          <div className="continuity-core">
+            <span className="continuity-number">12</span>
+            <span className="continuity-label">STAGES</span>
+          </div>
+
+          <div className="continuity-mark mark-nine">09</div>
+          <div className="continuity-mark mark-eleven">11</div>
+
+          <p className="continuity-caption">
+            TWO AUTHORS // ONE CONTINUITY
+          </p>
+        </div>
+
+        <div className="manuscript-coming-soon">
+          <p className="eyebrow">THE MANUSCRIPT</p>
+          <h2>RELATIONAL CONTINUITY HYPOTHESIS</h2>
+          <p>
+            The complete manuscript is currently being prepared for release.
+          </p>
+          <span className="manuscript-status">COMING SOON</span>
         </div>
 
         <div className="archive-grid">
