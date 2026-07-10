@@ -727,3 +727,56 @@ h2 { font-size: clamp(1.4rem, 2.4vw, 1.9rem); }
   object-fit: contain !important;
   display: block !important;
 }
+/* ================================
+   HOME - WELCOME TO THE VAULT
+================================ */
+
+.vault-intro {
+  background: #090909;
+  padding: 120px 24px;
+  text-align: center;
+}
+
+.vault-intro-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.vault-label {
+  color: #B63A50;
+  font-size: 0.85rem;
+  letter-spacing: 0.4rem;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.vault-intro h2 {
+  color: #ffffff;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.1;
+  margin-bottom: 30px;
+}
+
+.vault-description {
+  color: rgba(255,255,255,.75);
+  font-size: 1.15rem;
+  line-height: 1.9;
+  max-width: 760px;
+  margin: 0 auto 40px;
+}
+
+.vault-button {
+  display: inline-block;
+  padding: 16px 40px;
+  border: 1px solid #B63A50;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: .15rem;
+  transition: all .3s ease;
+}
+
+.vault-button:hover {
+  background: #B63A50;
+}
