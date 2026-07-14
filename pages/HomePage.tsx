@@ -48,35 +48,58 @@ export function HomePage() {
 
       <section className="vault-intro">
 
-        <div className="vault-intro-content">
+  <div className="vault-intro-content">
 
-          <p className="vault-label">
-            THIS IS NOT A PORTFOLIO
-          </p>
+    <p className="vault-label">
+      EVERY RECORD HAS TWO DATES.
+    </p>
 
-          <h2>
-            Nothing Here Exists
-            <br />
-            By Accident.
-          </h2>
+    <h2>
+      The day it was created.
+      <br />
+      And the day someone finally
+      <br />
+      understands why it mattered.
+    </h2>
 
-          <p className="vault-description">
-            Long before there was a website, there were songs.
-            Before there were manuscripts, there were questions.
-            Before there was a documentary, there was a growing body
-            of creative work that refused to exist as separate pieces.
-          </p>
+    <p className="vault-description">
+      Everything inside this archive was created at a different
+      moment in time.
+    </p>
 
-          <p className="vault-description">
-            GRVEZ VAULT preserves music, writing, symbolism,
-            visual art, filmmaking, apparel, and original ideas
-            exactly as they were created—allowing every visitor
-            to explore the archive for themselves.
-          </p>
+    <p className="vault-description">
+      Different songs.
+      Different symbols.
+      Different manuscripts.
+      Different ideas.
+      Different chapters.
+    </p>
 
-        </div>
+    <p className="vault-description">
+    Some connections appeared to explain themselves.
+    Until time revealed something even more compelling.
+    </p>
 
-      </section>
+    <p className="vault-description">
+      Nothing has been rearranged.
+      Nothing has been rewritten.
+      Nothing has been removed.
+    </p>
+
+    <p className="vault-description">
+      Every record remains exactly where it was created.
+    </p>
+
+    <blockquote className="vault-quote">
+      The only question is...
+      <br /><br />
+      <strong>What will you discover first?</strong>
+    </blockquote>
+
+  </div>
+
+</section>
+
      <section className="archive-grid">
 
   <a href="/music" className="archive-panel music-panel">
