@@ -1106,3 +1106,125 @@ grid-template-columns:1fr;
 }
 
 }
+/* ===============================
+   VAULTLINE PRODUCT SHOWCASE
+================================ */
+
+.vaultline-showcase{
+  display:flex;
+  flex-direction:column;
+  gap:5rem;
+  margin-top:4rem;
+}
+
+.vaultline-feature{
+  display:grid;
+  grid-template-columns:1.1fr 1fr;
+  gap:4rem;
+  align-items:center;
+}
+
+.vaultline-feature.reverse{
+  grid-template-columns:1fr 1.1fr;
+}
+
+.vaultline-feature.reverse .vaultline-feature-image{
+  order:2;
+}
+
+.vaultline-feature.reverse .vaultline-feature-copy{
+  order:1;
+}
+
+.vaultline-feature-image img{
+  width:100%;
+  display:block;
+  border-radius:20px;
+  transition:transform .35s ease;
+}
+
+.vaultline-feature:hover img{
+  transform:scale(1.02);
+}
+
+.vaultline-feature-copy h2{
+  margin:.5rem 0 1rem;
+}
+
+.vaultline-feature-copy p{
+  line-height:1.8;
+  margin-bottom:2rem;
+  max-width:560px;
+}
+
+.vaultline-grid-section{
+  margin-top:6rem;
+}
+
+.vaultline-product-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:2rem;
+  margin-top:3rem;
+}
+
+.vaultline-card{
+  text-decoration:none;
+  color:inherit;
+  border:1px solid var(--border);
+  border-radius:20px;
+  overflow:hidden;
+  background:rgba(255,255,255,.02);
+  transition:.35s ease;
+}
+
+.vaultline-card:hover{
+  transform:translateY(-8px);
+  box-shadow:var(--shadow);
+}
+
+.vaultline-card-image{
+  padding:1.5rem;
+}
+
+.vaultline-card-image img{
+  width:100%;
+  display:block;
+}
+
+.vaultline-card-content{
+  padding:1.5rem;
+  text-align:center;
+}
+
+.vaultline-card-content h3{
+  margin-bottom:1.5rem;
+  font-size:1rem;
+}
+
+.vaultline-store-cta{
+  margin-top:6rem;
+  text-align:center;
+  padding:4rem 2rem;
+  border-top:1px solid var(--border);
+}
+
+.vaultline-store-cta p{
+  max-width:620px;
+  margin:1rem auto 2rem;
+  line-height:1.8;
+}
+
+@media (max-width:900px){
+
+  .vaultline-feature,
+  .vaultline-feature.reverse{
+    grid-template-columns:1fr;
+  }
+
+  .vaultline-feature.reverse .vaultline-feature-image,
+  .vaultline-feature.reverse .vaultline-feature-copy{
+    order:unset;
+  }
+
+}
