@@ -1,152 +1,182 @@
 import React from "react";
 import { HeroArtwork } from "../HeroArtwork";
 
-const archiveEntries = [
+const archiveRecords = [
   {
     id: "001",
-   category: "RECORD // 001",
-   title: "Recorded Evidence",
+    title: "Recorded Evidence",
+    type: "Music",
     description:
-      "Songs, albums, instrumentals, lyrics, demos, and every recorded chapter preserved inside the archive.",
+      "Songs, albums, instrumentals, lyrics, demos, and recorded works preserved in their original chronology.",
     link: "/music",
-    action: "ENTER",
+    action: "ENTER RECORD",
   },
   {
     id: "002",
-    category: "RECORD // 002",
-    title: "The Written Record",
+    title: "Written Record",
+    type: "Manuscripts",
     description:
-      "Poetry, research, journals, manuscripts, and long-form writing documenting years of creative work.",
+      "Poetry, journals, manuscripts, research, and long-form writing documenting years of creative work.",
     link: "/manuscripts",
-    action: "OPEN",
+    action: "OPEN RECORD",
   },
   {
     id: "003",
-   category: "RECORD // 003",
-   title: "Visual Documentation",
+    title: "Visual Documentation",
+    type: "Media",
     description:
-      "Photography, documentaries, production, artwork, and visual storytelling collected throughout the archive.",
+      "Photography, documentaries, artwork, production, and visual storytelling collected throughout the archive.",
     link: "/media",
-    action: "VIEW",
+    action: "VIEW RECORD",
   },
   {
     id: "004",
-    category: "RECORD // 004",
     title: "Artifacts",
+    type: "Vaultline",
     description:
-      "Apparel, symbols, branding, logos, design language, and physical extensions of the archive.",
+      "Symbols, apparel, branding, design language, and physical extensions of the archive.",
     link: "/vaultline",
-    action: "EXPLORE",
+    action: "EXPLORE RECORD",
   },
 ];
 
 export function ArchivePage() {
   return (
-    <>
-      <section
-        className="page-section archive-page"
-        aria-labelledby="archive-heading"
-      >
-        <div className="page-hero">
-          <HeroArtwork
-            image="/manuscripts-hero.jpg"
-            alt="GRVEZ VAULT Archive"
-          />
-        </div>
+    <section
+      className="page-section archive-page"
+      aria-labelledby="archive-heading"
+    >
 
-        <div className="page-content">
+      <div className="page-hero">
 
-          <div className="page-intro">
+        <HeroArtwork
+          image="/manuscripts-hero.jpg"
+          alt="GRVEZ VAULT Archive"
+        />
 
-            <p className="eyebrow">
-              THE ARCHIVE
+      </div>
+
+      <div className="page-content">
+
+        <div className="page-intro">
+
+          <p className="eyebrow">
+            THE ARCHIVE
+          </p>
+
+          <h1 id="archive-heading">
+            Every Record
+            <br />
+            Has Two Dates.
+          </h1>
+
+          <p className="archive-quote">
+            The day it was created.
+            <br />
+            And the day someone finally understood
+            why it mattered.
+          </p>
+
+          <div className="archive-manifest">
+
+            <p>
+              GRVEZ VAULT exists to preserve creative work
+              exactly as it was originally created.
             </p>
 
-            <h1 id="archive-heading">
-              Every Record
-              <br />
-              Has Two Dates.
-            </h1>
-
-            <p className="archive-quote">
-              The day it was created.
-              <br />
-              And the day someone finally
-              understands why it mattered.
+            <p>
+              Songs.
+              Writing.
+              Symbols.
+              Films.
+              Artwork.
+              Ideas.
             </p>
 
-            <p className="story-copy">
-              Every entry inside GRVEZ VAULT exists in its
-              original chronology.
+            <p>
+              Time changes perspective.
+              The archive does not.
             </p>
-
-            <p className="story-copy">
-              Different songs.
-              Different symbols.
-              Different manuscripts.
-              Different films.
-              Different ideas.
-            </p>
-
-            <p className="story-copy">
-              Some connections revealed themselves immediately.
-            </p>
-
-            <p className="story-copy">
-              Others only became visible with time.
-            </p>
-
-            <p className="story-copy">
-              Nothing has been rearranged.
-              <br />
-              Nothing has been rewritten.
-              <br />
-              Nothing has been removed.
-            </p>
-
-            <blockquote className="vault-quote">
-              The chronology remains intact.
-            </blockquote>
 
           </div>
 
-          <section className="archive-directory">
+        </div>
+                <section className="archive-directory">
 
-            <p className="eyebrow">
-              CHOOSE AN ENTRY
-            </p>
+          <p className="eyebrow">
+            ARCHIVE DIRECTORY
+          </p>
 
-            <h2>
-              Where would you like to begin?
-            </h2>
+          <h2>
+            Select a record.
+          </h2>
 
-            <div className="archive-directory-grid">
-                          {archiveEntries.map((entry) => (
+          <div className="archive-record-grid">
+
+            {archiveRecords.map((record) => (
 
               <a
-                key={entry.id}
-                href={entry.link}
-                className="archive-directory-card"
+                key={record.id}
+                href={record.link}
+                className="archive-record-card"
               >
 
-                <span className="archive-number">
-                  {entry.category}
-                </span>
+                <div className="archive-record-header">
 
-                <span className="archive-category">
-                  {entry.category}
-                </span>
+                  <span className="archive-record-id">
+                    ARCHIVE RECORD {record.id}
+                  </span>
+
+                  <span className="archive-record-status">
+                    PRESERVED
+                  </span>
+
+                </div>
 
                 <h3>
-                  {entry.title}
+                  {record.title}
                 </h3>
 
-                <p>
-                  {entry.description}
+                <div className="archive-meta">
+
+                  <div>
+
+                    <span className="archive-label">
+                      CATEGORY
+                    </span>
+
+                    <p>
+                      {record.type}
+                    </p>
+
+                  </div>
+
+                  <div>
+
+                    <span className="archive-label">
+                      ACCESS
+                    </span>
+
+                    <p>
+                      AUTHORIZED
+                    </p>
+
+                  </div>
+
+                </div>
+
+                <p className="archive-description">
+                  {record.description}
                 </p>
 
                 <span className="archive-action">
-                  {entry.action} →
+
+                  {record.action}
+
+                  <span className="archive-arrow">
+                    →
+                  </span>
+
                 </span>
 
               </a>
@@ -156,104 +186,61 @@ export function ArchivePage() {
           </div>
 
         </section>
+                <section className="archive-feature">
 
-        <section className="archive-philosophy">
+          <div className="archive-feature-content">
+
+            <p className="eyebrow">
+              FEATURED RECORD
+            </p>
+
+            <h2>
+              Chronology
+              <br />
+              is evidence.
+            </h2>
+
+            <p>
+              Every entry inside GRVEZ VAULT remains exactly where
+              it was originally created. The archive does not reorganize
+              events to strengthen a narrative. It preserves the original
+              sequence so every connection can be discovered in context.
+            </p>
+
+            <blockquote className="vault-quote">
+              Nothing has been rewritten.
+              <br />
+              Nothing has been relocated.
+              <br />
+              Nothing has been removed.
+            </blockquote>
+
+          </div>
+
+        </section>
+                <section className="archive-closing">
 
           <p className="eyebrow">
-            WHY AN ARCHIVE?
+            THE RECORD REMAINS
           </p>
 
           <h2>
-            Preservation comes
+            Every new release
             <br />
-            before interpretation.
+            becomes another record.
           </h2>
 
-         <p className="story-copy">
-  Every entry inside GRVEZ VAULT remains exactly where
-  it was originally created.
-</p>
+          <p>
+            The archive continues to grow one entry at a time.
+            Every song, manuscript, symbol, film, and design is
+            preserved as part of the same ongoing chronology.
+          </p>
 
-<p className="story-copy">
-  Songs.
-  Symbols.
-  Manuscripts.
-  Films.
-  Ideas.
-  Designs.
-</p>
-
-<p className="story-copy">
-  Some seemed connected from the very beginning.
-</p>
-
-<p className="story-copy">
-  Others revealed a different story only after years
-  had passed.
-</p>
-
-<p className="story-copy">
-  Nothing has been rearranged.
-  <br />
-  Nothing has been rewritten.
-  <br />
-  Nothing has been removed.
-</p>
-
-<blockquote className="vault-quote">
-  The chronology is part of the record.
-</blockquote>
-
-        </section>
-
-        <section className="archive-timeline">
-
-          <p className="eyebrow">
-  ARCHIVE DIRECTORY
-</p>
-
-<h2>
-  Choose a record.
-</h2>
-
-          <div className="timeline">
-                        <div className="timeline-item">
-              <span>01</span>
-              <h3>The Work</h3>
-              <p>
-                Songs, writing, artwork, and ideas created independently over
-                time.
-              </p>
-            </div>
-
-            <div className="timeline-item">
-              <span>02</span>
-              <h3>The Archive</h3>
-              <p>
-                Every piece preserved instead of forgotten, allowing the
-                chronology to remain intact.
-              </p>
-            </div>
-
-            <div className="timeline-item">
-              <span>03</span>
-              <h3>The Discovery</h3>
-              <p>
-                Some connections appeared immediately.
-                Others only emerged after years of looking back.
-              </p>
-            </div>
-
-            <div className="timeline-item">
-              <span>04</span>
-              <h3>The Journey Continues</h3>
-              <p>
-                Every new release becomes another record.
-                Every record becomes another chapter.
-              </p>
-            </div>
-
-          </div>
+          <blockquote className="vault-quote">
+            The archive is never finished.
+            <br />
+            It is only waiting for its next record.
+          </blockquote>
 
         </section>
 
@@ -261,6 +248,5 @@ export function ArchivePage() {
 
     </section>
 
-    </>
   );
 }
