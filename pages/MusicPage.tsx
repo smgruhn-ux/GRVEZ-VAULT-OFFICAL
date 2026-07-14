@@ -7,7 +7,7 @@ export function MusicPage() {
   return (
     <section className="page-section music-page" aria-labelledby="music-heading">
       <div className="page-hero">
-        <HeroArtwork image="/music-hero.jpg" alt="GRVEZ VAULT music artwork" loading="lazy" />
+        <HeroArtwork image="/music-hero.png" alt="GRVEZ VAULT music artwork" loading="lazy" />
       </div>
       <div className="page-content">
         <div className="page-intro">

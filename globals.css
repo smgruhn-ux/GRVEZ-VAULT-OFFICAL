@@ -77,10 +77,14 @@ button { font: inherit; }
 }
 .skip-link:focus { top: 1rem; }
 .site-header,
-.site-footer,
+.site-footer {
+    width: min(1200px, calc(100% - 2rem));
+    margin: 0 auto;
+}
+
 .page-section {
-  width: min(1200px, calc(100% - 2rem));
-  margin: 0 auto;
+    width: 100%;
+    margin: 0;
 }
 .site-header {
   display: flex;
@@ -133,16 +137,20 @@ button { font: inherit; }
   overflow: hidden;
 }
 .hero-frame {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  border-radius: 0;
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow);
-  isolation: isolate;
-  background: #030304;
-  transition: transform 320ms ease;
-  animation: vaultReveal 1100ms cubic-bezier(0.16, 1, 0.3, 1) both;
+    position: relative;
+
+    width: 100vw;
+    max-width: none;
+    margin-left: calc(50% - 50vw);
+
+    overflow: hidden;
+
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+
+    isolation: isolate;
+    background: #030304;
 }
 .hero-backdrop-wrap {
   position: absolute;
@@ -174,14 +182,17 @@ button { font: inherit; }
   background: linear-gradient(180deg, rgba(6, 6, 8, 0.05) 0%, rgba(6, 6, 8, 0.88) 100%);
 }
 .hero-image {
-  position: relative;
-  z-index: 2;
-  display: block;
-  width: 100%;
-  height: min(80vh, 880px);
-  object-fit: contain;
-  object-position: center;
-  filter: saturate(0.96) contrast(1.05) drop-shadow(0 26px 50px rgba(0,0,0,0.55));
+    position: relative;
+    z-index: 2;
+    display: block;
+
+    width: 100%;
+    height: 90vh;
+
+    object-fit: cover;
+    object-position: center;
+
+    filter: saturate(0.96) contrast(1.05);
 }
 .hero-grain {
   position: absolute;
@@ -814,4 +825,253 @@ h2 { font-size: clamp(1.4rem, 2.4vw, 1.9rem); }
     object-fit: cover;
     object-position: center center;
   }
+}
+/* ==========================================
+   HOME HERO CINEMATIC
+========================================== */
+
+.home-hero {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,.25),
+            rgba(0,0,0,.65),
+            rgba(0,0,0,.95)
+        );
+}
+
+.hero-content{
+
+    width:min(900px,90%);
+
+    animation:fadeUp 1.5s ease;
+}
+
+.hero-content h1{
+
+    font-size:clamp(4rem,10vw,8rem);
+
+    letter-spacing:.18em;
+
+    text-transform:uppercase;
+
+    color:white;
+
+    margin-bottom:25px;
+
+    text-shadow:
+        0 0 35px rgba(0,0,0,.85);
+}
+
+.hero-tagline{
+
+    color:#dadada;
+
+    font-size:1.35rem;
+
+    line-height:1.8;
+
+    max-width:700px;
+
+    margin:auto;
+
+    margin-bottom:45px;
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+}
+
+.vault-button.secondary{
+
+    background:transparent;
+
+    border:1px solid rgba(255,255,255,.2);
+}
+
+.vault-button.secondary:hover{
+
+    border-color:#B63A50;
+}
+
+.detail-card{
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+}
+
+.detail-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.45);
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(50px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+/*==============================
+ARCHIVE GRID
+==============================*/
+
+.archive-grid{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:24px;
+
+padding:120px 8%;
+}
+
+.archive-panel{
+
+position:relative;
+
+min-height:420px;
+
+border-radius:24px;
+
+overflow:hidden;
+
+display:flex;
+
+align-items:flex-end;
+
+text-decoration:none;
+
+background:#111;
+
+transition:.45s;
+
+background-size:cover;
+
+background-position:center;
+}
+
+.archive-panel:hover{
+
+transform:translateY(-12px) scale(1.02);
+
+box-shadow:0 35px 70px rgba(0,0,0,.45);
+}
+
+.music-panel{
+
+background-image:url("/music-hero.jpg");
+
+}
+
+.manuscript-panel{
+
+background-image:url("/manuscripts-hero.jpg");
+
+}
+
+.media-panel{
+
+background-image:url("/about-hero.jpg");
+
+}
+
+.vaultline-panel{
+
+background-image:url("/vaultline-hero.jpg");
+
+}
+
+.archive-panel-overlay{
+
+width:100%;
+
+padding:48px;
+
+background:linear-gradient(to top,rgba(0,0,0,.95),transparent);
+
+}
+
+.archive-panel p{
+
+letter-spacing:.3em;
+
+font-size:.8rem;
+
+opacity:.7;
+
+margin-bottom:12px;
+
+color:white;
+
+}
+
+.archive-panel h2{
+
+font-size:2.4rem;
+
+margin-bottom:18px;
+
+color:white;
+
+}
+
+.archive-panel span{
+
+color:#B63A50;
+
+font-weight:700;
+
+letter-spacing:.12em;
+
+}
+
+@media(max-width:900px){
+
+.archive-grid{
+
+grid-template-columns:1fr;
+
+}
+
 }
