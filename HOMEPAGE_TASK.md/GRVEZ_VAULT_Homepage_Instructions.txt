@@ -1,0 +1,34 @@
+GRVEZ VAULT HOMEPAGE UPGRADE INSTRUCTIONS
+
+You are editing my existing React/Vite website inside my GitHub Codespace.
+
+OBJECTIVE
+Update the existing homepage without creating a new project.
+
+REQUIREMENTS
+
+- Remove the Explore section completely.
+- Place Featured Releases directly beneath the hero.
+- Show ONLY two releases:
+  1. Under My Tongue
+  2. Voodoo Bane
+- Display the two release cards side-by-side on desktop.
+- Stack them vertically on mobile.
+- Remove the large empty black area beneath the hero artwork.
+- Allow the hero image to determine its own height naturally.
+- Increase the hero section height on mobile to approximately 80vh.
+- Keep everything fully responsive using CSS Grid/Flexbox and media queries.
+- Do NOT create separate mobile/desktop pages.
+- Preserve the existing GRVEZ VAULT branding, colors, typography, and navigation.
+- Make the homepage feel premium, cinematic, and intriguing.
+- Reduce dead space and improve visual flow.
+- Optimize images for fast loading.
+- Modify the existing components and CSS only.
+
+WHEN FINISHED
+
+1. List every file you changed.
+2. Explain briefly why each file was changed.
+3. Confirm the project builds successfully using:
+   npm run build
+4. Do not leave placeholder content.

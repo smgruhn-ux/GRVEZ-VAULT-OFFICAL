@@ -6,7 +6,7 @@ export function HomePage() {
     <>
       <section className="hero-section home-hero">
         <HeroArtwork
-          image="/home-hero.jpg"
+          image="/home-hero.png"
           alt="GRVEZ VAULT Hero"
         />
       </section>
