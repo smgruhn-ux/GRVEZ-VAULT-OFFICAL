@@ -4,8 +4,8 @@ import { HeroArtwork } from "../HeroArtwork";
 const archiveEntries = [
   {
     id: "001",
-    category: "RECORDED EVIDENCE",
-    title: "Music",
+   category: "RECORD // 001",
+   title: "Recorded Evidence",
     description:
       "Songs, albums, instrumentals, lyrics, demos, and every recorded chapter preserved inside the archive.",
     link: "/music",
@@ -13,8 +13,8 @@ const archiveEntries = [
   },
   {
     id: "002",
-    category: "THE WRITTEN RECORD",
-    title: "Manuscripts",
+    category: "RECORD // 002",
+    title: "The Written Record",
     description:
       "Poetry, research, journals, manuscripts, and long-form writing documenting years of creative work.",
     link: "/manuscripts",
@@ -22,8 +22,8 @@ const archiveEntries = [
   },
   {
     id: "003",
-    category: "VISUAL DOCUMENTATION",
-    title: "Media",
+   category: "RECORD // 003",
+   title: "Visual Documentation",
     description:
       "Photography, documentaries, production, artwork, and visual storytelling collected throughout the archive.",
     link: "/media",
@@ -31,8 +31,8 @@ const archiveEntries = [
   },
   {
     id: "004",
-    category: "ARTIFACTS",
-    title: "Vaultline",
+    category: "RECORD // 004",
+    title: "Artifacts",
     description:
       "Apparel, symbols, branding, logos, design language, and physical extensions of the archive.",
     link: "/vaultline",
@@ -130,7 +130,7 @@ export function ArchivePage() {
               >
 
                 <span className="archive-number">
-                  RECORD // {entry.id}
+                  {entry.category}
                 </span>
 
                 <span className="archive-category">
@@ -169,39 +169,52 @@ export function ArchivePage() {
             before interpretation.
           </h2>
 
-          <p className="story-copy">
-            Creative work changes meaning over time.
-            A lyric written years ago may carry a different
-            meaning today than it did when it was first created.
-          </p>
+         <p className="story-copy">
+  Every entry inside GRVEZ VAULT remains exactly where
+  it was originally created.
+</p>
 
-          <p className="story-copy">
-            Rather than rewriting history,
-            GRVEZ VAULT preserves every chapter
-            in the order it originally appeared.
-          </p>
+<p className="story-copy">
+  Songs.
+  Symbols.
+  Manuscripts.
+  Films.
+  Ideas.
+  Designs.
+</p>
 
-          <p className="story-copy">
-            The purpose of the archive isn't to tell you
-            what to think.
-          </p>
+<p className="story-copy">
+  Some seemed connected from the very beginning.
+</p>
 
-          <blockquote className="vault-quote">
-            It simply preserves the record.
-          </blockquote>
+<p className="story-copy">
+  Others revealed a different story only after years
+  had passed.
+</p>
+
+<p className="story-copy">
+  Nothing has been rearranged.
+  <br />
+  Nothing has been rewritten.
+  <br />
+  Nothing has been removed.
+</p>
+
+<blockquote className="vault-quote">
+  The chronology is part of the record.
+</blockquote>
 
         </section>
 
         <section className="archive-timeline">
 
           <p className="eyebrow">
-            THE CHRONOLOGY
-          </p>
+  ARCHIVE DIRECTORY
+</p>
 
-          <h2>
-            Every discovery
-            begins somewhere.
-          </h2>
+<h2>
+  Choose a record.
+</h2>
 
           <div className="timeline">
                         <div className="timeline-item">
