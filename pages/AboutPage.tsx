@@ -58,7 +58,7 @@ export function AboutPage() {
               conclusion after the fact. Every lyric, every design,
               every symbol, every photograph, every manuscript, and
               every release remains preserved in the order it was
-              created—allowing the story to exist exactly as it
+              created, allowing the story to exist exactly as it
               unfolded.
             </p>
 
@@ -86,7 +86,7 @@ export function AboutPage() {
             <article className="detail-card">
 
               <h2>
-                Explore — Don't Just Read
+                Explore | Don't Just Read
               </h2>
 
               <p>
@@ -117,7 +117,7 @@ export function AboutPage() {
           </h2>
 
           <p className="story-copy">
-            Every archive begins with creation—not explanation.
+            Every archive begins with creation... not explanation.
             Songs were written without knowing what future projects
             they would influence. Symbols appeared long before their
             significance was fully understood. Ideas resurfaced across
@@ -160,7 +160,7 @@ export function AboutPage() {
             creative decisions, and personal experiences encouraged a
             deeper investigation into continuity, creativity, and human
             connection. Those observations eventually grew into an
-            ongoing manuscript—not as the beginning of the story, but
+            ongoing manuscript, not as the beginning of the story, but
             as one chapter within it.
           </p>
 
