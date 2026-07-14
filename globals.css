@@ -329,8 +329,39 @@ h2 { font-size: clamp(1.4rem, 2.4vw, 1.9rem); }
   display: block;
   object-fit: contain;
 }
-.page-content { padding: 2rem 0 0; }
-.page-intro { padding-bottom: 1.3rem; }
+.page-content {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+  padding: 2rem 0 0;
+}
+
+.page-intro {
+  max-width: 900px;
+  margin: 0 auto 4rem;
+  padding-bottom: 1.3rem;
+  text-align: center;
+}
+
+.page-intro p {
+  max-width: 760px;
+  margin: 1.5rem auto;
+  text-align: center;
+  line-height: 1.8;
+}
+
+.story-copy {
+  max-width: 760px;
+  margin: 1.5rem auto;
+  text-align: center;
+  line-height: 1.8;
+}
+
+.archive-quote,
+.vault-quote {
+  max-width: 760px;
+  margin: 2.5rem auto;
+  text-align: center;
+}
 .content-grid,
 .contact-grid,
 .vaultline-grid,

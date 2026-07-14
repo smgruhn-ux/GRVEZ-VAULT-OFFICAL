@@ -1,95 +1,253 @@
-import React from 'react';
-import { HeroArtwork } from '../HeroArtwork';
+import React from "react";
+import { HeroArtwork } from "../HeroArtwork";
 
-const archiveSections = [
+const archiveEntries = [
   {
-    title: 'FRAGMENT 001 // THE FIRST FRACTURE',
-    body: 'The pair begins in unity and then loses it. Awareness is the first fracture.',
+    id: "001",
+    category: "RECORDED EVIDENCE",
+    title: "Music",
+    description:
+      "Songs, albums, instrumentals, lyrics, demos, and every recorded chapter preserved inside the archive.",
+    link: "/music",
+    action: "ENTER",
   },
   {
-    title: 'FRAGMENT 002 // THE WRITTEN BODY',
-    body: 'The written word becomes the body of the relationship. The bond survives through language.',
+    id: "002",
+    category: "THE WRITTEN RECORD",
+    title: "Manuscripts",
+    description:
+      "Poetry, research, journals, manuscripts, and long-form writing documenting years of creative work.",
+    link: "/manuscripts",
+    action: "OPEN",
   },
   {
-    title: 'FRAGMENT 003 // THE MIRROR HALL',
-    body: 'The relationship becomes a mirror in which each partner sees aspects of the self that cannot remain hidden.',
+    id: "003",
+    category: "VISUAL DOCUMENTATION",
+    title: "Media",
+    description:
+      "Photography, documentaries, production, artwork, and visual storytelling collected throughout the archive.",
+    link: "/media",
+    action: "VIEW",
   },
   {
-    title: 'FRAGMENT 012 // CONSCIOUS CO-AUTHORSHIP',
-    body: 'The individuals become aware that they are participating in a symbolic system that they are actively creating together.',
+    id: "004",
+    category: "ARTIFACTS",
+    title: "Vaultline",
+    description:
+      "Apparel, symbols, branding, logos, design language, and physical extensions of the archive.",
+    link: "/vaultline",
+    action: "EXPLORE",
   },
 ];
 
 export function ArchivePage() {
   return (
-    <section
-      className="page-section manuscripts-page"
-      aria-labelledby="archive-heading"
-    >
-      <div className="page-hero">
-        <HeroArtwork
-          image="/manuscripts-hero.jpg"
-          alt="GRVEZ VAULT archive artwork"
-        />
-      </div>
-
-      <div className="page-content">
-        <div className="page-intro">
-          <p className="eyebrow">THE ARCHIVE</p>
-
-          <h1 id="archive-heading">
-            Where the wound meets the halo.
-          </h1>
-
-          <p className="archive-quote">
-            From the garden through the grave.
-          </p>
-
-          <p>
-            Fragments recovered from the Relational Continuity Hypothesis.
-            Twelve stages. One evolving bond. No fragment exists alone.
-          </p>
+    <>
+      <section
+        className="page-section archive-page"
+        aria-labelledby="archive-heading"
+      >
+        <div className="page-hero">
+          <HeroArtwork
+            image="/manuscripts-hero.jpg"
+            alt="GRVEZ VAULT Archive"
+          />
         </div>
 
-        <div className="continuity-chamber">
-          <div className="continuity-orbit orbit-one"></div>
-          <div className="continuity-orbit orbit-two"></div>
-          <div className="continuity-orbit orbit-three"></div>
+        <div className="page-content">
 
-          <div className="continuity-core">
-            <span className="continuity-number">12</span>
-            <span className="continuity-label">STAGES</span>
+          <div className="page-intro">
+
+            <p className="eyebrow">
+              THE ARCHIVE
+            </p>
+
+            <h1 id="archive-heading">
+              Every Record
+              <br />
+              Has Two Dates.
+            </h1>
+
+            <p className="archive-quote">
+              The day it was created.
+              <br />
+              And the day someone finally
+              understands why it mattered.
+            </p>
+
+            <p className="story-copy">
+              Every entry inside GRVEZ VAULT exists in its
+              original chronology.
+            </p>
+
+            <p className="story-copy">
+              Different songs.
+              Different symbols.
+              Different manuscripts.
+              Different films.
+              Different ideas.
+            </p>
+
+            <p className="story-copy">
+              Some connections revealed themselves immediately.
+            </p>
+
+            <p className="story-copy">
+              Others only became visible with time.
+            </p>
+
+            <p className="story-copy">
+              Nothing has been rearranged.
+              <br />
+              Nothing has been rewritten.
+              <br />
+              Nothing has been removed.
+            </p>
+
+            <blockquote className="vault-quote">
+              The chronology remains intact.
+            </blockquote>
+
           </div>
 
-          <div className="continuity-mark mark-nine">09</div>
-          <div className="continuity-mark mark-eleven">11</div>
+          <section className="archive-directory">
 
-          <p className="continuity-caption">
-            TWO AUTHORS // ONE CONTINUITY
+            <p className="eyebrow">
+              CHOOSE AN ENTRY
+            </p>
+
+            <h2>
+              Where would you like to begin?
+            </h2>
+
+            <div className="archive-directory-grid">
+                          {archiveEntries.map((entry) => (
+
+              <a
+                key={entry.id}
+                href={entry.link}
+                className="archive-directory-card"
+              >
+
+                <span className="archive-number">
+                  RECORD // {entry.id}
+                </span>
+
+                <span className="archive-category">
+                  {entry.category}
+                </span>
+
+                <h3>
+                  {entry.title}
+                </h3>
+
+                <p>
+                  {entry.description}
+                </p>
+
+                <span className="archive-action">
+                  {entry.action} →
+                </span>
+
+              </a>
+
+            ))}
+
+          </div>
+
+        </section>
+
+        <section className="archive-philosophy">
+
+          <p className="eyebrow">
+            WHY AN ARCHIVE?
           </p>
-        </div>
 
-        <div className="manuscript-coming-soon">
-          <p className="eyebrow">THE MANUSCRIPT</p>
-          <h2>RELATIONAL CONTINUITY HYPOTHESIS</h2>
-          <p>
-            The complete manuscript is currently being prepared for release.
+          <h2>
+            Preservation comes
+            <br />
+            before interpretation.
+          </h2>
+
+          <p className="story-copy">
+            Creative work changes meaning over time.
+            A lyric written years ago may carry a different
+            meaning today than it did when it was first created.
           </p>
-          <span className="manuscript-status">COMING SOON</span>
-        </div>
 
-        <div className="archive-grid">
-          {archiveSections.map((section) => (
-            <article
-              key={section.title}
-              className="archive-panel"
-            >
-              <h2>{section.title}</h2>
-              <p>{section.body}</p>
-            </article>
-          ))}
-        </div>
+          <p className="story-copy">
+            Rather than rewriting history,
+            GRVEZ VAULT preserves every chapter
+            in the order it originally appeared.
+          </p>
+
+          <p className="story-copy">
+            The purpose of the archive isn't to tell you
+            what to think.
+          </p>
+
+          <blockquote className="vault-quote">
+            It simply preserves the record.
+          </blockquote>
+
+        </section>
+
+        <section className="archive-timeline">
+
+          <p className="eyebrow">
+            THE CHRONOLOGY
+          </p>
+
+          <h2>
+            Every discovery
+            begins somewhere.
+          </h2>
+
+          <div className="timeline">
+                        <div className="timeline-item">
+              <span>01</span>
+              <h3>The Work</h3>
+              <p>
+                Songs, writing, artwork, and ideas created independently over
+                time.
+              </p>
+            </div>
+
+            <div className="timeline-item">
+              <span>02</span>
+              <h3>The Archive</h3>
+              <p>
+                Every piece preserved instead of forgotten, allowing the
+                chronology to remain intact.
+              </p>
+            </div>
+
+            <div className="timeline-item">
+              <span>03</span>
+              <h3>The Discovery</h3>
+              <p>
+                Some connections appeared immediately.
+                Others only emerged after years of looking back.
+              </p>
+            </div>
+
+            <div className="timeline-item">
+              <span>04</span>
+              <h3>The Journey Continues</h3>
+              <p>
+                Every new release becomes another record.
+                Every record becomes another chapter.
+              </p>
+            </div>
+
+          </div>
+
+        </section>
+
       </div>
+
     </section>
+
+    </>
   );
 }
