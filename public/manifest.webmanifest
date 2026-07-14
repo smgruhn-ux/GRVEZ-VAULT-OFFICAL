@@ -1,0 +1,17 @@
+{
+  "name": "GRVEZ VAULT",
+  "short_name": "GRVEZ VAULT",
+  "description": "Premium cinematic music and editorial experience by Gizzy Graves.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#060608",
+  "theme_color": "#060608",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/gv-favicon.PNG",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
