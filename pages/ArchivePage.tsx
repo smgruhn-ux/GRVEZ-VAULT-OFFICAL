@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { HeroArtwork } from "../HeroArtwork";
 
 const archiveRecords = [
@@ -46,14 +47,11 @@ export function ArchivePage() {
       className="page-section archive-page"
       aria-labelledby="archive-heading"
     >
-
       <div className="page-hero">
-
         <HeroArtwork
           image="/manuscripts-hero.jpg"
           alt="GRVEZ VAULT Archive"
         />
-
       </div>
 
       <div className="page-content">
@@ -101,7 +99,8 @@ export function ArchivePage() {
           </div>
 
         </div>
-                <section className="archive-directory">
+
+        <section className="archive-directory">
 
           <p className="eyebrow">
             ARCHIVE DIRECTORY
@@ -115,9 +114,9 @@ export function ArchivePage() {
 
             {archiveRecords.map((record) => (
 
-              <a
+              <Link
                 key={record.id}
-                href={record.link}
+                to={record.link}
                 className="archive-record-card"
               >
 
@@ -179,14 +178,15 @@ export function ArchivePage() {
 
                 </span>
 
-              </a>
+              </Link>
 
             ))}
 
           </div>
 
         </section>
-                <section className="archive-feature">
+
+        <section className="archive-feature">
 
           <div className="archive-feature-content">
 
@@ -218,7 +218,8 @@ export function ArchivePage() {
           </div>
 
         </section>
-                <section className="archive-closing">
+
+        <section className="archive-closing">
 
           <p className="eyebrow">
             THE RECORD REMAINS
@@ -247,6 +248,5 @@ export function ArchivePage() {
       </div>
 
     </section>
-
   );
 }
