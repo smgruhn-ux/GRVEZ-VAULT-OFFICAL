@@ -1473,3 +1473,73 @@ transition:.3s;
 background:#b63a50;
 border-color:#b63a50;
 }
+.archive-note{
+    max-width:900px;
+    margin:70px auto;
+    padding:42px;
+    border:1px solid rgba(255,255,255,.08);
+    background:rgba(255,255,255,.02);
+    backdrop-filter:blur(10px);
+    border-radius:18px;
+}
+
+.archive-note h2{
+    margin:10px 0 18px;
+    font-size:2rem;
+}
+
+.fragment-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+    gap:34px;
+    margin-top:45px;
+}
+
+.fragment-card{
+    background:rgba(255,255,255,.03);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:18px;
+    padding:36px;
+    transition:.35s;
+}
+
+.fragment-card:hover{
+    transform:translateY(-8px);
+    border-color:#b63a50;
+    box-shadow:0 25px 60px rgba(0,0,0,.45);
+}
+
+.fragment-category{
+    color:#b63a50;
+    letter-spacing:4px;
+    font-size:.78rem;
+    text-transform:uppercase;
+}
+
+.fragment-preview{
+    white-space:pre-wrap;
+    font-family:inherit;
+    line-height:2;
+    opacity:.9;
+    margin:28px 0;
+}
+
+.fragment-source{
+    opacity:.6;
+    margin-bottom:30px;
+}
+
+.fragment-button{
+    background:none;
+    border:1px solid rgba(255,255,255,.15);
+    color:white;
+    padding:14px 28px;
+    letter-spacing:2px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.fragment-button:hover{
+    background:#b63a50;
+    border-color:#b63a50;
+}
