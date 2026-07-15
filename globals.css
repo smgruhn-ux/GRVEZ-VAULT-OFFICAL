@@ -1543,3 +1543,16 @@ border-color:#b63a50;
     background:#b63a50;
     border-color:#b63a50;
 }
+.fragment-status{
+    margin-top:28px;
+    padding:14px 18px;
+    border:1px solid rgba(182,58,80,.45);
+    background:rgba(182,58,80,.08);
+    color:#b63a50;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:.78rem;
+    text-align:center;
+    border-radius:8px;
+    font-weight:600;
+}
