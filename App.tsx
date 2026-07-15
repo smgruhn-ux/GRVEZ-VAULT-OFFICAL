@@ -6,6 +6,7 @@ import { MusicPage } from './pages/MusicPage';
 import { VaultlinePage } from './pages/VaultlinePage';
 import { ContactPage } from './pages/ContactPage';
 import { ArchivePage } from './pages/ArchivePage';
+import { ManuscriptsPage } from './pages/ManuscriptsPage';
 import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
 import { TermsOfUsePage } from './pages/TermsOfUsePage';
 import { FaqPage } from './pages/FaqPage';
@@ -19,6 +20,7 @@ export function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/music" element={<MusicPage />} />
           <Route path="/archive" element={<ArchivePage />} />
+          <Route path="/manuscripts" element={<ManuscriptsPage />} />
           <Route path="/vaultline" element={<VaultlinePage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
