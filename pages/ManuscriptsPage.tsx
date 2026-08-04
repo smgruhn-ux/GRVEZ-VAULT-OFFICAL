@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const records = [
   {
@@ -19,23 +20,23 @@ const records = [
   },
   {
     id: "003",
-    type: "RECOVERED POEM",
-    title: "Angel of Death",
+    type: "JOURNAL ENTRY",
+    title: "Origins",
     preview:
-      '"Awaiting restoration..."',
-    source: "Poetry Collection",
+      '"Recovered journal entry currently undergoing restoration..."',
+    source: "Personal Journal",
   },
   {
     id: "004",
-    type: "RECOVERED POEM",
-    title: "Agony",
+    type: "RESEARCH NOTE",
+    title: "Pattern Recognition",
     preview:
-      '"Awaiting restoration..."',
-    source: "Poetry Collection",
+      '"Recovered research notes documenting early observations..."',
+    source: "Research Archive",
   },
   {
     id: "005",
-    type: "JOURNAL",
+    type: "SYMBOL STUDY",
     title: "Omega Development",
     preview:
       "Early handwritten notes exploring Omega, the eight-point star, continuity, and the origins of the archive.",
@@ -43,15 +44,31 @@ const records = [
   },
   {
     id: "006",
-    type: "ARCHIVIST'S OBSERVATION",
+    type: "EVIDENCE RECORD",
     title: "The Raven Motif",
     preview:
       "The raven appears repeatedly across unrelated works created over multiple years.",
     source: "Cross Reference",
   },
+  {
+    id: "007",
+    type: "TIMELINE",
+    title: "Chronology",
+    preview:
+      '"Recovered chronology currently being reconstructed..."',
+    source: "Evidence Timeline",
+  },
+    {
+  id: "008",
+  type: "FOUNDING EDITION",
+  title: "Relational Continuity Hypothesis",
+  preview:
+    "FOUNDING EDITION RECOVERED\n\nThe first preserved publication documenting the Relational Continuity Hypothesis. Continue following the recovered evidence throughout the archive to uncover the investigation that led to this work.",
+  source: "Published on Amazon",
+},
 ];
-
 export function ManuscriptsPage() {
+  const navigate = useNavigate();
   return (
     <section className="page-section manuscripts-page">
 
@@ -107,9 +124,11 @@ export function ManuscriptsPage() {
             {records.map((record) => (
 
               <article
-                key={record.id}
-                className="fragment-card"
-              >
+  key={record.id}
+  className="fragment-card"
+  style={{ cursor: "pointer" }}
+  onClick={() => navigate(`/archive/${record.id}`)}
+>
 
                 <div className="fragment-header">
 
@@ -143,7 +162,7 @@ export function ManuscriptsPage() {
 
                   <div className="fragment-status">
 
-                    UNDER RESTORATION
+                    CLICK TO OPEN →
 
                   </div>
 
@@ -157,24 +176,30 @@ export function ManuscriptsPage() {
 
         </section>
 
-        <section className="archive-note">
+       <section className="archive-note">
 
-          <p className="eyebrow">
-            ARCHIVE STATUS
-          </p>
+  <p className="eyebrow">
+    ARCHIVIST'S NOTE
+  </p>
 
-          <h2>
-            Reconstruction Active
-          </h2>
+  <h2>
+    Investigation Active
+  </h2>
 
-          <p>
-            Additional poems, journal pages, manuscript excerpts,
-            research documents, photographs, and evidence records
-            are currently being cataloged.
-          </p>
+  <p>
+    This archive is presented as an active investigation rather than
+    a complete collection. Every recovered record represents one piece
+    of a larger chronology preserved across poems, journals,
+    manuscripts, symbols, photographs, and documentary evidence.
+  </p>
 
-        </section>
+  <p>
+    Some records remain sealed. Others are incomplete. Visitors who
+    continue deeper into the archive will gradually recover additional
+    fragments leading toward the Founding Edition.
+  </p>
 
+</section>
       </div>
 
     </section>

@@ -11,6 +11,7 @@ import { MediaPage } from './pages/MediaPage';
 import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
 import { TermsOfUsePage } from './pages/TermsOfUsePage';
 import { FaqPage } from './pages/FaqPage';
+import { RecordPage } from './pages/RecordPage';
 
 export function App() {
   return (
@@ -22,6 +23,7 @@ export function App() {
           <Route path="/music" element={<MusicPage />} />
           <Route path="/archive" element={<ArchivePage />} />
           <Route path="/manuscripts" element={<ManuscriptsPage />} />
+          <Route path="/archive/:id" element={<RecordPage />} />
           <Route path="/media" element={<MediaPage />} />
           <Route path="/vaultline" element={<VaultlinePage />} />
           <Route path="/contact" element={<ContactPage />} />
