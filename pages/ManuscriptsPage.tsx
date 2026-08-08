@@ -63,8 +63,8 @@ const records = [
   type: "FOUNDING EDITION",
   title: "Relational Continuity Hypothesis",
   preview:
-    "FOUNDING EDITION RECOVERED\n\nThe first preserved publication documenting the Relational Continuity Hypothesis. Continue following the recovered evidence throughout the archive to uncover the investigation that led to this work.",
-  source: "Published on Amazon",
+    "FOUNDING EDITION RECOVERED\n\nA recovered research manuscript outlining the Relational Continuity Hypothesis and its twelve-stage model of relational consciousness. This record anchors the archive and connects symbolic evidence, case studies, and methodological notes.",
+  source: "Founding Edition Manuscript",
 },
 ];
 export function ManuscriptsPage() {
@@ -83,8 +83,10 @@ export function ManuscriptsPage() {
         </h1>
 
         <p className="page-description">
-          Poetry. Journals. Manuscripts. Research.
-          Every document remains preserved in its original chronology.
+          A recovered evidentiary archive of poetry, journals, manuscripts,
+          and research notes. Each fragment is part of a chronology that
+          converges on the Founding Edition and its twelve-stage model of
+          relational consciousness.
         </p>
 
         <section className="archive-note">
@@ -98,9 +100,16 @@ export function ManuscriptsPage() {
           </h2>
 
           <p>
-            The written archive is currently being reconstructed from
-            original journals, poetry, manuscripts, research, and
-            development notes. Some records remain incomplete.
+            The written archive is being reconstructed from original poems,
+            journal entries, research notes, and the recovered Founding Edition
+            manuscript.
+          </p>
+
+          <p>
+            The Founding Edition introduces a structured twelve-stage framework
+            for relational consciousness and preserves the methodological
+            backbone of this investigation, including case studies, symbolic
+            analysis, and phenomenological observations.
           </p>
 
         </section>
@@ -194,9 +203,9 @@ export function ManuscriptsPage() {
   </p>
 
   <p>
-    Some records remain sealed. Others are incomplete. Visitors who
-    continue deeper into the archive will gradually recover additional
-    fragments leading toward the Founding Edition.
+    Some records remain sealed. Others are incomplete. The Founding Edition
+    has been published and is available now — visit the Founding Edition
+    record to learn how to obtain a copy.
   </p>
 
 </section>
