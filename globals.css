@@ -267,6 +267,37 @@ button { font: inherit; }
 .eyebrow.small { font-size: 0.66rem; margin-bottom: 0.7rem; }
 h1, h2, h3 { font-family: 'Cormorant Garamond', Georgia, serif; margin: 0 0 1rem; font-weight: 500; }
 h1 { font-size: clamp(2.3rem, 4.8vw, 4.1rem); line-height: 0.95; }
+
+/* Stronger, responsive hero title sizing specifically for the homepage hero. */
+.home-hero .hero-content h1 {
+  /* Make the title a dominant focal point at wide viewports while remaining
+     restrained at smaller sizes. Uses clamp for smooth scaling. */
+  font-size: clamp(3.6rem, 9.0vw, 9.2rem);
+  line-height: 0.92;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.25rem;
+  /* subtle text shadow to keep readability against the artwork */
+  text-shadow: 0 10px 30px rgba(0,0,0,0.55);
+}
+
+/* Increase vertical space and center the hero content on large screens so the
+   title reads as an intentional centerpiece rather than hugging the bottom. */
+@media (min-width: 1000px) {
+  .home-hero .hero-content {
+    justify-content: center;
+    padding: 4.5rem 3rem;
+  }
+}
+
+/* Tighter mobile rules so the title remains dominant but doesn't overflow. */
+@media (max-width: 900px) {
+  .home-hero .hero-content h1 {
+    font-size: clamp(2.6rem, 8.5vw, 5.2rem);
+    line-height: 1;
+    text-shadow: 0 6px 18px rgba(0,0,0,0.6);
+  }
+  .home-hero .hero-content { padding: 2rem; }
+}
 h2 { font-size: clamp(1.4rem, 2.4vw, 1.9rem); }
 .page-intro p,
 .detail-card p,
