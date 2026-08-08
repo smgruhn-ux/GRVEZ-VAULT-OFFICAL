@@ -1,8 +1,630 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 export function RecordPage() {
   const { id } = useParams();
+
+  // ==========================================================
+  // RECORD 001 — FOREVERMORE
+  // ==========================================================
+
+  if (id === "001") {
+    return (
+      <section className="page-section">
+        <div className="page-content">
+
+          <p className="eyebrow">
+            RECOVERED POEM // 001
+          </p>
+
+          <h1>Forevermore</h1>
+
+          <p
+            style={{
+              color: "#999",
+              letterSpacing: ".15em",
+              textTransform: "uppercase",
+              fontSize: ".8rem",
+              marginTop: "-.5rem",
+              marginBottom: "2rem",
+            }}
+          >
+            EARLY POETRY ARCHIVE
+          </p>
+
+          <section className="archive-note">
+
+            <p className="eyebrow">
+              ARCHIVE METADATA
+            </p>
+
+            <p><strong>Archive ID:</strong> 001</p>
+            <p><strong>Document Type:</strong> Poem</p>
+            <p><strong>Date Written:</strong> September 5, 2024</p>
+            <p><strong>Recovery Status:</strong> Complete</p>
+
+          </section>
+
+          <section className="archive-note">
+
+            <p className="eyebrow">
+              RECOVERED TEXT
+            </p>
+
+            <blockquote
+              style={{
+                fontSize: "1.05rem",
+                lineHeight: "2",
+                whiteSpace: "pre-line",
+                color: "#ddd",
+              }}
+            >
+{`Forevermore
+Shall our souls
+Be intertwined
+
+For an eternity
+Would cease to exist
+Without you and I
+
+Therefore
+As our bones turn to dust
+We will forevermore
+Remain in peacefulness`}
+            </blockquote>
+
+          </section>
+
+          <section className="archive-note">
+
+            <p className="eyebrow">
+              ARCHIVIST'S NOTE
+            </p>
+
+            <p>
+              The earliest recovered poetic record currently preserved
+              within the archive. Themes of permanence, devotion,
+              mortality, and continuity introduced here echo throughout
+              later poems, manuscripts, and documentary material.
+            </p>
+
+          </section>
+
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              marginTop: "3rem",
+              borderTop: "1px solid rgba(255,255,255,.08)",
+              paddingTop: "2rem",
+            }}
+          >
+            <Link to="/manuscripts">
+              ← Archive
+            </Link>
+
+            <Link to="/record/002">
+              Angel of Death →
+            </Link>
+          </div>
+
+        </div>
+      </section>
+    );
+  }
+    // ==========================================================
+  // RECORD 002 — ANGEL OF DEATH
+  // ==========================================================
+
+  if (id === "002") {
+    return (
+      <section className="page-section">
+        <div className="page-content">
+
+          <p className="eyebrow">
+            RECOVERED POEM // 002
+          </p>
+
+          <h1>Angel of Death</h1>
+
+          <p
+            style={{
+              color: "#999",
+              letterSpacing: ".15em",
+              textTransform: "uppercase",
+              fontSize: ".8rem",
+              marginTop: "-.5rem",
+              marginBottom: "2rem",
+            }}
+          >
+            EARLY POETRY ARCHIVE
+          </p>
+
+          <section className="archive-note">
+
+            <p className="eyebrow">
+              ARCHIVE METADATA
+            </p>
+
+            <p><strong>Archive ID:</strong> 002</p>
+            <p><strong>Document Type:</strong> Poem</p>
+            <p><strong>Date Written:</strong> April 17, 2025</p>
+            <p><strong>Recovery Status:</strong> Complete</p>
+
+          </section>
+
+          <section className="archive-note">
+
+            <p className="eyebrow">
+              RECOVERED TEXT
+            </p>
+
+            <blockquote
+              style={{
+                fontSize: "1.05rem",
+                lineHeight: "2",
+                whiteSpace: "pre-line",
+                color: "#ddd",
+              }}
+            >
+{`What is calling me
+As I gasp for air
+Trying to breathe
+From the epitome of darkness
+That is haunting me
+
+I have been swindled
+Of my Liberty
+As I can no longer grapple
+The shadows that have summoned me
+
+Alone I fall
+To my prophesy
+As the Angel of Death
+Is what's calling me`}
+            </blockquote>
+
+          </section>
+
+          <section className="archive-note">
+
+            <p className="eyebrow">
+              ARCHIVIST'S NOTE
+            </p>
+
+            <p>
+              This record expands the archive's developing themes of
+              darkness, prophecy, mortality, and loss of liberty.
+              Several symbolic elements introduced here later reappear
+              throughout the broader archive.
+            </p>
+
+          </section>
+
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              marginTop: "3rem",
+              borderTop: "1px solid rgba(255,255,255,.08)",
+              paddingTop: "2rem",
+            }}
+          >
+            <Link to="/record/001">
+              ← Forevermore
+            </Link>
+
+            <Link to="/record/003">
+              Agony →
+            </Link>
+          </div>
+
+        </div>
+      </section>
+    );
+  }
+    // ==========================================================
+  // RECORD 003 — AGONY
+  // ==========================================================
+
+  if (id === "003") {
+    return (
+      <section className="page-section">
+        <div className="page-content">
+
+          <p className="eyebrow">
+            RECOVERED POEM // 003
+          </p>
+
+          <h1>Agony</h1>
+
+          <p
+            style={{
+              color: "#999",
+              letterSpacing: ".15em",
+              textTransform: "uppercase",
+              fontSize: ".8rem",
+              marginTop: "-.5rem",
+              marginBottom: "2rem",
+            }}
+          >
+            EARLY POETRY ARCHIVE
+          </p>
+
+          <section className="archive-note">
+
+            <p className="eyebrow">
+              ARCHIVE METADATA
+            </p>
+
+            <p><strong>Archive ID:</strong> 003</p>
+            <p><strong>Document Type:</strong> Poem</p>
+            <p><strong>Date Written:</strong> April 19, 2025</p>
+            <p><strong>Recovery Status:</strong> Complete</p>
+
+          </section>
+
+          <section className="archive-note">
+
+            <p className="eyebrow">
+              RECOVERED TEXT
+            </p>
+
+            <blockquote
+              style={{
+                fontSize: "1.05rem",
+                lineHeight: "2",
+                whiteSpace: "pre-line",
+                color: "#ddd",
+              }}
+            >
+{`Pondering me in agony
+As you load your barrel
+So pistic in supremacy
+Just to watch me
+Bleed here in peril
+
+Superior you must feel
+Forsaken me in betrayal
+Though too naive to
+Resignate a bare quiver
+As I pierce your unholy veil
+
+Inferior you are to me
+As I nock my bow & arrow
+To solemnly cease your supremacy
+For I scrutinize you
+Pleading in Agony`}
+            </blockquote>
+
+          </section>
+
+          <section className="archive-note">
+
+            <p className="eyebrow">
+              ARCHIVIST'S NOTE
+            </p>
+
+            <p>
+              This recovered record introduces imagery of conflict,
+              betrayal, resistance, and moral confrontation. The weapon
+              symbolism and emotional tension continue themes that
+              evolve throughout later works in the archive.
+            </p>
+
+          </section>
+
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              marginTop: "3rem",
+              borderTop: "1px solid rgba(255,255,255,.08)",
+              paddingTop: "2rem",
+            }}
+          >
+            <Link to="/record/002">
+              ← Angel of Death
+            </Link>
+
+            <Link to="/record/004">
+              Embers →
+            </Link>
+          </div>
+
+        </div>
+      </section>
+    );
+  }
+    // ==========================================================
+  // RECORD 004 — EMBERS
+  // ==========================================================
+
+  if (id === "004") {
+    return (
+      <section className="page-section">
+        <div className="page-content">
+
+          <p className="eyebrow">
+            RECOVERED POEM // 004
+          </p>
+
+          <h1>Embers</h1>
+
+          <p
+            style={{
+              color: "#999",
+              letterSpacing: ".15em",
+              textTransform: "uppercase",
+              fontSize: ".8rem",
+              marginTop: "-.5rem",
+              marginBottom: "2rem",
+            }}
+          >
+            EARLY POETRY ARCHIVE
+          </p>
+
+          <section className="archive-note">
+
+            <p className="eyebrow">
+              ARCHIVE METADATA
+            </p>
+
+            <p><strong>Archive ID:</strong> 004</p>
+            <p><strong>Document Type:</strong> Poem</p>
+            <p><strong>Date Written:</strong> April 23, 2025</p>
+            <p><strong>Source:</strong> Poetry Nation</p>
+            <p><strong>Recovery Status:</strong> Complete</p>
+
+          </section>
+
+          <section className="archive-note">
+
+            <p className="eyebrow">
+              RECOVERED TEXT
+            </p>
+
+            <blockquote
+              style={{
+                fontSize: "1.05rem",
+                lineHeight: "2",
+                whiteSpace: "pre-line",
+                color: "#ddd",
+              }}
+            >
+{`The fire cracks and the embers brew
+Whilst the stars sing as I cry and plead,
+For I render you, my love
+To please come back to me
+
+As I watch you go up in flames
+I'm pondering your face that's
+Burning a hole
+Into my memory
+
+This pain is just too real
+I beg the fire to lie and bring you back to me
+As my heart bleeds for you and
+Your flames smolder into ember,
+My soul aches to remember the love
+That you gave me..
+As you are my forever
+
+Once the fire dies,
+So do I.
+For I am drawn to the shadows
+That have left me ridden in despair
+As this life I cannot battle
+Without you here..
+
+I can no longer bear this pain,
+So, I must follow you
+As I surrender my life to be
+The embers in your flame.`}
+            </blockquote>
+
+          </section>
+
+          <section className="archive-note">
+
+            <p className="eyebrow">
+              ARCHIVIST'S NOTE
+            </p>
+
+            <p>
+              This record marks a significant evolution in the archive.
+              Fire, memory, loss, shadows, and enduring attachment begin
+              converging into recurring motifs that continue throughout
+              later poems, manuscripts, songs, symbols, and documentary
+              material.
+            </p>
+
+          </section>
+
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              marginTop: "3rem",
+              borderTop: "1px solid rgba(255,255,255,.08)",
+              paddingTop: "2rem",
+            }}
+          >
+            <Link to="/record/003">
+              ← Agony
+            </Link>
+
+            <Link to="/record/005">
+              Next Record →
+            </Link>
+          </div>
+
+        </div>
+      </section>
+    );
+  }
+    // ==========================================================
+  // RECORD 005 — UNDER RESTORATION
+  // ==========================================================
+
+  if (id === "005") {
+    return (
+      <section className="page-section">
+        <div className="page-content">
+
+          <p className="eyebrow">
+            RECOVERED RECORD // 005
+          </p>
+
+          <h1>Archive Fragment</h1>
+
+          <section className="archive-note">
+
+            <p className="eyebrow">
+              STATUS
+            </p>
+
+            <h2>Under Restoration</h2>
+
+            <p>
+              This archive record has been identified within the
+              chronology but has not yet been fully restored.
+            </p>
+
+          </section>
+
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              marginTop: "3rem",
+              borderTop: "1px solid rgba(255,255,255,.08)",
+              paddingTop: "2rem",
+            }}
+          >
+            <Link to="/record/004">
+              ← Embers
+            </Link>
+
+            <Link to="/record/006">
+              Next →
+            </Link>
+          </div>
+
+        </div>
+      </section>
+    );
+  }
+
+  // ==========================================================
+  // RECORD 006 — UNDER RESTORATION
+  // ==========================================================
+
+  if (id === "006") {
+    return (
+      <section className="page-section">
+        <div className="page-content">
+
+          <p className="eyebrow">
+            RECOVERED RECORD // 006
+          </p>
+
+          <h1>Archive Fragment</h1>
+
+          <section className="archive-note">
+
+            <p className="eyebrow">
+              STATUS
+            </p>
+
+            <h2>Under Restoration</h2>
+
+            <p>
+              This recovered record is currently being preserved and
+              catalogued within the archive.
+            </p>
+
+          </section>
+
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              marginTop: "3rem",
+              borderTop: "1px solid rgba(255,255,255,.08)",
+              paddingTop: "2rem",
+            }}
+          >
+            <Link to="/record/005">
+              ← Previous
+            </Link>
+
+            <Link to="/record/007">
+              Next →
+            </Link>
+          </div>
+
+        </div>
+      </section>
+    );
+  }
+
+  // ==========================================================
+  // RECORD 007 — UNDER RESTORATION
+  // ==========================================================
+
+  if (id === "007") {
+    return (
+      <section className="page-section">
+        <div className="page-content">
+
+          <p className="eyebrow">
+            RECOVERED RECORD // 007
+          </p>
+
+          <h1>Archive Fragment</h1>
+
+          <section className="archive-note">
+
+            <p className="eyebrow">
+              STATUS
+            </p>
+
+            <h2>Under Restoration</h2>
+
+            <p>
+              Restoration of this record is still in progress. Additional
+              documents and supporting material will be added as the
+              archive expands.
+            </p>
+
+          </section>
+
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              marginTop: "3rem",
+              borderTop: "1px solid rgba(255,255,255,.08)",
+              paddingTop: "2rem",
+            }}
+          >
+            <Link to="/record/006">
+              ← Previous
+            </Link>
+
+            <Link to="/record/008">
+              Founding Edition →
+            </Link>
+          </div>
+
+        </div>
+      </section>
+    );
+  }
+    // ==========================================================
+  // RECORD 008 — FOUNDING EDITION
+  // ==========================================================
 
   if (id === "008") {
     return (
@@ -10,7 +632,7 @@ export function RecordPage() {
         <div className="page-content">
 
           <p className="eyebrow">
-            RECOVERED FRAGMENT // 001
+            RECOVERED FRAGMENT // 008
           </p>
 
           <h1>
@@ -30,31 +652,54 @@ export function RecordPage() {
             FOUNDING EDITION
           </p>
 
-          <p>
-            The preserved first published edition documenting the
-            Relational Continuity Hypothesis. This record serves as the
-            current endpoint of the recovered archive chronology.
-          </p>
-
           <section className="archive-note">
-            <p className="eyebrow">STATUS</p>
 
-            <h2>Publication Pending</h2>
+              <p className="eyebrow">
+                STATUS
+              </p>
 
-            <p>
-              The Founding Edition is currently under review for publication
-              on Amazon KDP.
-            </p>
+              <h2>
+                AVAILABLE NOW
+              </h2>
+
+              <p>
+                The Founding Edition is now published and available. It documents
+                the Relational Continuity Hypothesis and its twelve-stage model of
+                relational consciousness — the core research that anchors this
+                archive.
+              </p>
+
+              <p>
+                The published edition is available for purchase. You can buy a
+                copy directly:
+                <a
+                  className="metal-button"
+                  style={{ marginLeft: "0.6rem" }}
+                  href="https://www.amazon.com/Relational-Continuity-Hypothesis-Twelve-Stage-Consciousness-ebook/dp/B0HD63Z6TN/ref=sr_1_1?crid=2LHS046FOCMMT&dib=eyJ2IjoiMSJ9.fhE49U_qaLuqNYxQCybnGA.wollX1w2o9m8u0EGIw4ZAT4rSy89fRvIIorAtwZmwU8&dib_tag=se&keywords=relational-Continuity-Hypothesis-Twelve-Stage-Consciousness&qid=1786163705&sprefix=relational-continuity-hypothesis-twelve-stage-consciousness%2Caps%2C339&sr=8-1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  BUY THE BOOK
+                </a>
+              </p>
+
           </section>
 
           <section className="archive-note">
-            <p className="eyebrow">PREVIEW</p>
 
-            <h2>Coming Soon</h2>
+            <p className="eyebrow">
+              PREVIEW
+            </p>
+
+            <h2>
+              Archive Preview
+            </h2>
 
             <p>
-              While publication is pending, a preview of the Founding Edition
-              is available below.
+              This archival preview highlights the manuscript's role as the
+              source document for the evidence and chronology preserved here.
+              The published edition of the Founding Edition is available now —
+              see the purchase link above for how to obtain a copy.
             </p>
 
             <a
@@ -66,7 +711,7 @@ export function RecordPage() {
                 src="/founding-edition.jpeg"
                 alt="Relational Continuity Hypothesis Founding Edition"
                 style={{
-                  width: "320px",
+                  width: "340px",
                   maxWidth: "100%",
                   display: "block",
                   margin: "2rem auto",
@@ -75,54 +720,83 @@ export function RecordPage() {
                 }}
               />
             </a>
-
-            <div
-              style={{
-                marginTop: "2rem",
-                padding: "1.5rem",
-                border: "1px solid rgba(255,255,255,.08)",
-                borderRadius: "12px",
-                background: "rgba(255,255,255,.02)",
-              }}
-            >
-              <p className="eyebrow">
-                ARCHIVE EXCERPT
-              </p>
-
-              <blockquote
-                style={{
-                  fontSize: "1.1rem",
-                  lineHeight: "1.8",
-                  fontStyle: "italic",
-                  margin: "1rem 0",
-                  color: "#ddd",
-                }}
-              >
-                “The pages that follow are not presented as conclusions.
-                <br /><br />
-                They are presented as evidence.
-                <br /><br />
-                Each recovered record preserves one fragment of a chronology
-                that ultimately led to the Founding Edition.”
-              </blockquote>
-
-              <p
-                style={{
-                  opacity: 0.75,
-                  fontSize: ".9rem",
-                }}
-              >
-                This is a preview excerpt from the Founding Edition.
-                The complete manuscript will become available after publication.
-              </p>
-            </div>
+              <div style={{ textAlign: "center", marginTop: "1rem" }}>
+                <a
+                  className="metal-button"
+                  href="https://www.amazon.com/Relational-Continuity-Hypothesis-Twelve-Stage-Consciousness-ebook/dp/B0HD63Z6TN/ref=sr_1_1?crid=2LHS046FOCMMT&dib=eyJ2IjoiMSJ9.fhE49U_qaLuqNYxQCybnGA.wollX1w2o9m8u0EGIw4ZAT4rSy89fRvIIorAtwZmwU8&dib_tag=se&keywords=relational-Continuity-Hypothesis-Twelve-Stage-Consciousness&qid=1786163705&sprefix=relational-continuity-hypothesis-twelve-stage-consciousness%2Caps%2C339&sr=8-1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  BUY THE BOOK
+                </a>
+              </div>
 
           </section>
+
+          <section className="archive-note">
+
+            <p className="eyebrow">
+              MANUSCRIPT STRUCTURE
+            </p>
+
+            <p>
+              The recovered manuscript is organized as a research investigation.
+              It traces the hypothesis from abstract and literature review through
+              operational definitions, twelve relational stages, historical case
+              studies, phenomenological analysis, methodology, and ethical
+              limitations.
+            </p>
+
+            <p>
+              Its structure anchors the archive by linking symbolic evidence,
+              continuity research, and the larger narrative of relational
+              development that appears throughout the recovered documents.
+            </p>
+
+          </section>
+
+          <section className="archive-note">
+
+            <p className="eyebrow">
+              ARCHIVIST'S NOTE
+            </p>
+
+            <p>
+              The Founding Edition represents the current endpoint of
+              the recovered archive chronology. Earlier records preserve
+              the creative works that preceded its publication and form
+              part of the broader documentary timeline presented
+              throughout this archive.
+            </p>
+
+          </section>
+
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              marginTop: "3rem",
+              borderTop: "1px solid rgba(255,255,255,.08)",
+              paddingTop: "2rem",
+            }}
+          >
+            <Link to="/record/007">
+              ← Previous
+            </Link>
+
+            <Link to="/manuscripts">
+              Return to Archive →
+            </Link>
+          </div>
 
         </div>
       </section>
     );
   }
+
+  // ==========================================================
+  // DEFAULT PAGE
+  // ==========================================================
 
   return (
     <section className="page-section">
@@ -139,6 +813,16 @@ export function RecordPage() {
         <p>
           This archive record is currently undergoing restoration.
         </p>
+
+        <div
+          style={{
+            marginTop: "2rem",
+          }}
+        >
+          <Link to="/manuscripts">
+            ← Return to Archive
+          </Link>
+        </div>
 
       </div>
     </section>
