@@ -49,8 +49,9 @@ export function ArchivePage() {
     >
       <div className="page-hero">
         <HeroArtwork
-          image="/manuscripts-hero.jpg"
+          image="/manuscripts-hero.png"
           alt="GRVEZ VAULT Archive"
+          clean
         />
       </div>
 

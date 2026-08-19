@@ -7,13 +7,13 @@ export function MusicPage() {
   return (
     <section className="page-section music-page" aria-labelledby="music-heading">
       <div className="page-hero">
-        <HeroArtwork image="/music-hero.png" alt="GRVEZ VAULT music artwork" loading="lazy" />
+        <HeroArtwork image="/music-hero.png" alt="GRVEZ VAULT music artwork" loading="lazy" clean />
       </div>
       <div className="page-content">
         <div className="page-intro">
-          <p className="eyebrow">Listen</p>
-          <h1 id="music-heading">Featured releases</h1>
-          <p>A restrained collection of dark, intimate releases framed with the same premium editorial language as the rest of the vault.</p>
+          <p className="eyebrow">Recorded Evidence</p>
+          <h1 id="music-heading">Audio Case Files</h1>
+          <p>Recorded audio evidence catalogued across the archive.</p>
         </div>
         <div className="release-list">
           {releases.map((release) => (
@@ -22,16 +22,16 @@ export function MusicPage() {
                 <img src={release.image} alt={`${release.title} artwork`} loading="lazy" decoding="async" />
               </div>
               <div className="release-body">
-                <p className="eyebrow small">Featured release</p>
+                <p className="eyebrow small">Evidence entry</p>
                 <h2>{release.title}</h2>
                 <p className="release-artist">{release.artist}</p>
                 <p>{release.description}</p>
                 <div className="inline-actions">
-                  <a className="metal-button" href={release.listenUrl} target="_blank" rel="noreferrer">Listen</a>
+                  <a className="metal-button" href={release.listenUrl} target="_blank" rel="noreferrer">Play file</a>
                   {release.lyricsUrl ? (
                     <a className="metal-button secondary" href={release.lyricsUrl} target="_blank" rel="noreferrer">Lyrics</a>
                   ) : (
-                    <span className="metal-button secondary disabled">Lyrics — Coming Soon</span>
+                    <span className="metal-button secondary disabled">Transcript — Coming Soon</span>
                   )}
                   {release.creditsUrl ? (
                     <a className="metal-button tertiary" href={release.creditsUrl} target="_blank" rel="noreferrer">Credits</a>
@@ -56,9 +56,9 @@ export function MusicPage() {
             />
           </div>
           <div className="music-panel-copy">
-            <p className="eyebrow">Streaming</p>
-            <h2>GRVEZ VAULT across the listening landscape</h2>
-            <p>From streaming platforms to the wider editorial world, this section is prepared for the full GRVEZ VAULT music experience.</p>
+            <p className="eyebrow">Evidence access</p>
+            <h2>GRVEZ VAULT audio evidence and field recordings</h2>
+            <p>From recovered files to external listening points, this section surfaces audio evidence from the archive.</p>
           </div>
           <div className="streaming-grid">
             {artistLinks.map((link) => (

@@ -360,6 +360,12 @@ h2 { font-size: clamp(1.4rem, 2.4vw, 1.9rem); }
   display: block;
   object-fit: contain;
 }
+.hero-frame-clean .hero-image,
+.home-hero .hero-frame-clean .hero-image {
+  height: auto;
+  object-fit: contain;
+  filter: none;
+}
 .page-content {
   width: min(1200px, 92%);
   margin: 0 auto;

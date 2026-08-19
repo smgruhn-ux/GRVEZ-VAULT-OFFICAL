@@ -6,43 +6,10 @@ export function HomePage() {
     <>
       <section className="hero-section home-hero">
         <HeroArtwork
-          image="/home-hero-v2.png"
+          image="/home-hero.png"
           alt="GRVEZ VAULT"
+          clean
         />
-
-        <div className="hero-overlay">
-
-          <div className="hero-content">
-
-            <p className="vault-label">
-              WELCOME TO THE ARCHIVE
-            </p>
-
-            <h1>
-              GRVEZ VAULT
-            </h1>
-
-            <p className="hero-tagline">
-              Every archive keeps records.
-              <br />
-              This one keeps a story.
-            </p>
-
-            <div className="hero-buttons">
-
-              <a href="/music" className="vault-button">
-                ENTER THE ARCHIVE
-              </a>
-
-              <a href="/about" className="vault-button secondary">
-                BEGIN THE STORY
-              </a>
-
-            </div>
-
-          </div>
-
-        </div>
 
       </section>
 
