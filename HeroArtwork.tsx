@@ -75,7 +75,7 @@ export function HeroArtwork({ image, alt, hotspots = [], loading = 'lazy', clean
       <img
         src={image}
         alt={alt}
-        className="hero-image"
+        className={`hero-image${clean ? ' hero-image-clean' : ''}`}
         loading={loading}
         decoding="async"
         sizes="(max-width: 768px) 100vw, 1200px"
