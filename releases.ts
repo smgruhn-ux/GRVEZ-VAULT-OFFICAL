@@ -2,7 +2,7 @@ export const releases = [
   {
     title: 'VOODOO BANE',
     artist: 'GRVEZ VAULT',
-    description: 'A dark and elegant release that anchors the GRVEZ VAULT soundscape.',
+    description: 'A dark collaborative release from Gizzy Graves x DMONIX, housed inside the GRVEZ VAULT archive.',
     image: '/voodoo-bane.jpg',
     listenUrl: 'https://open.spotify.com/album/4hsTeEGzRphu35zOeFoV5l',
     lyricsUrl: '',
