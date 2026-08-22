@@ -12,6 +12,7 @@ import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
 import { TermsOfUsePage } from './pages/TermsOfUsePage';
 import { FaqPage } from './pages/FaqPage';
 import { RecordPage } from './pages/RecordPage';
+import { DmonixPage } from './pages/DmonixPage';
 
 export function App() {
   return (
@@ -30,6 +31,7 @@ export function App() {
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
           <Route path="/terms-of-use" element={<TermsOfUsePage />} />
           <Route path="/faq" element={<FaqPage />} />
+          <Route path="/dmonix" element={<DmonixPage />} />
         </Routes>
       </Layout>
     </BrowserRouter>
