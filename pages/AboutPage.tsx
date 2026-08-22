@@ -188,18 +188,30 @@ export function AboutPage() {
 
             <article className="value-card">
 
-              <h3>Gizzy Graves</h3>
+              <h3>Sheldyn Gruhn</h3>
 
               <p>
-                Founder of GRVEZ VAULT, songwriter, creative director,
-                visual designer, and the architect behind every song,
-                manuscript, collection, and evolving chapter within the
-                archive.
+                Songwriter, creative director, visual designer, and
+                the real-world person behind GRVEZ VAULT. Creator of
+                every song, manuscript, collection, and evolving
+                chapter within the archive.
               </p>
 
             </article>
 
             <article className="value-card">
+
+              <h3>Gizzy Graves</h3>
+
+              <p>
+                The curated artist identity through which Sheldyn Gruhn's
+                creative work is presented. The public-facing voice and
+                artistic persona guiding the narrative and atmosphere
+                of GRVEZ VAULT.
+              </p>
+
+            </article>
+                        <article className="value-card">
 
               <h3>DMONIX</h3>
 
@@ -211,7 +223,8 @@ export function AboutPage() {
               </p>
 
             </article>
-                        <article className="value-card">
+
+            <article className="value-card">
 
               <h3>The Archive</h3>
 
@@ -220,19 +233,6 @@ export function AboutPage() {
                 photography, apparel, and future projects all live
                 together as one connected creative body of work instead
                 of existing as isolated releases.
-              </p>
-
-            </article>
-
-            <article className="value-card">
-
-              <h3>The Future</h3>
-
-              <p>
-                GRVEZ VAULT continues to expand through new music,
-                films, manuscripts, visual projects, and the ongoing
-                preservation of every chapter still waiting to be
-                written.
               </p>
 
             </article>
