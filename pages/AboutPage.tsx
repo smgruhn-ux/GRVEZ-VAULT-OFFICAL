@@ -1,284 +1,159 @@
 import React from "react";
 import { HeroArtwork } from "../HeroArtwork";
+import { Link } from "react-router-dom";
 
 export function AboutPage() {
   return (
     <>
+      {/* MAIN HERO & INTRO SECTION */}
       <section className="page-section about-page" aria-labelledby="about-heading">
         <div className="page-hero">
           <HeroArtwork
             image="/about-hero.jpg"
-            alt="Welcome to GRVEZ VAULT"
+            alt="About GRVEZ VAULT"
             loading="lazy"
           />
         </div>
 
         <div className="page-content">
-
           <div className="page-intro">
-
-            <p className="eyebrow">
-              WELCOME TO THE ARCHIVE
-            </p>
-
+            <p className="eyebrow">ABOUT</p>
+            
             <h1 id="about-heading">
-              Every Archive Begins With A Story.
+              GRVEZ VAULT
             </h1>
 
             <p>
-              Before there was a manuscript...
-              there were songs.
+              GRVEZ VAULT is an independent creative archive founded by 
+              songwriter and creative director Sheldyn Gruhn. It brings together 
+              music, writing, film, visual work, design, and the evolving body 
+              of work surrounding Gizzy Graves, DMONIX, Vaultline, and related 
+              projects.
             </p>
-
-            <p>
-              Before there was a documentary...
-              there were photographs.
-            </p>
-
-            <p>
-              Before there was a creative philosophy...
-              there were poems.
-            </p>
-
-            <p>
-              Before there was a world...
-              there were fragments.
-            </p>
-
-            <p>
-              GRVEZ VAULT wasn't built to become a traditional artist
-              website. It became the permanent home for years of music,
-              writing, artwork, symbolism, apparel, filmmaking,
-              documentary work, and ideas that continued to grow into
-              something much larger than any single project.
-            </p>
-
-            <p>
-              Nothing inside this archive was created to support a
-              conclusion after the fact. Every lyric, every design,
-              every symbol, every photograph, every manuscript, and
-              every release remains preserved in the order it was
-              created, allowing the story to exist exactly as it
-              unfolded.
-            </p>
-
           </div>
 
           <div className="content-grid">
-
             <article className="detail-card">
-
-              <h2>
-                The Archive Came First
-              </h2>
-
+              <h2>Sheldyn Gruhn</h2>
               <p>
-                Long before there was a website, there was a growing
-                collection of songs, poetry, concepts, artwork, and
-                symbols. Over time, those independent creations began
-                revealing unexpected connections, eventually inspiring
-                deeper exploration into creativity, continuity, and the
-                stories that can emerge across years of work.
+                Songwriter, creative director, and founder of GRVEZ VAULT. Sheldyn Gruhn 
+                develops the songwriting, visual direction, written work, design, 
+                filmmaking, and broader creative direction behind the archive.
               </p>
-
             </article>
 
             <article className="detail-card">
-
-              <h2>
-                Explore | Don't Just Read
-              </h2>
-
+              <h2>Gizzy Graves</h2>
               <p>
-                GRVEZ VAULT isn't meant to be consumed in five minutes.
-                Every page connects to another. Music leads to
-                manuscripts. Manuscripts lead to artwork. Artwork leads
-                to symbols. Every discovery opens another door inside
-                the archive.
+                Artist identity curated by Sheldyn Gruhn, centered on the music, 
+                visual language, and creative work developed under the Gizzy Graves name.
               </p>
-
             </article>
-
           </div>
-
         </div>
-
-      </section>
-            <section className="about-story">
-
-        <div className="page-content">
-
-          <p className="eyebrow">
-            BEFORE THERE WAS A THEORY
-          </p>
-
-          <h2>
-            The Story Was Already Being Written.
-          </h2>
-
-          <p className="story-copy">
-            Every archive begins with creation... not explanation.
-            Songs were written without knowing what future projects
-            they would influence. Symbols appeared long before their
-            significance was fully understood. Ideas resurfaced across
-            music, artwork, writing, and visual design over the course
-            of years, each becoming another preserved chapter inside
-            the Vault.
-          </p>
-
-          <p className="story-copy">
-            Rather than rewriting history to fit a narrative, GRVEZ
-            VAULT preserves the chronology exactly as it happened.
-            Visitors are invited to explore the work in the same order
-            it unfolded, connecting the pieces for themselves.
-          </p>
-
-          <blockquote className="vault-quote">
-            "The archive wasn't created to prove a story.
-            <br />
-            The story revealed itself through the archive."
-          </blockquote>
-
-        </div>
-
       </section>
 
+      {/* DMONIX SECTION */}
       <section className="about-story">
-
         <div className="page-content">
-
-          <p className="eyebrow">
-            THE DISCOVERY
-          </p>
-
-          <h2>
-            Questions Came After The Work.
-          </h2>
-
+          <p className="eyebrow">WITHIN THE VAULT</p>
+          
+          <h2>DMONIX</h2>
+          
           <p className="story-copy">
-            As the archive expanded, recurring themes, symbols,
-            creative decisions, and personal experiences encouraged a
-            deeper investigation into continuity, creativity, and human
-            connection. Those observations eventually grew into an
-            ongoing manuscript, not as the beginning of the story, but
-            as one chapter within it.
+            A distinct creative identity within GRVEZ VAULT, developed alongside 
+            Gizzy Graves as part of the broader creative world surrounding the archive.
           </p>
-
-          <p className="story-copy">
-            The manuscript exists because the creative work already
-            existed. It documents questions inspired by years of
-            creation while preserving the distinction between artistic
-            expression, documented chronology, and personal
-            interpretation.
-          </p>
-
         </div>
-
       </section>
 
+      {/* WHAT LIVES IN THE VAULT */}
       <section className="core-values">
-
         <div className="page-content">
-
-          <p className="eyebrow">
-            THE ARCHITECTS
-          </p>
+          <p className="eyebrow">THE WORK</p>
 
           <div className="values-grid">
-
             <article className="value-card">
-
-              <h3>Sheldyn Gruhn</h3>
-
+              <h3>Music</h3>
               <p>
-                Songwriter, creative director, visual designer, and
-                the real-world person behind GRVEZ VAULT. Creator of
-                every song, manuscript, collection, and evolving
-                chapter within the archive.
+                Original songs, recorded releases, demos, and audio work catalogued 
+                across the archive.
               </p>
-
             </article>
 
             <article className="value-card">
-
-              <h3>Gizzy Graves</h3>
-
+              <h3>Manuscripts & Writing</h3>
               <p>
-                The curated artist identity through which Sheldyn Gruhn's
-                creative work is presented. The public-facing voice and
-                artistic persona guiding the narrative and atmosphere
-                of GRVEZ VAULT.
+                Written work, poetry, essays, and ongoing manuscript projects 
+                that document ideas and observations over time.
               </p>
-
-            </article>
-                        <article className="value-card">
-
-              <h3>DMONIX</h3>
-
-              <p>
-                A central figure within the GRVEZ VAULT universe whose
-                presence is expressed through atmosphere, symbolism,
-                visual storytelling, and the mythology surrounding the
-                archive.
-              </p>
-
             </article>
 
             <article className="value-card">
-
-              <h3>The Archive</h3>
-
+              <h3>Film & Documentary</h3>
               <p>
-                Music, manuscripts, visual art, documentaries,
-                photography, apparel, and future projects all live
-                together as one connected creative body of work instead
-                of existing as isolated releases.
+                Documentary films, short-form visual work, and recorded material 
+                developed and preserved through GRVEZ VAULT.
               </p>
-
             </article>
 
+            <article className="value-card">
+              <h3>Visual Art & Design</h3>
+              <p>
+                Photography, visual artwork, design direction, symbolism, and 
+                the overall aesthetic language of the archive.
+              </p>
+            </article>
+
+            <article className="value-card">
+              <h3>Vaultline</h3>
+              <p>
+                Apparel and design created through Vaultline by Gizzy Graves, 
+                the merchandise arm connected to GRVEZ VAULT.
+              </p>
+            </article>
           </div>
-
         </div>
-
       </section>
 
+      {/* THE ARCHIVE */}
       <section className="about-story">
-
         <div className="page-content">
-
-          <p className="eyebrow">
-            EXPLORE THE ARCHIVE
-          </p>
-
-          <h2>
-            Every Door Leads Somewhere.
-          </h2>
-
+          <p className="eyebrow">THE ARCHIVE</p>
+          
+          <h2>Chronology Preserved</h2>
+          
           <p className="story-copy">
-            Whether you arrived here through a song, a business card,
-            a manuscript, a film, or simple curiosity, you're no longer
-            looking at separate projects.
+            GRVEZ VAULT preserves the development of the work over time, keeping 
+            music, writing, visuals, film, and design connected to the periods 
+            and projects they came from.
           </p>
-
-          <p className="story-copy">
-            You're exploring one evolving archive where music,
-            storytelling, symbolism, research, visual art, and design
-            continue to influence one another over time.
-          </p>
-
-          <blockquote className="vault-quote">
-            Every page has a history.
-            <br />
-            Every symbol leaves a trace.
-            <br />
-            Every chapter opens another door.
-          </blockquote>
-
         </div>
-
       </section>
 
+      {/* NAVIGATION / CTA */}
+      <section className="about-story">
+        <div className="page-content">
+          <p className="eyebrow">NAVIGATE</p>
+          
+          <h2>DIRECTORY</h2>
+          
+          <div className="archive-stack">
+            <Link to="/music" className="metal-button">
+              Listen
+            </Link>
+            <Link to="/archive" className="metal-button">
+              Archive
+            </Link>
+            <Link to="/vaultline" className="metal-button">
+              Vaultline
+            </Link>
+            <Link to="/contact" className="metal-button">
+              Contact
+            </Link>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
