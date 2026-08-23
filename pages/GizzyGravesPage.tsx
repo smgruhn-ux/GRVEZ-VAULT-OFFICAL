@@ -1,33 +1,59 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { HeroArtwork } from "../HeroArtwork";
 
 export function GizzyGravesPage() {
+  useEffect(() => {
+    const previousTitle = document.title;
+    const description = document.querySelector('meta[name="description"]');
+    const previousDescription = description?.getAttribute("content");
+
+    document.title = "Gizzy Graves | GRVEZ VAULT";
+    description?.setAttribute(
+      "content",
+      "Gizzy Graves, an artist identity curated by Sheldyn Gruhn, inside the GRVEZ VAULT creative archive."
+    );
+
+    return () => {
+      document.title = previousTitle;
+      if (description && previousDescription) description.setAttribute("content", previousDescription);
+    };
+  }, []);
+
   return (
-    <section className="page-section" aria-labelledby="gizzy-graves-heading">
+    <section className="page-section profile-page gizzy-profile" aria-labelledby="gizzy-graves-heading">
       <div className="page-hero">
         <HeroArtwork
-          image="/gizzy-graves-hero.jpg"
+          image="/gizzy-graves-hero.png"
           alt="Gizzy Graves"
-          loading="lazy"
+          loading="eager"
         />
+        <div className="profile-hero-title">
+          <p className="eyebrow">ARTIST IDENTITY</p>
+          <h1 id="gizzy-graves-heading">GIZZY GRAVES</h1>
+        </div>
       </div>
 
       <div className="page-content">
-        <div className="page-intro">
-          <p className="eyebrow">ARTIST IDENTITY</p>
-          <h1 id="gizzy-graves-heading">GIZZY GRAVES</h1>
-          <p>
-            Gizzy Graves is an artist identity curated by songwriter and creative director Sheldyn Gruhn.
-          </p>
-          <div className="inline-actions">
-            <Link className="metal-button" to="/about">
-              Back to About
-            </Link>
-            <Link className="metal-button secondary" to="/music">
-              Music
-            </Link>
+        <section className="profile-editorial" aria-labelledby="gizzy-profile-heading">
+          <figure className="profile-portrait">
+            <img src="/gizzy-graves-portrait.jpeg" alt="Portrait of Gizzy Graves" loading="lazy" />
+          </figure>
+          <div className="profile-copy">
+            <p className="eyebrow">THE ARTIST</p>
+            <h2 id="gizzy-profile-heading">Gizzy Graves</h2>
+            <p>
+              An artist identity curated by songwriter and creative director Sheldyn Gruhn. Through Gizzy Graves, Gruhn creates original music rooted in dark alternative rock, industrial metal, hard rock, and nu-metal, while directing the visual identity and creative world surrounding the work.
+            </p>
           </div>
+        </section>
+        <div className="inline-actions profile-actions">
+          <Link className="metal-button" to="/about">
+            Back to About
+          </Link>
+          <Link className="metal-button secondary" to="/music">
+            Music
+          </Link>
         </div>
       </div>
     </section>

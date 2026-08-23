@@ -38,7 +38,7 @@ const records = [
     type: "ARCHIVIST'S OBSERVATION",
     title: "Recurring Symbolism",
     preview:
-      "Recurring imagery appears across artwork, journals, and later visual identity.",
+      "Recurring imagery appears across artwork, journals, and later visual identity, aligning with the evidence used to support the recovered manuscript.",
     source: "Cross Reference",
   },
 ];
@@ -59,8 +59,27 @@ export function MediaPage() {
 
         <p className="page-description">
           Artwork. Photography. Concepts. Symbols.
-          Visual evidence preserved throughout the archive.
+          Visual evidence preserved throughout the archive’s investigation.
+          These images and designs are part of the same documentary trail
+          that supports the recovered manuscript and its twelve-stage
+          relational model.
         </p>
+
+        <section className="archive-note">
+
+          <p className="eyebrow">
+            VISUAL EVIDENCE
+          </p>
+
+          <p>
+            The visual archive documents recurring motifs, early concept
+            language, and symbolic patterns found across music, writing,
+            manuscripts, and recovered artifacts. It serves as supporting
+            evidence for the investigative narrative rather than a separate
+            gallery.
+          </p>
+
+        </section>
 
         <div className="fragment-grid">
 

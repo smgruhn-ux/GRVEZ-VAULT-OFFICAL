@@ -348,6 +348,45 @@ h2 { font-size: clamp(1.4rem, 2.4vw, 1.9rem); }
   border-radius: 28px;
   box-shadow: var(--shadow);
 }
+.profile-page .page-hero { position: relative; }
+.profile-page .hero-image { height: min(78vh, 900px); }
+.gizzy-profile .hero-image { object-position: center 30%; }
+.dmonix-profile .hero-image { object-position: center 38%; filter: saturate(0.82) contrast(1.1) brightness(0.88); }
+.profile-hero-title {
+  position: absolute;
+  z-index: 5;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: clamp(2rem, 7vw, 5.5rem) clamp(1.4rem, 6vw, 5rem) clamp(2rem, 5vw, 4rem);
+  background: linear-gradient(180deg, transparent, rgba(6, 6, 8, 0.82));
+  pointer-events: none;
+}
+.profile-hero-title .eyebrow { margin-bottom: 0.55rem; }
+.profile-hero-title h1 { margin: 0; text-shadow: 0 8px 24px rgba(0, 0, 0, 0.55); }
+.profile-editorial {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.78fr) minmax(0, 1.22fr);
+  gap: clamp(2rem, 6vw, 5.5rem);
+  align-items: center;
+  padding: 4rem 0 1rem;
+}
+.profile-portrait { margin: 0; }
+.profile-portrait img {
+  display: block;
+  width: 100%;
+  max-height: 620px;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+}
+.profile-copy { max-width: 650px; }
+.profile-copy h2 { font-size: clamp(2rem, 4vw, 3.4rem); margin-bottom: 1.2rem; }
+.profile-copy p:last-child { color: var(--muted); line-height: 1.85; }
+.profile-actions { margin: 2rem 0 1rem; }
 
 .music-page .page-hero {
   height: auto;
@@ -592,6 +631,9 @@ h2 { font-size: clamp(1.4rem, 2.4vw, 1.9rem); }
 @media (max-width: 900px) {
   .hero-content { padding: 2rem; }
   .hero-image { height: 66vh; }
+  .profile-page .hero-image { height: 68vh; }
+  .profile-editorial { grid-template-columns: 1fr; gap: 2rem; padding-top: 3rem; }
+  .profile-portrait img { max-height: 560px; }
   .release-card { grid-template-columns: 1fr; }
   .content-grid,
   .contact-grid,
@@ -629,6 +671,11 @@ h2 { font-size: clamp(1.4rem, 2.4vw, 1.9rem); }
   }
   .site-nav.mobile-open { display: flex; }
   .hero-section { min-height: auto; }
+  .profile-page .page-hero { border-radius: 20px; }
+  .profile-page .hero-image { height: 62vh; min-height: 440px; }
+  .gizzy-profile .hero-image { object-position: 48% 30%; }
+  .dmonix-profile .hero-image { object-position: 52% 38%; }
+  .profile-hero-title { padding-bottom: 2rem; }
   .hero-frame-clean .hero-image { height: auto; min-height: 0; }
   .hero-content { padding: 1.4rem; }
   .hero-fracture { width: 60px; right: 3%; }

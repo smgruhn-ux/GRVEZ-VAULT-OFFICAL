@@ -65,11 +65,10 @@ export function VaultlinePage() {
           </h1>
 
           <p>
-  Vaultline is the official apparel division of GRVEZ VAULT,
-  where cinematic storytelling is translated into wearable design.
-  Every release is built around the same fractured visual language,
-  creating pieces that exist as extensions of the archive rather
-  than traditional merchandise.
+  Vaultline collects artifacts recovered from the GRVEZ VAULT investigation.
+  These pieces are presented as wearable evidence rather than ordinary
+  products, and they carry the same fractured visual language found in the
+  archive's manuscripts, symbols, and recovered documentation.
 </p>
         </div>
 
@@ -90,7 +89,7 @@ export function VaultlinePage() {
             <div className="vaultline-feature-copy">
 
               <p className="eyebrow">
-                FEATURED RELEASE
+                ARTIFACT
               </p>
 
               <h2>
@@ -110,7 +109,7 @@ export function VaultlinePage() {
                 target="_blank"
                 rel="noreferrer"
               >
-                VIEW PRODUCT
+                INSPECT ARTIFACT
               </a>
 
             </div>
@@ -122,7 +121,7 @@ export function VaultlinePage() {
             <div className="vaultline-feature-copy">
 
               <p className="eyebrow">
-                EDITOR'S PICK
+                SIGNATURE ARTIFACT
               </p>
 
               <h2>
@@ -132,8 +131,9 @@ export function VaultlinePage() {
               <p>
                 Designed with a relaxed oversized silhouette,
                 this piece carries the signature Vaultline visual
-                identity while remaining versatile enough for
-                everyday wear.
+                identity as a recovered artifact. It is presented here
+                as part of the ongoing investigation, not as a standard
+                product release.
               </p>
 
               <a
@@ -142,7 +142,7 @@ export function VaultlinePage() {
                 target="_blank"
                 rel="noreferrer"
               >
-                VIEW PRODUCT
+                INSPECT ARTIFACT
               </a>
 
             </div>
@@ -167,12 +167,13 @@ export function VaultlinePage() {
               </p>
 
               <h2>
-                Complete the Collection
+                Complete the Artifact Set
               </h2>
 
               <p>
                 Every release is designed as part of the same visual
-                language. Explore more from the current Vaultline lineup.
+                language. Continue the artifact investigation across the
+                current Vaultline archive.
               </p>
 
             </div>
@@ -206,7 +207,7 @@ export function VaultlinePage() {
                     </h3>
 
                     <span className="metal-button">
-                      VIEW PRODUCT
+                      INSPECT ARTIFACT
                     </span>
 
                   </div>
@@ -222,7 +223,7 @@ export function VaultlinePage() {
           <section className="vaultline-store-cta">
 
             <p className="eyebrow">
-              OFFICIAL STOREFRONT
+              ARCHIVE PORTAL
             </p>
 
             <h2>
@@ -230,9 +231,11 @@ export function VaultlinePage() {
             </h2>
 
             <p>
-              View every collection, discover new arrivals,
-              and shop directly through the official
-              Vaultline storefront.
+              View every preserved artifact, document recovered
+              visual evidence, and access the official Vaultline
+              portal as part of the ongoing investigation.
+              These pieces exist as evidence from the same archive
+              that led to the Founding Edition manuscript.
             </p>
 
             <a
@@ -241,7 +244,7 @@ export function VaultlinePage() {
               rel="noreferrer"
               className="metal-button"
             >
-              ENTER THE STORE
+              OPEN ARCHIVE PORTAL
             </a>
 
           </section>

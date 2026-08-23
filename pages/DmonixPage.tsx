@@ -1,33 +1,53 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { HeroArtwork } from "../HeroArtwork";
 
 export function DmonixPage() {
+  useEffect(() => {
+    const previousTitle = document.title;
+    const description = document.querySelector('meta[name="description"]');
+    const previousDescription = description?.getAttribute("content");
+
+    document.title = "DMONIX | GRVEZ VAULT";
+    description?.setAttribute("content", "DMONIX, a distinct creative identity within the GRVEZ VAULT archive.");
+
+    return () => {
+      document.title = previousTitle;
+      if (description && previousDescription) description.setAttribute("content", previousDescription);
+    };
+  }, []);
+
   return (
-    <section className="page-section" aria-labelledby="dmonix-heading">
+    <section className="page-section profile-page dmonix-profile" aria-labelledby="dmonix-heading">
       <div className="page-hero">
         <HeroArtwork
-          image="/dmonix-hero.jpg"
+          image="/dmonix-hero.png"
           alt="DMONIX"
-          loading="lazy"
+          loading="eager"
         />
+        <div className="profile-hero-title">
+          <p className="eyebrow">CREATIVE IDENTITY</p>
+          <h1 id="dmonix-heading">DMONIX</h1>
+        </div>
       </div>
 
       <div className="page-content">
-        <div className="page-intro">
-          <p className="eyebrow">CREATIVE IDENTITY</p>
-          <h1 id="dmonix-heading">DMONIX</h1>
-          <p>
-            DMONIX is a distinct creative identity within GRVEZ VAULT, developed alongside Gizzy Graves as part of the broader creative world surrounding the archive.
-          </p>
-          <div className="inline-actions">
-            <Link className="metal-button" to="/about">
-              Back to About
-            </Link>
-            <Link className="metal-button secondary" to="/archive">
-              Archive
-            </Link>
+        <section className="profile-editorial" aria-labelledby="dmonix-profile-heading">
+          <figure className="profile-portrait">
+            <img src="/dmonix-portrait.PNG" alt="Portrait of DMONIX" loading="lazy" />
+          </figure>
+          <div className="profile-copy">
+            <p className="eyebrow">THE IDENTITY</p>
+            <h2 id="dmonix-profile-heading">DMONIX</h2>
           </div>
+        </section>
+        <div className="inline-actions profile-actions">
+          <Link className="metal-button" to="/about">
+            Back to About
+          </Link>
+          <Link className="metal-button secondary" to="/archive">
+            Archive
+          </Link>
         </div>
       </div>
     </section>
