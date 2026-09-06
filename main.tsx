@@ -10,6 +10,7 @@ import './nav-dropdown.css';
 import './breadcrumb.css';
 import './vault-v2.css';
 import './responsive.css';
+import './catalog.css';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

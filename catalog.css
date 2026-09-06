@@ -1,0 +1,75 @@
+/* ==============================================
+   CATALOG LIST — Track listing for Music page
+================================================= */
+
+.catalog-section {
+  margin-bottom: 4rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.catalog-section:last-of-type {
+  border-bottom: none;
+}
+
+.catalog-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.catalog-track {
+  display: flex;
+  align-items: baseline;
+  gap: 1.5rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  flex-wrap: wrap;
+}
+
+.catalog-track:last-child {
+  border-bottom: none;
+}
+
+.catalog-track-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: 0.02em;
+  flex: 1;
+  min-width: 200px;
+}
+
+.catalog-track-artist {
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.catalog-track-link {
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  text-decoration: none;
+  transition: opacity 200ms ease;
+}
+
+.catalog-track-link:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 480px) {
+  .catalog-track {
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0.6rem 0;
+  }
+
+  .catalog-track-title {
+    min-width: 0;
+    font-size: 0.92rem;
+  }
+}
