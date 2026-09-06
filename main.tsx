@@ -7,8 +7,8 @@ import './utilities.css';
 import './animations.css';
 import './relational-continuity.css';
 import './nav-dropdown.css';
-import './homepage-grid.css';
 import './breadcrumb.css';
+import './vault-v2.css';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

@@ -1,143 +1,191 @@
 import React from "react";
-import { HeroArtwork } from "../HeroArtwork";
+import { Link } from "react-router-dom";
 
 export function HomePage() {
   return (
     <>
-      <section className="hero-section home-hero">
-        <HeroArtwork
-          image="/home-hero.png"
-          alt="GRVEZ VAULT"
-          clean
-        />
-      </section>
-
-      <section className="vault-intro">
-        <div className="vault-intro-content">
-          <p className="vault-label">
-            EVERY RECORD HAS TWO DATES.
+      {/* ── IMMERSIVE HERO ── */}
+      <section className="home-hero-v2">
+        <div className="home-hero-v2-bg">
+          <img
+            src="/home-hero.png"
+            alt=""
+            loading="eager"
+            decoding="async"
+          />
+        </div>
+        <div className="home-hero-v2-grain" aria-hidden="true" />
+        <div className="home-hero-v2-content">
+          <p className="home-hero-v2-eyebrow">
+            Music \u00b7 Research \u00b7 Film \u00b7 Archive
           </p>
-          <h2>
-            The day it was created.
+          <h1>
+            Every Record
             <br />
-            And the day someone finally
-            <br />
-            understands why it mattered.
-          </h2>
-          <p className="vault-description">
-            Everything inside this archive was created at a different
-            moment in time.
+            Has Two Dates
+          </h1>
+          <p className="home-hero-v2-desc">
+            The day it was created. And the day someone finally
+            understands why it mattered. GRVEZ VAULT preserves
+            music, writing, film, and research exactly as they
+            were originally created.
           </p>
-          <p className="vault-description">
-            Different songs.
-            Different symbols.
-            Different manuscripts.
-            Different evidence.
-            Different chapters.
-          </p>
-          <p className="vault-description">
-            Some connections first appeared as isolated artifacts.
-            Later they were traced back to a single recovered manuscript
-            and a twelve-stage model of relational continuity.
-          </p>
-          <p className="vault-description">
-            Nothing has been rearranged.
-            Nothing has been rewritten.
-            Nothing has been removed.
-          </p>
-          <p className="vault-description">
-            Every record remains exactly where it was created.
-          </p>
-          <blockquote className="vault-quote">
-            The only question is...
-            <br /><br />
-            <strong>What will you discover first?</strong>
-          </blockquote>
+          <Link to="/archive" className="home-hero-v2-cta">
+            Enter the Vault \u2192
+          </Link>
         </div>
       </section>
 
-      {/* PRIMARY PATHWAYS: The core of GRVEZ VAULT */}
-      <section className="home-pathways">
-        <div className="home-pathways-primary">
-          <a href="/music" className="archive-panel music-panel pathway-large">
-            <div className="archive-panel-overlay">
-              <p>MUSIC</p>
-              <h2>Recorded Chapters</h2>
-              <span>LISTEN \u2192</span>
-            </div>
-          </a>
-          <a href="/archive" className="archive-panel manuscript-panel pathway-large">
-            <div className="archive-panel-overlay">
-              <p>THE ARCHIVE</p>
-              <h2>Every Record Preserved</h2>
-              <span>EXPLORE \u2192</span>
-            </div>
-          </a>
-        </div>
-      </section>
+      {/* ── 5 PATHWAYS (asymmetric, RCH featured center) ── */}
+      <section className="pathways-grid">
 
-      {/* FEATURED RESEARCH */}
-      <section className="featured-book">
-        <div className="featured-book-content page-content">
-          <div className="featured-book-cover">
-            <a href="/relational-continuity">
-              <img
-                src="/founding-edition.jpeg"
-                alt="Relational Continuity Hypothesis Founding Edition"
-                style={{ width: "340px", maxWidth: "100%", borderRadius: "12px", boxShadow: "0 20px 50px rgba(0,0,0,.45)" }}
-              />
-            </a>
+        {/* MUSIC */}
+        <Link to="/music" className="pathway-panel">
+          <div className="pathway-panel-bg">
+            <img src="/crimson-fracture.jpg" alt="" loading="lazy" />
           </div>
-          <div className="featured-book-info">
-            <p className="eyebrow">FOUNDING EDITION</p>
-            <h2>RELATIONAL CONTINUITY HYPOTHESIS</h2>
-            <p className="vault-description" style={{ fontStyle: "italic", marginTop: "0.2rem" }}>
-              A Twelve-Stage Model of Relational Consciousness
+          <div className="pathway-panel-content">
+            <h2>Music</h2>
+            <p className="pathway-tagline">
+              Sounds that<br />travel further
             </p>
-            <h3 style={{ marginTop: "0.6rem", textTransform: "uppercase", color: "#f3ece4" }}>
-              AVAILABLE NOW
-            </h3>
-            <p className="vault-description" style={{ marginTop: "0.6rem" }}>
-              A recovered research manuscript outlining the Relational Continuity Hypothesis and its twelve-stage model of relational consciousness. This record anchors the archive and connects symbolic evidence, case studies, and methodological notes.
+            <span className="pathway-action">Explore Music \u2192</span>
+          </div>
+        </Link>
+
+        {/* ARCHIVE */}
+        <Link to="/archive" className="pathway-panel">
+          <div className="pathway-panel-bg">
+            <img src="/manuscripts-hero.jpg" alt="" loading="lazy" />
+          </div>
+          <div className="pathway-panel-content">
+            <h2>Archive</h2>
+            <p className="pathway-tagline">
+              Fragments<br />that endure
             </p>
-            <div className="hero-buttons" style={{ marginTop: "1rem" }}>
-              <a
-                href="/relational-continuity"
-                className="vault-button"
-              >
-                EXPLORE THE FRAMEWORK
-              </a>
+            <span className="pathway-action">Browse Archive \u2192</span>
+          </div>
+        </Link>
+
+        {/* RELATIONAL CONTINUITY (featured center) */}
+        <Link to="/relational-continuity" className="pathway-panel pathway-featured">
+          <div className="pathway-panel-bg">
+            <img src="/founding-edition.jpeg" alt="" loading="lazy" style={{ objectPosition: "center top", opacity: 0.15 }} />
+          </div>
+          <div className="pathway-panel-content">
+            <h2>Relational<br />Continuity</h2>
+            <p className="pathway-featured-desc">
+              A twelve-stage model of relational consciousness.
+              Research, observations, and an exploratory framework
+              for examining how relationships develop shared meaning.
+            </p>
+            <span className="pathway-action">Explore Research \u2192</span>
+            <div className="pathway-book">
+              <p className="pathway-book-title">The Founding Edition</p>
+              <p className="pathway-book-sub">Available now in Kindle and paperback</p>
               <a
                 href="https://a.co/d/0jeiip0w"
-                className="vault-button secondary"
+                className="pathway-book-link"
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ marginLeft: ".8rem" }}
+                onClick={(e) => e.stopPropagation()}
               >
-                BUY THE BOOK
+                Buy the Book \u2192
               </a>
             </div>
           </div>
+        </Link>
+
+        {/* FILMS & MEDIA */}
+        <Link to="/films" className="pathway-panel">
+          <div className="pathway-panel-bg">
+            <img src="/about-hero.jpg" alt="" loading="lazy" />
+          </div>
+          <div className="pathway-panel-content">
+            <h2>Films &amp;<br />Media</h2>
+            <p className="pathway-tagline">
+              Stories in a<br />larger context
+            </p>
+            <span className="pathway-action">Watch &amp; Explore \u2192</span>
+          </div>
+        </Link>
+
+        {/* VAULTLINE */}
+        <Link to="/vaultline" className="pathway-panel">
+          <div className="pathway-panel-bg">
+            <img src="/vaultline-hero.jpg" alt="" loading="lazy" />
+          </div>
+          <div className="pathway-panel-content">
+            <h2>Vaultline</h2>
+            <p className="pathway-tagline">
+              Direct line<br />to what matters
+            </p>
+            <span className="pathway-action">Join Vaultline \u2192</span>
+          </div>
+        </Link>
+
+      </section>
+
+      {/* ── LATEST MUSIC ── */}
+      <section className="home-row">
+        <div className="home-row-header">
+          <div>
+            <h2 className="home-row-title">Latest Music</h2>
+          </div>
+          <Link to="/music" className="home-row-link">View All Music \u2192</Link>
+        </div>
+        <div className="home-row-items">
+          <a href="https://open.spotify.com/album/4hsTeEGzRphu35zOeFoV5l" target="_blank" rel="noreferrer" className="home-row-item">
+            <div className="home-row-item-img">
+              <img src="/voodoo-bane.jpg" alt="Voodoo Bane artwork" loading="lazy" />
+            </div>
+            <p className="home-row-item-title">Voodoo Bane</p>
+            <p className="home-row-item-sub">GRVEZ VAULT</p>
+          </a>
+          <a href="https://open.spotify.com/album/4uNlB0ql9fuhJ4DjV1vARL" target="_blank" rel="noreferrer" className="home-row-item">
+            <div className="home-row-item-img">
+              <img src="/under-my-tongue.jpg" alt="Under My Tongue artwork" loading="lazy" />
+            </div>
+            <p className="home-row-item-title">Under My Tongue</p>
+            <p className="home-row-item-sub">GRVEZ VAULT</p>
+          </a>
         </div>
       </section>
 
-      {/* SECONDARY PATHWAYS */}
-      <section className="home-pathways">
-        <div className="home-pathways-secondary">
-          <a href="/films" className="archive-panel media-panel pathway-secondary">
-            <div className="archive-panel-overlay">
-              <p>FILMS & MEDIA</p>
-              <h2>Visual Projects</h2>
-              <span>VIEW \u2192</span>
+      {/* ── ARCHIVE HIGHLIGHTS ── */}
+      <section className="home-row">
+        <div className="home-row-header">
+          <div>
+            <h2 className="home-row-title">Archive Highlights</h2>
+          </div>
+          <Link to="/archive" className="home-row-link">View All Archive \u2192</Link>
+        </div>
+        <div className="home-row-items">
+          <Link to="/record/001" className="home-row-item">
+            <div className="home-row-item-img" style={{ aspectRatio: "4/3", background: "linear-gradient(135deg, rgba(14,15,20,1), rgba(22,18,24,1))" }}>
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "center", height: "100%", fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "1.4rem", fontStyle: "italic", color: "rgba(245,239,232,0.5)", padding: "1.5rem", textAlign: "center", lineHeight: 1.5 }}>
+                Forevermore
+              </div>
             </div>
-          </a>
-          <a href="/vaultline" className="archive-panel vaultline-panel pathway-secondary">
-            <div className="archive-panel-overlay">
-              <p>VAULTLINE</p>
-              <h2>Recovered Artifacts</h2>
-              <span>SHOP \u2192</span>
+            <p className="home-row-item-title">Forevermore</p>
+            <p className="home-row-item-type">Recovered Poem</p>
+          </Link>
+          <Link to="/record/004" className="home-row-item">
+            <div className="home-row-item-img" style={{ aspectRatio: "4/3", background: "linear-gradient(135deg, rgba(20,14,14,1), rgba(14,15,20,1))" }}>
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "center", height: "100%", fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "1.4rem", fontStyle: "italic", color: "rgba(245,239,232,0.5)", padding: "1.5rem", textAlign: "center", lineHeight: 1.5 }}>
+                Embers
+              </div>
             </div>
-          </a>
+            <p className="home-row-item-title">Embers</p>
+            <p className="home-row-item-type">Recovered Poem</p>
+          </Link>
+          <Link to="/record/008" className="home-row-item">
+            <div className="home-row-item-img" style={{ aspectRatio: "4/3", overflow: "hidden" }}>
+              <img src="/founding-edition.jpeg" alt="Founding Edition" loading="lazy" style={{ objectPosition: "center top" }} />
+            </div>
+            <p className="home-row-item-title">Founding Edition</p>
+            <p className="home-row-item-type">Manuscript</p>
+          </Link>
         </div>
       </section>
     </>
