@@ -5,6 +5,7 @@ import './globals.css';
 import './typography.css';
 import './utilities.css';
 import './animations.css';
+import './relational-continuity.css';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
