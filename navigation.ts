@@ -24,7 +24,7 @@ export const navigation: NavItem[] = [
       { path: '/media', label: 'Visual Documentation' },
     ]
   },
-  { path: '/relational-continuity', label: 'Relational Continuity' },
+  { path: '/relational-continuity', label: 'Continuity' },
   { path: '/films', label: 'Films & Media' },
   { path: '/vaultline', label: 'Vaultline' },
   { path: '/about', label: 'About' },
