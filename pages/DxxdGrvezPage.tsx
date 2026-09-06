@@ -5,7 +5,7 @@ export function DxxdGrvezPage() {
   useEffect(() => { document.title = "DXXD GRVEZ | GRVEZ VAULT"; return () => { document.title = "GRVEZ VAULT | Music · Archive · Manuscripts · Media"; }; }, []);
   return (
     <section className="page-section dxxd-page" aria-labelledby="dxxd-heading">
-      <div className="dxxd-hero"><img src="/DXXD_GRVEZ.PNG" alt="DXXD GRVEZ" loading="eager" onError={(e) => { e.currentTarget.src = "/dmonix-hero.png"; }} /></div>
+      <div className="dxxd-hero"><img src="/DXXD_GRVEZ.PNG" alt="DXXD GRVEZ" loading="eager" /></div>
       <div className="page-content">
         <div className="page-intro"><p className="eyebrow">BAND PROJECT</p><h1 id="dxxd-heading">DXXD GRVEZ</h1><p>The current band and music project identity within the GRVEZ VAULT creative world, connecting Gizzy Graves and DMONIX.</p></div>
         <section className="archive-note"><p className="eyebrow">THE PROJECT</p><h2>Project Description</h2><p>The fuller DXXD GRVEZ project description will be added here when provided.</p></section>
