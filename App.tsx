@@ -14,6 +14,7 @@ import { FaqPage } from './pages/FaqPage';
 import { RecordPage } from './pages/RecordPage';
 import { GizzyGravesPage } from './pages/GizzyGravesPage';
 import { DmonixPage } from './pages/DmonixPage';
+import { RelationalContinuityPage } from './pages/RelationalContinuityPage';
 
 export function App() {
   return (
@@ -27,6 +28,7 @@ export function App() {
           <Route path="/music" element={<MusicPage />} />
           <Route path="/archive" element={<ArchivePage />} />
           <Route path="/manuscripts" element={<ManuscriptsPage />} />
+          <Route path="/relational-continuity" element={<RelationalContinuityPage />} />
           <Route path="/record/:id" element={<RecordPage />} />
           <Route path="/media" element={<MediaPage />} />
           <Route path="/vaultline" element={<VaultlinePage />} />
