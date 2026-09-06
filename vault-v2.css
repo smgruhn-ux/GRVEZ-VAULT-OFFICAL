@@ -1,6 +1,7 @@
-/* Homepage hero phrase: restrained editorial treatment */
-.home-hero-headline{width:auto!important;max-width:90%;margin:0 auto 1.5rem!important;text-align:center;text-transform:uppercase;color:rgba(122,31,37,.82)!important;font-size:clamp(1.7rem,3.3vw,3.2rem)!important;line-height:1.1!important;letter-spacing:.24em!important;font-weight:500;filter:blur(3px);opacity:0;animation:gvHeroPhraseIn 1.4s cubic-bezier(.16,1,.3,1) .18s forwards}
+/* Homepage hero phrase: right-side two-line editorial overlay */
+.home-hero-headline{position:absolute;right:7%;top:50%;z-index:3;width:auto!important;max-width:none!important;margin:0!important;transform:translateY(-50%);text-align:center;text-transform:uppercase;color:rgba(122,31,37,.78)!important;font-size:clamp(1.55rem,3vw,3rem)!important;line-height:1.18!important;letter-spacing:.2em!important;font-weight:500;filter:blur(3px);opacity:0;animation:gvHeroPhraseIn 2.4s cubic-bezier(.16,1,.3,1) .35s forwards}
 @keyframes gvHeroPhraseIn{to{filter:blur(0);opacity:1}}
-@media(max-width:768px){.home-hero-headline{max-width:94%;font-size:clamp(1.35rem,6vw,2.2rem)!important;letter-spacing:.16em!important;line-height:1.16!important}}
-@media(max-width:430px){.home-hero-headline{max-width:100%;font-size:1.35rem!important;letter-spacing:.12em!important}}
+@media(max-width:900px){.home-hero-headline{right:5%;font-size:clamp(1.25rem,3.8vw,2.1rem)!important;letter-spacing:.15em!important}}
+@media(max-width:600px){.home-hero-headline{right:50%;top:28%;transform:translate(50%,-50%);font-size:clamp(1.15rem,5.5vw,1.65rem)!important;letter-spacing:.12em!important;line-height:1.25!important}}
+@media(max-width:430px){.home-hero-headline{top:25%;font-size:1.12rem!important;letter-spacing:.1em!important}}
 @media(prefers-reduced-motion:reduce){.home-hero-headline{animation:none;filter:none;opacity:1}}
