@@ -48,13 +48,11 @@ export const gizzyGravesFeatDmonix: Release[] = [
 
 export const dxxdGrvezReleases: Release[] = [
   { title: 'UNDER AND OVER', artist: 'DXXD GRVEZ', image: '', listenUrl: '', lyricsUrl: '', creditsUrl: '' },
+  { title: 'PRESSURE SICK', artist: 'DXXD GRVEZ', image: '', listenUrl: '', lyricsUrl: '', creditsUrl: '' },
 ];
 
-export const dxxdGrvezFeatDmonix: Release[] = [
-  { title: 'PRESSURE SICK', artist: 'DXXD GRVEZ feat. DMONIX', image: '', listenUrl: '', lyricsUrl: '', creditsUrl: '' },
-];
+export const dxxdGrvezFeatDmonix: Release[] = [];
 
-// Legacy export for backward compatibility
 export const releases = [
   ...gizzyGravesReleases,
   ...gizzyGravesFeatDmonix,
