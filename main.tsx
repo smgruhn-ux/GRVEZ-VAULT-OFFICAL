@@ -9,6 +9,7 @@ import './relational-continuity.css';
 import './nav-dropdown.css';
 import './breadcrumb.css';
 import './vault-v2.css';
+import './responsive.css';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
