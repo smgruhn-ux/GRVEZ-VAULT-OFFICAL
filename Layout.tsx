@@ -25,6 +25,7 @@ const PAGE_TITLES: Record<string, string> = {
   '/about': 'About | GRVEZ VAULT',
   '/about/gizzy-graves': 'Gizzy Graves | GRVEZ VAULT',
   '/about/dmonix': 'DMONIX | GRVEZ VAULT',
+  '/dxxd-grvez': 'DXXD GRVEZ | GRVEZ VAULT',
   '/music': 'Music | GRVEZ VAULT',
   '/archive': 'The Archive | GRVEZ VAULT',
   '/manuscripts': 'Manuscripts | GRVEZ VAULT',
@@ -190,6 +191,7 @@ export function Layout({ children }: LayoutProps) {
           <ul>
             <li><Link to="/about">About GRVEZ VAULT</Link></li>
             <li><Link to="/about/gizzy-graves">Gizzy Graves</Link></li>
+            <li><Link to="/dxxd-grvez">DXXD GRVEZ</Link></li>
             <li><Link to="/about/dmonix">DMONIX</Link></li>
             <li><Link to="/contact">Contact</Link></li>
           </ul>

@@ -140,7 +140,7 @@ h1, h2, h3 {
   inset: 0;
   background:
     linear-gradient(180deg, rgba(5,5,7,0.2) 0%, rgba(5,5,7,0.05) 35%, rgba(5,5,7,0.8) 85%, rgba(5,5,7,1) 100%),
-    radial-gradient(ellipse 60% 50% at 50% 40%, rgba(35,55,95,0.1), transparent 60%);
+    radial-gradient(ellipse 60% 50% at 50% 40%, rgba(31,58,86,0.1), transparent 60%);
 }
 
 .home-hero-v2-grain {
@@ -246,6 +246,31 @@ h1, h2, h3 {
   inset: 0;
   z-index: 0;
   overflow: hidden;
+}
+
+/* TEMPORARY PATHWAY BACKGROUNDS — awaiting dedicated assets */
+.pathway-bg-music {
+  background: linear-gradient(160deg, rgba(10,10,14,1) 0%, rgba(18,14,16,1) 50%, rgba(8,8,12,1) 100%);
+  opacity: 0.7;
+}
+
+.pathway-bg-archive {
+  background: linear-gradient(160deg, rgba(10,12,18,1) 0%, rgba(14,16,22,1) 50%, rgba(8,10,14,1) 100%);
+  opacity: 0.7;
+}
+
+.pathway-bg-rch {
+  background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(31,58,86,0.12), transparent 70%);
+}
+
+.pathway-bg-films {
+  background: linear-gradient(160deg, rgba(8,10,14,1) 0%, rgba(12,12,18,1) 50%, rgba(10,8,12,1) 100%);
+  opacity: 0.7;
+}
+
+.pathway-bg-vaultline {
+  background: linear-gradient(160deg, rgba(12,10,12,1) 0%, rgba(16,12,14,1) 50%, rgba(8,8,10,1) 100%);
+  opacity: 0.7;
 }
 
 .pathway-panel-bg img {
@@ -422,6 +447,25 @@ h1, h2, h3 {
 .home-row-item:hover .home-row-item-img img {
   filter: brightness(0.92) saturate(0.95);
   transform: scale(1.03);
+}
+
+/* Text placeholder tiles for archive items without imagery */
+.home-row-item-text-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(14,15,20,1), rgba(20,16,22,1));
+  aspect-ratio: 1;
+}
+
+.home-row-item-text-placeholder span {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.3rem;
+  font-style: italic;
+  color: rgba(245,239,232,0.4);
+  text-align: center;
+  padding: 1.5rem;
+  line-height: 1.5;
 }
 
 .home-row-item-title {
