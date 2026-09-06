@@ -44,11 +44,6 @@ export function DmonixPage() {
               counterpart to Gizzy Graves. DMONIX is part of the broader creative
               world that includes the DXXD GRVEZ project.
             </p>
-            <p style={{ marginTop: "1rem", color: "var(--muted)" }}>
-              DMONIX appears across music, visual work, and the symbolic language
-              of the archive. The identity carries its own visual direction
-              and creative presence within the GRVEZ VAULT world.
-            </p>
           </div>
         </section>
         <div className="inline-actions profile-actions">
@@ -57,9 +52,6 @@ export function DmonixPage() {
           </Link>
           <Link className="metal-button secondary" to="/music">
             Music
-          </Link>
-          <Link className="metal-button secondary" to="/archive">
-            Archive
           </Link>
         </div>
       </div>

@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Breadcrumb } from "../Breadcrumb";
 
-const records = [
+const restoredRecords = [
   {
     id: "001",
     type: "RECOVERED POEM",
@@ -32,10 +32,20 @@ const records = [
     source: "Early Poetry Archive",
   },
   {
+    id: "008",
+    type: "FOUNDING EDITION",
+    title: "Relational Continuity Hypothesis",
+    preview: "A recovered research manuscript outlining the Relational Continuity Hypothesis and its twelve-stage model of relational consciousness.",
+    source: "Founding Edition Manuscript",
+  },
+];
+
+const underRestoration = [
+  {
     id: "005",
     type: "RESEARCH NOTE",
     title: "Pattern Recognition",
-    preview: '"Recovered research notes documenting early observations..."',
+    preview: "Recovered research notes documenting early observations.",
     source: "Research Archive",
   },
   {
@@ -51,13 +61,6 @@ const records = [
     title: "The Raven Motif",
     preview: "The raven appears repeatedly across unrelated works created over multiple years.",
     source: "Cross Reference",
-  },
-  {
-    id: "008",
-    type: "FOUNDING EDITION",
-    title: "Relational Continuity Hypothesis",
-    preview: "FOUNDING EDITION RECOVERED\n\nA recovered research manuscript outlining the Relational Continuity Hypothesis and its twelve-stage model of relational consciousness. This record anchors the archive and connects symbolic evidence, case studies, and methodological notes.",
-    source: "Founding Edition Manuscript",
   },
 ];
 
@@ -98,13 +101,14 @@ export function ManuscriptsPage() {
           </p>
         </section>
 
+        {/* RESTORED RECORDS */}
         <section className="archive-section">
           <div className="section-heading">
             <p className="eyebrow">RECOVERED MATERIAL</p>
-            <h2>Archive Fragments</h2>
+            <h2>Restored Records</h2>
           </div>
           <div className="fragment-grid">
-            {records.map((record) => (
+            {restoredRecords.map((record) => (
               <article
                 key={record.id}
                 className="fragment-card"
@@ -119,8 +123,7 @@ export function ManuscriptsPage() {
                 <pre className="fragment-preview">{record.preview}</pre>
                 <div className="fragment-footer">
                   <p>
-                    <strong>Recovered From</strong>
-                    <br />
+                    <strong>Recovered From</strong><br />
                     {record.source}
                   </p>
                   <div className="fragment-status">CLICK TO OPEN \u2192</div>
@@ -130,7 +133,44 @@ export function ManuscriptsPage() {
           </div>
         </section>
 
-        <section className="archive-note">
+        {/* UNDER RESTORATION */}
+        <section className="archive-section" style={{ marginTop: "4rem" }}>
+          <div className="section-heading">
+            <p className="eyebrow">PENDING RESTORATION</p>
+            <h2>Records Under Restoration</h2>
+            <p style={{ color: "var(--muted)", fontSize: "0.95rem", marginTop: "0.5rem", maxWidth: "640px" }}>
+              These records have been identified within the archive chronology
+              but have not yet been fully restored. They remain preserved
+              and will be updated as restoration progresses.
+            </p>
+          </div>
+          <div className="fragment-grid">
+            {underRestoration.map((record) => (
+              <article
+                key={record.id}
+                className="fragment-card"
+                style={{ cursor: "pointer", opacity: 0.75 }}
+                onClick={() => navigate(`/record/${record.id}`)}
+              >
+                <div className="fragment-header">
+                  <span className="fragment-id">RECORD {record.id}</span>
+                  <span className="fragment-type">{record.type}</span>
+                </div>
+                <h3>{record.title}</h3>
+                <p className="fragment-preview">{record.preview}</p>
+                <div className="fragment-footer">
+                  <p>
+                    <strong>Recovered From</strong><br />
+                    {record.source}
+                  </p>
+                  <div className="fragment-status">UNDER RESTORATION</div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="archive-note" style={{ marginTop: "4rem" }}>
           <p className="eyebrow">ARCHIVIST'S NOTE</p>
           <h2>Investigation Active</h2>
           <p>
@@ -141,8 +181,7 @@ export function ManuscriptsPage() {
           </p>
           <p>
             Some records remain sealed. Others are incomplete. The Founding Edition
-            has been published and is available now \u2014 visit the Founding Edition
-            record to learn how to obtain a copy.
+            has been published and is available now.
           </p>
         </section>
 
