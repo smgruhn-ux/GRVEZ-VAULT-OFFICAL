@@ -5,29 +5,37 @@ const records = [
   {
     id: "001",
     type: "RECOVERED POEM",
+    title: "Forevermore",
+    preview:
+      '"Forevermore\nShall our souls\nBe intertwined..."',
+    source: "Early Poetry Archive",
+  },
+  {
+    id: "002",
+    type: "RECOVERED POEM",
+    title: "Angel of Death",
+    preview:
+      '"What is calling me\nAs I gasp for air\nTrying to breathe..."',
+    source: "Early Poetry Archive",
+  },
+  {
+    id: "003",
+    type: "RECOVERED POEM",
+    title: "Agony",
+    preview:
+      '"Pondering me in agony\nAs you load your barrel..."',
+    source: "Early Poetry Archive",
+  },
+  {
+    id: "004",
+    type: "RECOVERED POEM",
     title: "Embers",
     preview:
       '"Once the fire dies,\nSo do I.\nFor I am drawn to the shadows..."',
     source: "Early Poetry Archive",
   },
   {
-    id: "002",
-    type: "RECOVERED POEM",
-    title: "Forevermore",
-    preview:
-      '"Forevermore\nShall our souls\nBe intertwined..."',
-    source: "Poetry Collection",
-  },
-  {
-    id: "003",
-    type: "JOURNAL ENTRY",
-    title: "Origins",
-    preview:
-      '"Recovered journal entry currently undergoing restoration..."',
-    source: "Personal Journal",
-  },
-  {
-    id: "004",
+    id: "005",
     type: "RESEARCH NOTE",
     title: "Pattern Recognition",
     preview:
@@ -35,7 +43,7 @@ const records = [
     source: "Research Archive",
   },
   {
-    id: "005",
+    id: "006",
     type: "SYMBOL STUDY",
     title: "Omega Development",
     preview:
@@ -43,7 +51,7 @@ const records = [
     source: "Journal Archive",
   },
   {
-    id: "006",
+    id: "007",
     type: "EVIDENCE RECORD",
     title: "The Raven Motif",
     preview:
@@ -51,21 +59,13 @@ const records = [
     source: "Cross Reference",
   },
   {
-    id: "007",
-    type: "TIMELINE",
-    title: "Chronology",
+    id: "008",
+    type: "FOUNDING EDITION",
+    title: "Relational Continuity Hypothesis",
     preview:
-      '"Recovered chronology currently being reconstructed..."',
-    source: "Evidence Timeline",
+      "FOUNDING EDITION RECOVERED\n\nA recovered research manuscript outlining the Relational Continuity Hypothesis and its twelve-stage model of relational consciousness. This record anchors the archive and connects symbolic evidence, case studies, and methodological notes.",
+    source: "Founding Edition Manuscript",
   },
-    {
-  id: "008",
-  type: "FOUNDING EDITION",
-  title: "Relational Continuity Hypothesis",
-  preview:
-    "FOUNDING EDITION RECOVERED\n\nA recovered research manuscript outlining the Relational Continuity Hypothesis and its twelve-stage model of relational consciousness. This record anchors the archive and connects symbolic evidence, case studies, and methodological notes.",
-  source: "Founding Edition Manuscript",
-},
 ];
 export function ManuscriptsPage() {
   const navigate = useNavigate();
@@ -136,7 +136,7 @@ export function ManuscriptsPage() {
   key={record.id}
   className="fragment-card"
   style={{ cursor: "pointer" }}
-  onClick={() => navigate(`/archive/${record.id}`)}
+  onClick={() => navigate(`/record/${record.id}`)}
 >
 
                 <div className="fragment-header">
@@ -171,7 +171,7 @@ export function ManuscriptsPage() {
 
                   <div className="fragment-status">
 
-                    CLICK TO OPEN →
+                    CLICK TO OPEN \u2192
 
                   </div>
 
@@ -204,7 +204,7 @@ export function ManuscriptsPage() {
 
   <p>
     Some records remain sealed. Others are incomplete. The Founding Edition
-    has been published and is available now — visit the Founding Edition
+    has been published and is available now \u2014 visit the Founding Edition
     record to learn how to obtain a copy.
   </p>
 
