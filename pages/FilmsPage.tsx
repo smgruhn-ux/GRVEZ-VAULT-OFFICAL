@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { Breadcrumb } from "../Breadcrumb";
 
 export function FilmsPage() {
   useEffect(() => {
@@ -30,7 +31,7 @@ export function FilmsPage() {
             and media will be added to this section as they become available
             for public documentation.
           </p>
-          <p>
+          <p style={{ marginTop: "1rem" }}>
             For visual documentation including concept art, symbols, photography,
             and recovered imagery, see the{" "}
             <Link to="/media" style={{ color: "var(--accent)", textDecoration: "underline" }}>
@@ -52,8 +53,8 @@ export function FilmsPage() {
         </section>
 
         <div style={{ textAlign: "center", marginTop: "3rem" }}>
-          <Link to="/archive" className="metal-button">
-            Return to Archive
+          <Link to="/" className="metal-button">
+            Return to Home
           </Link>
         </div>
 

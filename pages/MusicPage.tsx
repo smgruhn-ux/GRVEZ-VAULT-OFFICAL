@@ -7,6 +7,12 @@ import { HeroArtwork } from '../HeroArtwork';
 export function MusicPage() {
   useEffect(() => {
     document.title = "Music | GRVEZ VAULT";
+    // Handle hash-based scrolling for section links
+    const hash = window.location.hash;
+    if (hash) {
+      const el = document.querySelector(hash);
+      if (el) setTimeout(() => el.scrollIntoView({ behavior: 'smooth' }), 150);
+    }
     return () => { document.title = "GRVEZ VAULT | Music \u00b7 Archive \u00b7 Manuscripts \u00b7 Media"; };
   }, []);
 
@@ -29,7 +35,7 @@ export function MusicPage() {
           <p style={{ color: "var(--muted)", maxWidth: "720px", marginBottom: "1.5rem" }}>
             Artist identity curated by Sheldyn Gruhn, centered on dark alternative rock, industrial metal, hard rock, and nu-metal.
           </p>
-          <Link to="/about/gizzy-graves" className="metal-button secondary" style={{ marginBottom: "2rem", display: "inline-flex" }}>
+          <Link to="/about/gizzy-graves" className="metal-button secondary" style={{ display: "inline-flex" }}>
             Artist Profile
           </Link>
         </section>
@@ -38,7 +44,7 @@ export function MusicPage() {
         <section id="dxxd-grvez" style={{ marginBottom: "4rem" }}>
           <p className="eyebrow">PROJECT</p>
           <h2>DXXD GRVEZ</h2>
-          <p style={{ color: "var(--muted)", maxWidth: "720px", marginBottom: "1.5rem" }}>
+          <p style={{ color: "var(--muted)", maxWidth: "720px" }}>
             Band project within the GRVEZ VAULT creative world, connecting Gizzy Graves and DMONIX.
           </p>
         </section>
@@ -61,14 +67,10 @@ export function MusicPage() {
                     <a className="metal-button" href={release.listenUrl} target="_blank" rel="noreferrer">Listen</a>
                     {release.lyricsUrl ? (
                       <a className="metal-button secondary" href={release.lyricsUrl} target="_blank" rel="noreferrer">Lyrics</a>
-                    ) : (
-                      <span className="metal-button secondary disabled">Lyrics \u2014 Coming Soon</span>
-                    )}
+                    ) : null}
                     {release.creditsUrl ? (
-                      <a className="metal-button tertiary" href={release.creditsUrl} target="_blank" rel="noreferrer">Credits</a>
-                    ) : (
-                      <span className="metal-button tertiary disabled">Credits \u2014 Coming Soon</span>
-                    )}
+                      <a className="metal-button secondary" href={release.creditsUrl} target="_blank" rel="noreferrer">Credits</a>
+                    ) : null}
                   </div>
                 </div>
               </article>
@@ -92,7 +94,6 @@ export function MusicPage() {
           <div className="music-panel-copy">
             <p className="eyebrow">Streaming</p>
             <h2>Listen Everywhere</h2>
-            <p>Find GRVEZ VAULT releases across all major platforms.</p>
           </div>
           <div className="streaming-grid">
             {artistLinks.map((link) => (

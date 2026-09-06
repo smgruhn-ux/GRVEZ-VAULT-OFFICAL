@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
+import { Breadcrumb } from "../Breadcrumb";
 
 const records = [
   {
     id: "001",
     type: "CONCEPT ART",
     title: "Death of Deceit",
-    preview:
-      "Concept artwork exploring the earliest visual language of the archive.",
+    preview: "Concept artwork exploring the earliest visual language of the archive.",
     source: "Artwork Archive",
     status: "UNDER RESTORATION",
   },
@@ -14,8 +14,7 @@ const records = [
     id: "002",
     type: "SYMBOL",
     title: "Omega Development",
-    preview:
-      "Early exploration of the Omega mark and eight-point star.",
+    preview: "Early exploration of the Omega mark and eight-point star.",
     source: "Design Archive",
     status: "UNDER RESTORATION",
   },
@@ -23,8 +22,7 @@ const records = [
     id: "003",
     type: "TATTOO",
     title: "Hourglass Sketch",
-    preview:
-      "Original tattoo concept drawn before later symbolic development.",
+    preview: "Original tattoo concept drawn before later symbolic development.",
     source: "Journal Archive",
     status: "UNDER RESTORATION",
   },
@@ -32,8 +30,7 @@ const records = [
     id: "004",
     type: "PHOTOGRAPH",
     title: "Visual Evolution",
-    preview:
-      "Recovered images documenting the evolution of GRVEZ VAULT.",
+    preview: "Recovered images documenting the evolution of GRVEZ VAULT.",
     source: "Media Archive",
     status: "UNDER RESTORATION",
   },
@@ -41,8 +38,7 @@ const records = [
     id: "005",
     type: "ARCHIVIST'S OBSERVATION",
     title: "Recurring Symbolism",
-    preview:
-      "Recurring imagery appears across artwork, journals, and later visual identity, aligning with the evidence used to support the recovered manuscript.",
+    preview: "Recurring imagery appears across artwork, journals, and later visual identity, aligning with the evidence used to support the recovered manuscript.",
     source: "Cross Reference",
     status: "UNDER RESTORATION",
   },
@@ -58,13 +54,13 @@ export function MediaPage() {
     <section className="page-section manuscripts-page" aria-labelledby="media-heading">
       <div className="page-content">
 
-        <p className="eyebrow">
-          ARCHIVE RECORD // 003
-        </p>
+        <Breadcrumb items={[
+          { label: "Archive", to: "/archive" },
+          { label: "Visual Documentation" },
+        ]} />
 
-        <h1 id="media-heading">
-          Visual Documentation
-        </h1>
+        <p className="eyebrow">ARCHIVE RECORD // 003</p>
+        <h1 id="media-heading">Visual Documentation</h1>
 
         <p className="page-description">
           Artwork. Photography. Concepts. Symbols.
@@ -75,9 +71,7 @@ export function MediaPage() {
         </p>
 
         <section className="archive-note">
-          <p className="eyebrow">
-            VISUAL EVIDENCE
-          </p>
+          <p className="eyebrow">VISUAL EVIDENCE</p>
           <h2>Archive In Progress</h2>
           <p>
             The visual archive documents recurring motifs, early concept
@@ -98,34 +92,22 @@ export function MediaPage() {
             <p className="eyebrow">RECOVERED VISUAL RECORDS</p>
             <h2>Catalogued Evidence</h2>
           </div>
-
           <div className="fragment-grid">
             {records.map((record) => (
               <article key={record.id} className="fragment-card">
                 <div className="fragment-header">
-                  <span className="fragment-id">
-                    VISUAL {record.id}
-                  </span>
-                  <span className="fragment-type">
-                    {record.type}
-                  </span>
+                  <span className="fragment-id">VISUAL {record.id}</span>
+                  <span className="fragment-type">{record.type}</span>
                 </div>
-
                 <h3>{record.title}</h3>
-
-                <p className="fragment-preview">
-                  {record.preview}
-                </p>
-
+                <p className="fragment-preview">{record.preview}</p>
                 <div className="fragment-footer">
                   <p>
                     <strong>Recovered From</strong>
                     <br />
                     {record.source}
                   </p>
-                  <div className="fragment-status">
-                    {record.status}
-                  </div>
+                  <div className="fragment-status">{record.status}</div>
                 </div>
               </article>
             ))}
