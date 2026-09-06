@@ -1,10 +1,9 @@
 /* ==============================================
    GRVEZ VAULT V2 — VISUAL SYSTEM
    Cinematic, architectural, editorial
-   Overrides globals.css where needed
 ================================================= */
 
-/* ── ARCHITECTURAL RADIUS ── */
+/* ── ARCHITECTURAL RADIUS (global override) ── */
 .detail-card,
 .release-card,
 .archive-panel,
@@ -14,15 +13,18 @@
 .archive-note,
 .archive-record-card,
 .vaultline-card,
-.spotify-frame { border-radius: 3px; }
+.spotify-frame,
+.vaultline-feature-image img,
+.profile-portrait img,
+.page-hero { border-radius: 3px; }
 
-.page-hero,
 .page-hero:has(> .hero-frame-clean) { border-radius: 0; box-shadow: none; border: none; }
 
 .metal-button, .metal-button:visited,
-.vault-button { border-radius: 2px; }
-
+.vault-button, .vault-button:visited { border-radius: 2px; }
 .streaming-pill { border-radius: 2px; }
+.nav-link { border-radius: 2px; }
+.hero-hotspot { border-radius: 2px; }
 
 .detail-card::before,
 .release-card::before,
@@ -31,12 +33,11 @@
 
 /* ── HEADER REFINEMENT ── */
 .site-header { padding: 1.1rem 0; }
-.site-header .brand-mark img { height: 36px; }
-.nav-link {
-  font-size: 0.68rem;
+.site-header .brand-mark img { height: 34px; }
+.site-header .nav-link {
+  font-size: 0.66rem;
   letter-spacing: 0.26em;
-  padding: 0.4rem 0.65rem;
-  border-radius: 2px;
+  padding: 0.38rem 0.6rem;
 }
 
 /* ── THINNER STRUCTURAL BORDERS ── */
@@ -44,14 +45,71 @@
 .archive-note,
 .archive-record-card,
 .fragment-card,
-.release-card { border-color: rgba(255,255,255,0.07); }
+.release-card,
+.info-panel { border-color: rgba(255,255,255,0.06); }
 
-.archive-panel { border-radius: 3px; }
-
-/* ── VAULT BLUE ILLUMINATION ── */
+/* ── VAULT-BLUE TINTED BACKGROUNDS ── */
 .archive-note {
-  background: linear-gradient(135deg, rgba(14,15,20,0.95), rgba(18,22,32,0.9));
+  background: linear-gradient(160deg, rgba(14,16,24,0.95), rgba(10,12,18,0.92));
 }
+
+.fragment-card {
+  background: linear-gradient(160deg, rgba(12,14,20,0.95), rgba(8,10,16,0.9));
+}
+
+/* ── TYPOGRAPHY ALIGNMENT ── */
+h1, h2, h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 500;
+}
+
+.eyebrow {
+  font-size: 0.68rem;
+  letter-spacing: 0.35em;
+  font-weight: 600;
+}
+
+.page-intro h1 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 400;
+}
+
+/* ── BUTTON CONSISTENCY ── */
+.metal-button, .metal-button:visited {
+  border-radius: 2px;
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  padding: 0.72rem 1rem;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  box-shadow: none;
+}
+
+.metal-button:hover, .metal-button:focus-visible {
+  border-color: rgba(182,58,80,0.5);
+  background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+  box-shadow: none;
+  transform: translateY(-1px);
+}
+
+.metal-button.secondary {
+  background: rgba(6,6,8,0.4);
+}
+
+.metal-button.disabled {
+  opacity: 0.4;
+  border-color: rgba(255,255,255,0.06);
+}
+
+.vault-button {
+  border-radius: 2px;
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  padding: 0.85rem 1.8rem;
+}
+
+/* ── ARCHIVE PANEL CONSISTENCY ── */
+.archive-panel { border-radius: 3px; }
 
 /* ── HOMEPAGE HERO V2 ── */
 .home-hero-v2 {
@@ -90,7 +148,7 @@
   inset: 0;
   z-index: 1;
   pointer-events: none;
-  opacity: 0.14;
+  opacity: 0.12;
   mix-blend-mode: overlay;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.08 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   background-size: 160px 160px;
@@ -106,7 +164,7 @@
 .home-hero-v2-eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.4em;
-  font-size: 0.65rem;
+  font-size: 0.62rem;
   color: var(--accent);
   margin-bottom: 1.8rem;
   font-weight: 600;
@@ -123,9 +181,9 @@
 }
 
 .home-hero-v2-desc {
-  font-size: 1rem;
-  line-height: 1.85;
-  color: rgba(245,239,232,0.65);
+  font-size: 0.95rem;
+  line-height: 1.9;
+  color: rgba(245,239,232,0.6);
   max-width: 480px;
   margin-bottom: 2.5rem;
 }
@@ -134,29 +192,29 @@
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  padding: 0.85rem 1.5rem;
-  border: 1px solid rgba(255,255,255,0.18);
+  padding: 0.82rem 1.4rem;
+  border: 1px solid rgba(255,255,255,0.15);
   background: transparent;
   color: #f5efe8;
   text-transform: uppercase;
   letter-spacing: 0.22em;
-  font-size: 0.7rem;
+  font-size: 0.66rem;
   text-decoration: none;
   font-weight: 500;
-  transition: border-color 280ms ease, background 280ms ease, transform 280ms ease;
+  transition: border-color 280ms cubic-bezier(0.16,1,0.3,1), background 280ms ease, transform 280ms cubic-bezier(0.16,1,0.3,1);
 }
 
 .home-hero-v2-cta:hover {
-  border-color: rgba(182,58,80,0.6);
-  background: rgba(182,58,80,0.06);
+  border-color: rgba(182,58,80,0.5);
+  background: rgba(182,58,80,0.04);
   transform: translateY(-2px);
 }
 
 /* ── PATHWAY GRID ── */
 .pathways-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1.8fr 1fr 1fr;
-  gap: 10px;
+  grid-template-columns: 1fr 1fr 1.6fr 1fr 1fr;
+  gap: 8px;
   padding: 0 4%;
   margin-top: -3.5rem;
   position: relative;
@@ -165,22 +223,22 @@
 
 .pathway-panel {
   position: relative;
-  min-height: 440px;
+  min-height: 420px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   padding: 2rem 1.4rem;
-  border: 1px solid rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.05);
   background: rgba(8,8,12,0.95);
   text-decoration: none;
   color: #f5efe8;
-  transition: border-color 350ms cubic-bezier(0.16,1,0.3,1), transform 350ms cubic-bezier(0.16,1,0.3,1);
+  transition: border-color 400ms cubic-bezier(0.16,1,0.3,1), transform 400ms cubic-bezier(0.16,1,0.3,1);
 }
 
 .pathway-panel:hover {
-  border-color: rgba(255,255,255,0.14);
-  transform: translateY(-3px);
+  border-color: rgba(255,255,255,0.12);
+  transform: translateY(-2px);
 }
 
 .pathway-panel-bg {
@@ -193,14 +251,14 @@
 .pathway-panel-bg img {
   width: 100%; height: 100%;
   object-fit: cover;
-  opacity: 0.3;
-  filter: brightness(0.5) saturate(0.65);
-  transition: opacity 500ms ease, transform 6s ease;
+  opacity: 0.25;
+  filter: brightness(0.45) saturate(0.6);
+  transition: opacity 600ms ease, transform 8s ease;
 }
 
 .pathway-panel:hover .pathway-panel-bg img {
-  opacity: 0.42;
-  transform: scale(1.04);
+  opacity: 0.38;
+  transform: scale(1.03);
 }
 
 .pathway-panel-content {
@@ -210,7 +268,7 @@
 
 .pathway-panel h2 {
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   font-weight: 500;
@@ -218,23 +276,26 @@
 }
 
 .pathway-tagline {
-  font-size: 0.72rem;
-  color: rgba(183,176,168,0.8);
+  font-size: 0.68rem;
+  color: rgba(183,176,168,0.65);
   text-transform: uppercase;
   letter-spacing: 0.16em;
-  line-height: 1.7;
+  line-height: 1.8;
   margin-bottom: 1.5rem;
 }
 
 .pathway-action {
-  font-size: 0.65rem;
+  font-size: 0.62rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #f5efe8;
+  color: rgba(245,239,232,0.7);
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+  transition: color 200ms ease;
 }
+
+.pathway-panel:hover .pathway-action { color: #f5efe8; }
 
 /* Featured center panel (RCH) */
 .pathway-featured {
@@ -243,35 +304,35 @@
 }
 
 .pathway-featured h2 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   letter-spacing: 0.07em;
 }
 
 .pathway-featured-desc {
-  font-size: 0.85rem;
-  color: rgba(245,239,232,0.6);
-  line-height: 1.75;
+  font-size: 0.82rem;
+  color: rgba(245,239,232,0.5);
+  line-height: 1.8;
   margin-bottom: 1.5rem;
-  max-width: 360px;
+  max-width: 340px;
 }
 
 .pathway-book {
   margin-top: 1.5rem;
   padding-top: 1.2rem;
-  border-top: 1px solid rgba(255,255,255,0.06);
+  border-top: 1px solid rgba(255,255,255,0.05);
 }
 
 .pathway-book-title {
-  font-size: 0.68rem;
+  font-size: 0.65rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(183,176,168,0.7);
-  margin-bottom: 0.2rem;
+  color: rgba(183,176,168,0.6);
+  margin-bottom: 0.15rem;
 }
 
 .pathway-book-sub {
-  font-size: 0.62rem;
-  color: rgba(255,255,255,0.35);
+  font-size: 0.6rem;
+  color: rgba(255,255,255,0.28);
   letter-spacing: 0.06em;
 }
 
@@ -279,21 +340,21 @@
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  font-size: 0.62rem;
+  font-size: 0.6rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: rgba(182,58,80,0.75);
   text-decoration: none;
   margin-top: 0.5rem;
-  transition: opacity 200ms ease;
+  transition: color 200ms ease;
 }
 
-.pathway-book-link:hover { opacity: 0.65; }
+.pathway-book-link:hover { color: var(--accent); }
 
 /* ── CONTENT ROWS ── */
 .home-row {
-  padding: 5rem 4%;
-  border-top: 1px solid rgba(255,255,255,0.05);
+  padding: 4.5rem 4%;
+  border-top: 1px solid rgba(255,255,255,0.04);
 }
 
 .home-row-header {
@@ -307,26 +368,18 @@
 
 .home-row-title {
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   font-weight: 500;
   margin: 0;
 }
 
-.home-row-sub {
-  font-size: 0.68rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-top: 0.3rem;
-}
-
 .home-row-link {
-  font-size: 0.65rem;
-  letter-spacing: 0.2em;
+  font-size: 0.62rem;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: rgba(183,176,168,0.6);
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -346,28 +399,28 @@
   text-decoration: none;
   color: #f5efe8;
   display: block;
-  transition: transform 350ms cubic-bezier(0.16,1,0.3,1);
+  transition: transform 400ms cubic-bezier(0.16,1,0.3,1);
 }
 
-.home-row-item:hover { transform: translateY(-4px); }
+.home-row-item:hover { transform: translateY(-3px); }
 
 .home-row-item-img {
   position: relative;
   aspect-ratio: 1;
   overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.04);
   margin-bottom: 0.7rem;
 }
 
 .home-row-item-img img {
   width: 100%; height: 100%;
   object-fit: cover;
-  filter: brightness(0.82) saturate(0.85);
-  transition: filter 350ms ease, transform 5s ease;
+  filter: brightness(0.78) saturate(0.8);
+  transition: filter 400ms ease, transform 6s ease;
 }
 
 .home-row-item:hover .home-row-item-img img {
-  filter: brightness(0.95) saturate(1);
+  filter: brightness(0.92) saturate(0.95);
   transform: scale(1.03);
 }
 
@@ -377,26 +430,105 @@
 }
 
 .home-row-item-sub {
-  font-size: 0.65rem;
+  font-size: 0.62rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--muted);
 }
 
 .home-row-item-type {
-  font-size: 0.62rem;
+  font-size: 0.6rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: rgba(182,58,80,0.7);
 }
 
+/* ── RECORD PAGE STYLES ── */
+.record-subtitle {
+  color: rgba(183,176,168,0.7);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  margin-top: -0.5rem;
+  margin-bottom: 2rem;
+}
+
+.record-poem {
+  font-size: 1.02rem;
+  line-height: 2.1;
+  white-space: pre-line;
+  color: rgba(245,239,232,0.88);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.record-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.record-nav a {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 200ms ease;
+}
+
+.record-nav a:hover { color: var(--text); }
+
+/* ── VAULTLINE OVERRIDES ── */
+.vaultline-page .detail-card,
+.vaultline-card { border-radius: 3px; }
+
+.vaultline-feature-image img { border-radius: 3px; }
+
+.vaultline-latest { border-radius: 3px; }
+
+.vaultline-card-image { padding: 1.2rem; }
+
+.vaultline-card-content { padding: 1.2rem; text-align: center; }
+
+.vaultline-card-content .metal-button {
+  font-size: 0.62rem;
+  padding: 0.65rem 0.9rem;
+}
+
+/* ── PROFILE PAGES ── */
+.profile-portrait img { border-radius: 3px; }
+
 /* ── REFINED FOOTER ── */
-.site-footer { border-top: 1px solid rgba(255,255,255,0.05); }
+.site-footer {
+  border-top: 1px solid rgba(255,255,255,0.04);
+  padding: 3.5rem 0 2.5rem;
+}
+
 .site-footer h2 {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
-  font-size: 0.68rem;
-  letter-spacing: 0.28em;
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
   font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+}
+
+.site-footer ul { gap: 0.5rem; }
+
+.site-footer a {
+  font-size: 0.88rem;
+  color: rgba(183,176,168,0.65);
+  transition: color 180ms ease;
+}
+
+.site-footer a:hover { color: var(--text); }
+
+.footer-note {
+  font-size: 0.72rem;
+  color: rgba(183,176,168,0.4);
+  margin-top: 1.2rem;
 }
 
 /* ── RESPONSIVE ── */
@@ -406,28 +538,31 @@
   }
   .pathways-grid > :nth-child(3) {
     grid-column: 1 / -1;
-    min-height: 320px;
+    min-height: 300px;
   }
 }
 
 @media (max-width: 768px) {
   .pathways-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 8px;
+    gap: 6px;
     margin-top: -2rem;
     padding: 0 3%;
   }
   .pathways-grid > :nth-child(3) { grid-column: 1 / -1; }
-  .pathway-panel { min-height: 260px; padding: 1.5rem 1.2rem; }
-  .home-hero-v2 { min-height: 85vh; }
-  .home-hero-v2-content { padding: 0 6% 4rem; }
-  .home-row { padding: 3.5rem 5%; }
+  .pathway-panel { min-height: 240px; padding: 1.4rem 1.1rem; }
+  .pathway-featured { padding: 2rem 1.4rem; }
+  .home-hero-v2 { min-height: 80vh; }
+  .home-hero-v2-content { padding: 0 6% 3.5rem; }
+  .home-row { padding: 3rem 5%; }
   .home-row-items { grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .site-header .brand-mark img { height: 30px; }
 }
 
 @media (max-width: 480px) {
-  .pathways-grid { grid-template-columns: 1fr; }
+  .pathways-grid { grid-template-columns: 1fr; gap: 6px; }
   .pathways-grid > :nth-child(3) { grid-column: auto; }
   .home-hero-v2 h1 { font-size: 2.2rem; }
-  .pathway-panel { min-height: 220px; }
+  .pathway-panel { min-height: 200px; }
+  .home-row-items { grid-template-columns: 1fr; }
 }
