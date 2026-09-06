@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { artistLinks } from '../artist-links';
 import { releases } from '../releases';
 import { HeroArtwork } from '../HeroArtwork';
 
 export function MusicPage() {
+  useEffect(() => {
+    document.title = "Music | GRVEZ VAULT";
+    return () => { document.title = "GRVEZ VAULT | Music \u00b7 Archive \u00b7 Manuscripts \u00b7 Media"; };
+  }, []);
+
   return (
     <section className="page-section music-page" aria-labelledby="music-heading">
       <div className="page-hero">
@@ -11,39 +17,67 @@ export function MusicPage() {
       </div>
       <div className="page-content">
         <div className="page-intro">
-          <p className="eyebrow">Recorded Evidence</p>
-          <h1 id="music-heading">Audio Case Files</h1>
-          <p>Recorded audio evidence catalogued across the archive.</p>
+          <p className="eyebrow">Music</p>
+          <h1 id="music-heading">Recorded Chapters</h1>
+          <p>Music created through the GRVEZ VAULT creative world, spanning the distinct identities of Gizzy Graves and DXXD GRVEZ.</p>
         </div>
-        <div className="release-list">
-          {releases.map((release) => (
-            <article key={release.title} className="release-card">
-              <div className="release-media">
-                <img src={release.image} alt={`${release.title} artwork`} loading="lazy" decoding="async" />
-              </div>
-              <div className="release-body">
-                <p className="eyebrow small">Evidence entry</p>
-                <h2>{release.title}</h2>
-                <p className="release-artist">{release.artist}</p>
-                <p>{release.description}</p>
-                <div className="inline-actions">
-                  <a className="metal-button" href={release.listenUrl} target="_blank" rel="noreferrer">Play file</a>
-                  {release.lyricsUrl ? (
-                    <a className="metal-button secondary" href={release.lyricsUrl} target="_blank" rel="noreferrer">Lyrics</a>
-                  ) : (
-                    <span className="metal-button secondary disabled">Transcript — Coming Soon</span>
-                  )}
-                  {release.creditsUrl ? (
-                    <a className="metal-button tertiary" href={release.creditsUrl} target="_blank" rel="noreferrer">Credits</a>
-                  ) : (
-                    <span className="metal-button tertiary disabled">Credits — Coming Soon</span>
-                  )}
+
+        {/* GIZZY GRAVES */}
+        <section id="gizzy-graves" style={{ marginBottom: "4rem" }}>
+          <p className="eyebrow">ARTIST</p>
+          <h2>Gizzy Graves</h2>
+          <p style={{ color: "var(--muted)", maxWidth: "720px", marginBottom: "1.5rem" }}>
+            Artist identity curated by Sheldyn Gruhn, centered on dark alternative rock, industrial metal, hard rock, and nu-metal.
+          </p>
+          <Link to="/about/gizzy-graves" className="metal-button secondary" style={{ marginBottom: "2rem", display: "inline-flex" }}>
+            Artist Profile
+          </Link>
+        </section>
+
+        {/* DXXD GRVEZ */}
+        <section id="dxxd-grvez" style={{ marginBottom: "4rem" }}>
+          <p className="eyebrow">PROJECT</p>
+          <h2>DXXD GRVEZ</h2>
+          <p style={{ color: "var(--muted)", maxWidth: "720px", marginBottom: "1.5rem" }}>
+            Band project within the GRVEZ VAULT creative world, connecting Gizzy Graves and DMONIX.
+          </p>
+        </section>
+
+        {/* RELEASES */}
+        <section id="releases">
+          <p className="eyebrow">RELEASES</p>
+          <h2>Catalog</h2>
+          <div className="release-list">
+            {releases.map((release) => (
+              <article key={release.title} className="release-card">
+                <div className="release-media">
+                  <img src={release.image} alt={`${release.title} artwork`} loading="lazy" decoding="async" />
                 </div>
-              </div>
-            </article>
-          ))}
-        </div>
-        <div className="music-panel">
+                <div className="release-body">
+                  <p className="eyebrow small">{release.artist}</p>
+                  <h2>{release.title}</h2>
+                  <p>{release.description}</p>
+                  <div className="inline-actions">
+                    <a className="metal-button" href={release.listenUrl} target="_blank" rel="noreferrer">Listen</a>
+                    {release.lyricsUrl ? (
+                      <a className="metal-button secondary" href={release.lyricsUrl} target="_blank" rel="noreferrer">Lyrics</a>
+                    ) : (
+                      <span className="metal-button secondary disabled">Lyrics \u2014 Coming Soon</span>
+                    )}
+                    {release.creditsUrl ? (
+                      <a className="metal-button tertiary" href={release.creditsUrl} target="_blank" rel="noreferrer">Credits</a>
+                    ) : (
+                      <span className="metal-button tertiary disabled">Credits \u2014 Coming Soon</span>
+                    )}
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        {/* STREAMING */}
+        <div className="music-panel" style={{ marginTop: "3rem" }}>
           <div className="spotify-frame">
             <iframe
               title="Gizzy Graves on Spotify"
@@ -56,9 +90,9 @@ export function MusicPage() {
             />
           </div>
           <div className="music-panel-copy">
-            <p className="eyebrow">Evidence access</p>
-            <h2>GRVEZ VAULT audio evidence and field recordings</h2>
-            <p>From recovered files to external listening points, this section surfaces audio evidence from the archive.</p>
+            <p className="eyebrow">Streaming</p>
+            <h2>Listen Everywhere</h2>
+            <p>Find GRVEZ VAULT releases across all major platforms.</p>
           </div>
           <div className="streaming-grid">
             {artistLinks.map((link) => (
