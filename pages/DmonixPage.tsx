@@ -39,11 +39,24 @@ export function DmonixPage() {
           <div className="profile-copy">
             <p className="eyebrow">THE IDENTITY</p>
             <h2 id="dmonix-profile-heading">DMONIX</h2>
+            <p>
+              A distinct creative identity within GRVEZ VAULT, developed as the
+              counterpart to Gizzy Graves. DMONIX is part of the broader creative
+              world that includes the DXXD GRVEZ project.
+            </p>
+            <p style={{ marginTop: "1rem", color: "var(--muted)" }}>
+              DMONIX appears across music, visual work, and the symbolic language
+              of the archive. The identity carries its own visual direction
+              and creative presence within the GRVEZ VAULT world.
+            </p>
           </div>
         </section>
         <div className="inline-actions profile-actions">
           <Link className="metal-button" to="/about">
             Back to About
+          </Link>
+          <Link className="metal-button secondary" to="/music">
+            Music
           </Link>
           <Link className="metal-button secondary" to="/archive">
             Archive
