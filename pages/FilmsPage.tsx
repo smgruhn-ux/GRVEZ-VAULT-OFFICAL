@@ -15,18 +15,21 @@ export function FilmsPage() {
 
         <article className="archive-note">
           <p className="eyebrow">DOCUMENTARY</p>
-          <h2>Something Between</h2>
+          <h2>SOMEWHERE BETWEEN</h2>
           <p style={{ color: 'var(--muted)', fontSize: '0.85rem', marginBottom: '1rem' }}>Short documentary / investigative documentary concept</p>
-          <img className="film-poster" src="/SOMEWHERE_BETWEEN_THUMBNAIL.jpg" alt="Something Between documentary thumbnail" loading="lazy" />
+          <img className="film-poster" src="/SOMEWHERE_BETWEEN_THUMBNAIL.jpg" alt="Somewhere Between documentary thumbnail" loading="lazy" />
           <p>A short-form documentary examining the development of the Relational Continuity investigation through archival material, creative works, personal observations, and documented chronology. The film approaches the subject as an unfolding investigation rather than presenting the hypothesis as established fact.</p>
           <div className="film-video" style={{ marginTop: '2rem' }}>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/LHgeW8RKG_U?si=jsnQ8Xnl53NmfqVD" title="Something Between trailer" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen />
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/LHgeW8RKG_U?si=jsnQ8Xnl53NmfqVD" title="Somewhere Between trailer" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen />
           </div>
           <div style={{ marginTop: '1.5rem', fontSize: '0.88rem', lineHeight: 2 }}>
-            <p style={{ margin: 0 }}><strong>Director</strong> · Sheldyn Gruhn</p>
-            <p style={{ margin: 0 }}><strong>Writer</strong> · Sheldyn Gruhn</p>
-            <p style={{ margin: 0 }}><strong>Producer</strong> · Sheldyn Gruhn</p>
-            <p style={{ margin: 0 }}><strong>Acoustic Guitar</strong> · Jerry Downard ("Destiny")</p>
+            <p style={{ margin: 0 }}><strong>Written, directed &amp; produced by</strong> · Sheldyn Gruhn</p>
+            <p style={{ margin: 0 }}><strong>A GRVEZ VAULT Production</strong></p>
+            <p style={{ margin: 0 }}><strong>Music</strong> · “Twilight (with Laura Brehm) – Instrumental”</p>
+            <p style={{ margin: 0 }}><strong>Written/Performed by</strong> · Judah Earl</p>
+            <p style={{ margin: 0 }}><strong>Licensed through</strong> · Musicbed</p>
+            <p style={{ margin: 0 }}><strong>Musicbed reference</strong> · MB010UHWLTT02Z2</p>
+            <p style={{ margin: '1rem 0 0' }}>© 2026 GRVEZ VAULT. All rights reserved.</p>
           </div>
         </article>
 
