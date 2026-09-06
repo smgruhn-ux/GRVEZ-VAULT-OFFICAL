@@ -11,6 +11,7 @@ export const navigation: NavItem[] = [
     label: 'Music',
     children: [
       { path: '/about/gizzy-graves', label: 'Gizzy Graves' },
+      { path: '/about/dmonix', label: 'DMONIX' },
       { path: '/music', label: 'Releases' },
     ]
   },

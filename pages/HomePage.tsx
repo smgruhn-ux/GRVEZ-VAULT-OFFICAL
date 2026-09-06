@@ -56,6 +56,27 @@ export function HomePage() {
         </div>
       </section>
 
+      {/* PRIMARY PATHWAYS: The core of GRVEZ VAULT */}
+      <section className="home-pathways">
+        <div className="home-pathways-primary">
+          <a href="/music" className="archive-panel music-panel pathway-large">
+            <div className="archive-panel-overlay">
+              <p>MUSIC</p>
+              <h2>Recorded Chapters</h2>
+              <span>LISTEN \u2192</span>
+            </div>
+          </a>
+          <a href="/archive" className="archive-panel manuscript-panel pathway-large">
+            <div className="archive-panel-overlay">
+              <p>THE ARCHIVE</p>
+              <h2>Every Record Preserved</h2>
+              <span>EXPLORE \u2192</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      {/* FEATURED RESEARCH */}
       <section className="featured-book">
         <div className="featured-book-content page-content">
           <div className="featured-book-cover">
@@ -81,57 +102,43 @@ export function HomePage() {
             </p>
             <div className="hero-buttons" style={{ marginTop: "1rem" }}>
               <a
-                href="https://a.co/d/0jeiip0w"
+                href="/relational-continuity"
                 className="vault-button"
+              >
+                EXPLORE THE FRAMEWORK
+              </a>
+              <a
+                href="https://a.co/d/0jeiip0w"
+                className="vault-button secondary"
                 target="_blank"
                 rel="noopener noreferrer"
+                style={{ marginLeft: ".8rem" }}
               >
                 BUY THE BOOK
-              </a>
-              <a href="/relational-continuity" className="vault-button secondary" style={{ marginLeft: ".8rem" }}>
-                EXPLORE THE FRAMEWORK
               </a>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="archive-grid archive-grid-5">
-        <a href="/music" className="archive-panel music-panel">
-          <div className="archive-panel-overlay">
-            <p>MUSIC</p>
-            <h2>Recorded Chapters</h2>
-            <span>OPEN CASE \u2192</span>
-          </div>
-        </a>
-        <a href="/archive" className="archive-panel manuscript-panel">
-          <div className="archive-panel-overlay">
-            <p>THE ARCHIVE</p>
-            <h2>The Written Record</h2>
-            <span>REVEAL \u2192</span>
-          </div>
-        </a>
-        <a href="/relational-continuity" className="archive-panel" style={{ backgroundImage: 'linear-gradient(135deg, rgba(6,6,8,0.92), rgba(20,15,22,0.95)), radial-gradient(circle at 30% 50%, rgba(182,58,80,0.2), transparent 60%)' }}>
-          <div className="archive-panel-overlay">
-            <p>RESEARCH</p>
-            <h2>Relational Continuity</h2>
-            <span>READ THE HYPOTHESIS \u2192</span>
-          </div>
-        </a>
-        <a href="/vaultline" className="archive-panel vaultline-panel">
-          <div className="archive-panel-overlay">
-            <p>VAULTLINE</p>
-            <h2>Recovered Artifacts</h2>
-            <span>INSPECT EVIDENCE \u2192</span>
-          </div>
-        </a>
-        <a href="/films" className="archive-panel media-panel">
-          <div className="archive-panel-overlay">
-            <p>FILMS & MEDIA</p>
-            <h2>Visual Documentation</h2>
-            <span>VIEW EVIDENCE \u2192</span>
-          </div>
-        </a>
+      {/* SECONDARY PATHWAYS */}
+      <section className="home-pathways">
+        <div className="home-pathways-secondary">
+          <a href="/films" className="archive-panel media-panel pathway-secondary">
+            <div className="archive-panel-overlay">
+              <p>FILMS & MEDIA</p>
+              <h2>Visual Projects</h2>
+              <span>VIEW \u2192</span>
+            </div>
+          </a>
+          <a href="/vaultline" className="archive-panel vaultline-panel pathway-secondary">
+            <div className="archive-panel-overlay">
+              <p>VAULTLINE</p>
+              <h2>Recovered Artifacts</h2>
+              <span>SHOP \u2192</span>
+            </div>
+          </a>
+        </div>
       </section>
     </>
   );

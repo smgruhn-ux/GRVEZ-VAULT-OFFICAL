@@ -8,6 +8,7 @@ import './animations.css';
 import './relational-continuity.css';
 import './nav-dropdown.css';
 import './homepage-grid.css';
+import './breadcrumb.css';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

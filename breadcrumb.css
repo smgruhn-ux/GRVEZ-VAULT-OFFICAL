@@ -1,0 +1,32 @@
+/* Breadcrumb wayfinding */
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.breadcrumb-link {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.breadcrumb-link:hover,
+.breadcrumb-link:focus-visible {
+  color: var(--accent);
+}
+
+.breadcrumb-sep {
+  color: rgba(255, 255, 255, 0.2);
+  user-select: none;
+}
+
+.breadcrumb-current {
+  color: var(--text);
+}

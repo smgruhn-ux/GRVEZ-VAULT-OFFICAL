@@ -1,56 +1,49 @@
 /* ==============================================
-   HOMEPAGE 5-PANEL GRID
-   3 top + 2 bottom for primary GRVEZ VAULT pathways
+   HOMEPAGE PATHWAY LAYOUT
+   Tiered hierarchy: primary > featured > secondary
 ================================================= */
 
-.archive-grid-5 {
+.home-pathways {
+  padding: 0 8%;
+}
+
+.home-pathways-primary {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr;
   gap: 24px;
-  padding: 120px 8%;
+  padding-top: 80px;
+  padding-bottom: 40px;
 }
 
-.archive-grid-5 > :nth-child(4),
-.archive-grid-5 > :nth-child(5) {
-  /* Bottom row: 2 items spanning 3 columns */
+.home-pathways-secondary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  padding-top: 40px;
+  padding-bottom: 100px;
 }
 
-/* Rework to explicit 3-over-2 layout */
-.archive-grid-5 {
-  grid-template-columns: repeat(6, 1fr);
+.pathway-large {
+  min-height: 460px;
 }
 
-.archive-grid-5 > :nth-child(1),
-.archive-grid-5 > :nth-child(2),
-.archive-grid-5 > :nth-child(3) {
-  grid-column: span 2;
+.pathway-secondary {
+  min-height: 320px;
+  opacity: 0.92;
 }
 
-.archive-grid-5 > :nth-child(4) {
-  grid-column: 1 / 4;
-}
-
-.archive-grid-5 > :nth-child(5) {
-  grid-column: 4 / 7;
-}
-
-/* RCH panel: no background image, uses inline gradient */
-.archive-grid-5 > :nth-child(3) {
-  min-height: 420px;
+.pathway-secondary:hover {
+  opacity: 1;
 }
 
 @media (max-width: 900px) {
-  .archive-grid-5 {
+  .home-pathways { padding: 0 5%; }
+  .home-pathways-primary,
+  .home-pathways-secondary {
     grid-template-columns: 1fr;
-    padding: 60px 5%;
   }
-
-  .archive-grid-5 > :nth-child(1),
-  .archive-grid-5 > :nth-child(2),
-  .archive-grid-5 > :nth-child(3),
-  .archive-grid-5 > :nth-child(4),
-  .archive-grid-5 > :nth-child(5) {
-    grid-column: auto;
-  }
+  .home-pathways-primary { padding-top: 60px; padding-bottom: 20px; }
+  .home-pathways-secondary { padding-top: 20px; padding-bottom: 60px; }
+  .pathway-large { min-height: 360px; }
+  .pathway-secondary { min-height: 280px; }
 }
