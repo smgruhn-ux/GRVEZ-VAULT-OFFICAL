@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export function HomePage() {
   return (
     <>
-      {/* ── IMMERSIVE HERO ── */}
+      {/* IMMERSIVE HERO */}
       <section className="home-hero-v2">
         <div className="home-hero-v2-bg">
           <img
@@ -17,7 +17,7 @@ export function HomePage() {
         <div className="home-hero-v2-grain" aria-hidden="true" />
         <div className="home-hero-v2-content">
           <p className="home-hero-v2-eyebrow">
-            Music \u00b7 Research \u00b7 Film \u00b7 Archive
+            Music \u00b7 Archive \u00b7 Research \u00b7 Film
           </p>
           <h1>
             Every Record
@@ -30,24 +30,22 @@ export function HomePage() {
             music, writing, film, and research exactly as they
             were originally created.
           </p>
-          <Link to="/archive" className="home-hero-v2-cta">
-            Enter the Vault \u2192
-          </Link>
+          <a href="#pathways" className="home-hero-v2-cta">
+            Explore GRVEZ VAULT \u2192
+          </a>
         </div>
       </section>
 
-      {/* ── 5 PATHWAYS (asymmetric, RCH featured center) ── */}
-      <section className="pathways-grid">
+      {/* FIVE PATHWAYS */}
+      <section className="pathways-grid" id="pathways">
 
         {/* MUSIC */}
         <Link to="/music" className="pathway-panel">
-          <div className="pathway-panel-bg">
-            <img src="/crimson-fracture.jpg" alt="" loading="lazy" />
-          </div>
+          <div className="pathway-panel-bg pathway-bg-music" />
           <div className="pathway-panel-content">
             <h2>Music</h2>
             <p className="pathway-tagline">
-              Sounds that<br />travel further
+              Sound lives on
             </p>
             <span className="pathway-action">Explore Music \u2192</span>
           </div>
@@ -55,13 +53,11 @@ export function HomePage() {
 
         {/* ARCHIVE */}
         <Link to="/archive" className="pathway-panel">
-          <div className="pathway-panel-bg">
-            <img src="/manuscripts-hero.jpg" alt="" loading="lazy" />
-          </div>
+          <div className="pathway-panel-bg pathway-bg-archive" />
           <div className="pathway-panel-content">
             <h2>Archive</h2>
             <p className="pathway-tagline">
-              Fragments<br />that endure
+              Preserve the record
             </p>
             <span className="pathway-action">Browse Archive \u2192</span>
           </div>
@@ -69,9 +65,7 @@ export function HomePage() {
 
         {/* RELATIONAL CONTINUITY (featured center) */}
         <Link to="/relational-continuity" className="pathway-panel pathway-featured">
-          <div className="pathway-panel-bg">
-            <img src="/founding-edition.jpeg" alt="" loading="lazy" style={{ objectPosition: "center top", opacity: 0.15 }} />
-          </div>
+          <div className="pathway-panel-bg pathway-bg-rch" />
           <div className="pathway-panel-content">
             <h2>Relational<br />Continuity</h2>
             <p className="pathway-featured-desc">
@@ -98,13 +92,11 @@ export function HomePage() {
 
         {/* FILMS & MEDIA */}
         <Link to="/films" className="pathway-panel">
-          <div className="pathway-panel-bg">
-            <img src="/about-hero.jpg" alt="" loading="lazy" />
-          </div>
+          <div className="pathway-panel-bg pathway-bg-films" />
           <div className="pathway-panel-content">
             <h2>Films &amp;<br />Media</h2>
             <p className="pathway-tagline">
-              Stories in a<br />larger context
+              Stories in<br />another form
             </p>
             <span className="pathway-action">Watch &amp; Explore \u2192</span>
           </div>
@@ -112,21 +104,19 @@ export function HomePage() {
 
         {/* VAULTLINE */}
         <Link to="/vaultline" className="pathway-panel">
-          <div className="pathway-panel-bg">
-            <img src="/vaultline-hero.jpg" alt="" loading="lazy" />
-          </div>
+          <div className="pathway-panel-bg pathway-bg-vaultline" />
           <div className="pathway-panel-content">
             <h2>Vaultline</h2>
             <p className="pathway-tagline">
-              Direct line<br />to what matters
+              Wear what remains
             </p>
-            <span className="pathway-action">Join Vaultline \u2192</span>
+            <span className="pathway-action">Shop Vaultline \u2192</span>
           </div>
         </Link>
 
       </section>
 
-      {/* ── LATEST MUSIC ── */}
+      {/* LATEST MUSIC */}
       <section className="home-row">
         <div className="home-row-header">
           <div>
@@ -140,19 +130,17 @@ export function HomePage() {
               <img src="/voodoo-bane.jpg" alt="Voodoo Bane artwork" loading="lazy" />
             </div>
             <p className="home-row-item-title">Voodoo Bane</p>
-            <p className="home-row-item-sub">GRVEZ VAULT</p>
           </a>
           <a href="https://open.spotify.com/album/4uNlB0ql9fuhJ4DjV1vARL" target="_blank" rel="noreferrer" className="home-row-item">
             <div className="home-row-item-img">
               <img src="/under-my-tongue.jpg" alt="Under My Tongue artwork" loading="lazy" />
             </div>
             <p className="home-row-item-title">Under My Tongue</p>
-            <p className="home-row-item-sub">GRVEZ VAULT</p>
           </a>
         </div>
       </section>
 
-      {/* ── ARCHIVE HIGHLIGHTS ── */}
+      {/* ARCHIVE HIGHLIGHTS */}
       <section className="home-row">
         <div className="home-row-header">
           <div>
@@ -162,25 +150,21 @@ export function HomePage() {
         </div>
         <div className="home-row-items">
           <Link to="/record/001" className="home-row-item">
-            <div className="home-row-item-img" style={{ aspectRatio: "4/3", background: "linear-gradient(135deg, rgba(14,15,20,1), rgba(22,18,24,1))" }}>
-              <div style={{ display: "flex", alignItems: "center", justifyContent: "center", height: "100%", fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "1.4rem", fontStyle: "italic", color: "rgba(245,239,232,0.5)", padding: "1.5rem", textAlign: "center", lineHeight: 1.5 }}>
-                Forevermore
-              </div>
+            <div className="home-row-item-img home-row-item-text-placeholder">
+              <span>Forevermore</span>
             </div>
             <p className="home-row-item-title">Forevermore</p>
             <p className="home-row-item-type">Recovered Poem</p>
           </Link>
           <Link to="/record/004" className="home-row-item">
-            <div className="home-row-item-img" style={{ aspectRatio: "4/3", background: "linear-gradient(135deg, rgba(20,14,14,1), rgba(14,15,20,1))" }}>
-              <div style={{ display: "flex", alignItems: "center", justifyContent: "center", height: "100%", fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "1.4rem", fontStyle: "italic", color: "rgba(245,239,232,0.5)", padding: "1.5rem", textAlign: "center", lineHeight: 1.5 }}>
-                Embers
-              </div>
+            <div className="home-row-item-img home-row-item-text-placeholder">
+              <span>Embers</span>
             </div>
             <p className="home-row-item-title">Embers</p>
             <p className="home-row-item-type">Recovered Poem</p>
           </Link>
           <Link to="/record/008" className="home-row-item">
-            <div className="home-row-item-img" style={{ aspectRatio: "4/3", overflow: "hidden" }}>
+            <div className="home-row-item-img">
               <img src="/founding-edition.jpeg" alt="Founding Edition" loading="lazy" style={{ objectPosition: "center top" }} />
             </div>
             <p className="home-row-item-title">Founding Edition</p>

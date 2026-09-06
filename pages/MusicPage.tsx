@@ -7,7 +7,6 @@ import { HeroArtwork } from '../HeroArtwork';
 export function MusicPage() {
   useEffect(() => {
     document.title = "Music | GRVEZ VAULT";
-    // Handle hash-based scrolling for section links
     const hash = window.location.hash;
     if (hash) {
       const el = document.querySelector(hash);
@@ -44,9 +43,12 @@ export function MusicPage() {
         <section id="dxxd-grvez" style={{ marginBottom: "4rem" }}>
           <p className="eyebrow">PROJECT</p>
           <h2>DXXD GRVEZ</h2>
-          <p style={{ color: "var(--muted)", maxWidth: "720px" }}>
+          <p style={{ color: "var(--muted)", maxWidth: "720px", marginBottom: "1.5rem" }}>
             Band project within the GRVEZ VAULT creative world, connecting Gizzy Graves and DMONIX.
           </p>
+          <Link to="/dxxd-grvez" className="metal-button secondary" style={{ display: "inline-flex" }}>
+            Project Page
+          </Link>
         </section>
 
         {/* RELEASES */}
@@ -60,7 +62,9 @@ export function MusicPage() {
                   <img src={release.image} alt={`${release.title} artwork`} loading="lazy" decoding="async" />
                 </div>
                 <div className="release-body">
-                  <p className="eyebrow small">{release.artist}</p>
+                  {release.artist && release.artist !== 'GRVEZ VAULT' && (
+                    <p className="eyebrow small">{release.artist}</p>
+                  )}
                   <h2>{release.title}</h2>
                   <p>{release.description}</p>
                   <div className="inline-actions">

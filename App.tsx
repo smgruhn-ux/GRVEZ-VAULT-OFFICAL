@@ -14,6 +14,7 @@ import { FaqPage } from './pages/FaqPage';
 import { RecordPage } from './pages/RecordPage';
 import { GizzyGravesPage } from './pages/GizzyGravesPage';
 import { DmonixPage } from './pages/DmonixPage';
+import { DxxdGrvezPage } from './pages/DxxdGrvezPage';
 import { RelationalContinuityPage } from './pages/RelationalContinuityPage';
 import { FilmsPage } from './pages/FilmsPage';
 import { NotFoundPage } from './pages/NotFoundPage';
@@ -27,6 +28,7 @@ export function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/about/gizzy-graves" element={<GizzyGravesPage />} />
           <Route path="/about/dmonix" element={<DmonixPage />} />
+          <Route path="/dxxd-grvez" element={<DxxdGrvezPage />} />
           <Route path="/music" element={<MusicPage />} />
           <Route path="/archive" element={<ArchivePage />} />
           <Route path="/manuscripts" element={<ManuscriptsPage />} />
