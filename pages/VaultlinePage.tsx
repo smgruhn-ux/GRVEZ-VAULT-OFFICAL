@@ -3,14 +3,14 @@ import { HeroArtwork } from "../HeroArtwork";
 
 const products = [
   {
-    title: "DMONIX Fracture Long Sleeve",
-    image: "/vaultline/dmonix-fracture.png",
-    url: "https://vaultlineofficial.us/products/dmonix-fracture-long-sleeve",
+    title: "IXXI Vaultline Tee",
+    image: "",
+    url: "https://vaultlineofficial.us/products/ixxi-vaultline-tee",
   },
   {
-    title: "Vaultline VG Oversized Tee",
-    image: "/vaultline/vaultline-vg-oversized-tee.png",
-    url: "https://vaultlineofficial.us/products/vaultline-vg-oversized-tee",
+    title: "Vaultline Northstar Baby Tee",
+    image: "",
+    url: "https://vaultlineofficial.us/products/vaultline-northstar-baby-tee",
   },
   {
     title: "IXXI Whiteout Snapback",
@@ -41,217 +41,41 @@ const products = [
 
 export function VaultlinePage() {
   return (
-    <section
-      className="page-section vaultline-page"
-      aria-labelledby="vaultline-heading"
-    >
+    <section className="page-section vaultline-page" aria-labelledby="vaultline-heading">
       <div className="page-hero">
-        <HeroArtwork
-          image="/vaultline-hero.jpg"
-          alt="Vaultline by Gizzy Graves"
-        />
+        <HeroArtwork image="/vaultline-hero.jpg" alt="Vaultline by Gizzy Graves" />
       </div>
-
       <div className="page-content">
-
         <div className="page-intro">
-
-          <p className="eyebrow">
-            VAULTLINE
-          </p>
-
-          <h1 id="vaultline-heading">
-            Vaultline by Gizzy Graves
-          </h1>
-
-          <p>
-  Vaultline collects artifacts recovered from the GRVEZ VAULT investigation.
-  These pieces are presented as wearable evidence rather than ordinary
-  products, and they carry the same fractured visual language found in the
-  archive's manuscripts, symbols, and recovered documentation.
-</p>
+          <p className="eyebrow">VAULTLINE</p>
+          <h1 id="vaultline-heading">Vaultline by Gizzy Graves</h1>
+          <p>Vaultline collects artifacts recovered from the GRVEZ VAULT investigation. These pieces are presented as wearable evidence rather than ordinary products, and they carry the same fractured visual language found in the archive's manuscripts, symbols, and recovered documentation.</p>
         </div>
 
         <section className="vaultline-showcase">
-
           <article className="vaultline-feature">
-
-            <div className="vaultline-feature-image">
-
-              <img
-                src={products[0].image}
-                alt={products[0].title}
-                loading="eager"
-              />
-
-            </div>
-
+            <div className="vaultline-feature-image">{products[0].image ? <img src={products[0].image} alt={products[0].title} loading="eager" /> : <div className="vaultline-image-needed" role="img" aria-label="Product image needed for IXXI Vaultline Tee" />}</div>
             <div className="vaultline-feature-copy">
-
-              <p className="eyebrow">
-                ARTIFACT
-              </p>
-
-              <h2>
-                {products[0].title}
-              </h2>
-
-              <p>
-                A heavyweight statement piece built around the
-                DMONIX identity. The crimson fracture, premium
-                construction, and minimalist presentation make it
-                one of the defining releases within Vaultline.
-              </p>
-
-              <a
-                className="metal-button"
-                href={products[0].url}
-                target="_blank"
-                rel="noreferrer"
-              >
-                INSPECT ARTIFACT
-              </a>
-
+              <p className="eyebrow">ARTIFACT</p><h2>{products[0].title}</h2>
+              <p>View the current Vaultline product at the official storefront.</p>
+              <a className="metal-button" href={products[0].url} target="_blank" rel="noreferrer">INSPECT ARTIFACT</a>
             </div>
-
           </article>
-
           <article className="vaultline-feature reverse">
-
             <div className="vaultline-feature-copy">
-
-              <p className="eyebrow">
-                SIGNATURE ARTIFACT
-              </p>
-
-              <h2>
-                {products[1].title}
-              </h2>
-
-              <p>
-                Designed with a relaxed oversized silhouette,
-                this piece carries the signature Vaultline visual
-                identity as a recovered artifact. It is presented here
-                as part of the ongoing investigation, not as a standard
-                product release.
-              </p>
-
-              <a
-                className="metal-button"
-                href={products[1].url}
-                target="_blank"
-                rel="noreferrer"
-              >
-                INSPECT ARTIFACT
-              </a>
-
+              <p className="eyebrow">SIGNATURE ARTIFACT</p><h2>{products[1].title}</h2>
+              <p>View the current Vaultline product at the official storefront.</p>
+              <a className="metal-button" href={products[1].url} target="_blank" rel="noreferrer">INSPECT ARTIFACT</a>
             </div>
-
-            <div className="vaultline-feature-image">
-
-              <img
-                src={products[1].image}
-                alt={products[1].title}
-                loading="lazy"
-              />
-
-            </div>
-
+            <div className="vaultline-feature-image">{products[1].image ? <img src={products[1].image} alt={products[1].title} loading="lazy" /> : <div className="vaultline-image-needed" role="img" aria-label="Product image needed for Vaultline Northstar Baby Tee" />}</div>
           </article>
-                    <section className="vaultline-grid-section">
-
-            <div className="section-heading">
-
-              <p className="eyebrow">
-                SIGNATURE PIECES
-              </p>
-
-              <h2>
-                Complete the Artifact Set
-              </h2>
-
-              <p>
-                Every release is designed as part of the same visual
-                language. Continue the artifact investigation across the
-                current Vaultline archive.
-              </p>
-
-            </div>
-
-            <div className="vaultline-product-grid">
-
-              {products.slice(2).map((product) => (
-
-                <a
-                  key={product.title}
-                  href={product.url}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="vaultline-card"
-                >
-
-                  <div className="vaultline-card-image">
-
-                    <img
-                      src={product.image}
-                      alt={product.title}
-                      loading="lazy"
-                    />
-
-                  </div>
-
-                  <div className="vaultline-card-content">
-
-                    <h3>
-                      {product.title}
-                    </h3>
-
-                    <span className="metal-button">
-                      INSPECT ARTIFACT
-                    </span>
-
-                  </div>
-
-                </a>
-
-              ))}
-
-            </div>
-
+          <section className="vaultline-grid-section">
+            <div className="section-heading"><p className="eyebrow">SIGNATURE PIECES</p><h2>Complete the Artifact Set</h2><p>Every release is designed as part of the same visual language. Continue the artifact investigation across the current Vaultline archive.</p></div>
+            <div className="vaultline-product-grid">{products.slice(2).map((product) => <a key={product.title} href={product.url} target="_blank" rel="noreferrer" className="vaultline-card"><div className="vaultline-card-image"><img src={product.image} alt={product.title} loading="lazy" /></div><div className="vaultline-card-content"><h3>{product.title}</h3><span className="metal-button">INSPECT ARTIFACT</span></div></a>)}</div>
           </section>
-
-          <section className="vaultline-store-cta">
-
-            <p className="eyebrow">
-              ARCHIVE PORTAL
-            </p>
-
-            <h2>
-              Browse the complete Vaultline archive.
-            </h2>
-
-            <p>
-              View every preserved artifact, document recovered
-              visual evidence, and access the official Vaultline
-              portal as part of the ongoing investigation.
-              These pieces exist as evidence from the same archive
-              that led to the Founding Edition manuscript.
-            </p>
-
-            <a
-              href="https://vaultlineofficial.us"
-              target="_blank"
-              rel="noreferrer"
-              className="metal-button"
-            >
-              OPEN ARCHIVE PORTAL
-            </a>
-
-          </section>
-                  </section>
-
+          <section className="vaultline-store-cta"><p className="eyebrow">ARCHIVE PORTAL</p><h2>Browse the complete Vaultline archive.</h2><p>View every preserved artifact, document recovered visual evidence, and access the official Vaultline portal as part of the ongoing investigation. These pieces exist as evidence from the same archive that led to the Founding Edition manuscript.</p><a href="https://vaultlineofficial.us" target="_blank" rel="noreferrer" className="metal-button">OPEN ARCHIVE PORTAL</a></section>
+        </section>
       </div>
-
     </section>
   );
 }
