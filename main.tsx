@@ -14,6 +14,7 @@ import './catalog.css';
 import './moodboard-system.css';
 import './music-public.css';
 import './homepage-pathways.css';
+import './documentary-questions.css';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
