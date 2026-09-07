@@ -1,130 +1,23 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Breadcrumb } from "../Breadcrumb";
 
 const records = [
-  {
-    id: "001",
-    type: "CONCEPT ART",
-    title: "Death of Deceit",
-    preview: "Concept artwork exploring the earliest visual language of the archive.",
-    source: "Artwork Archive",
-    status: "UNDER RESTORATION",
-  },
-  {
-    id: "002",
-    type: "SYMBOL",
-    title: "Omega Development",
-    preview: "Early exploration of the Omega mark and eight-point star.",
-    source: "Design Archive",
-    status: "UNDER RESTORATION",
-  },
-  {
-    id: "003",
-    type: "TATTOO",
-    title: "Hourglass Sketch",
-    preview: "Original tattoo concept drawn before later symbolic development.",
-    source: "Journal Archive",
-    status: "UNDER RESTORATION",
-  },
-  {
-    id: "004",
-    type: "PHOTOGRAPH",
-    title: "Visual Evolution",
-    preview: "Recovered images documenting the evolution of GRVEZ VAULT.",
-    source: "Media Archive",
-    status: "UNDER RESTORATION",
-  },
-  {
-    id: "005",
-    type: "ARCHIVIST'S OBSERVATION",
-    title: "Recurring Symbolism",
-    preview: "Recurring imagery appears across artwork, journals, and later visual identity, aligning with the evidence used to support the recovered manuscript.",
-    source: "Cross Reference",
-    status: "UNDER RESTORATION",
-  },
+  { id: "001", type: "CONCEPT ART", title: "Death of Deceit", preview: "Concept artwork exploring the earliest visual language of the archive.", source: "Artwork Archive", status: "UNDER RESTORATION", route: "/record/005" },
+  { id: "002", type: "SYMBOL", title: "Omega Development", preview: "Early exploration of the Omega mark and eight-point star.", source: "Design Archive", status: "UNDER RESTORATION", route: "/record/006" },
+  { id: "003", type: "TATTOO", title: "Hourglass Tattoo", preview: "Primary Facebook screenshot documenting the completed tattoo.", source: "Primary source, Facebook screenshot", status: "SOURCE MATCHED", route: "/media/hourglass-tattoo", image: "https://u234214232.p.clickup-attachments.com/u234214232/56ad0121-c4ef-47f5-a584-79d42d7080e1/hourglass_2019.png?view=open" },
+  { id: "004", type: "PHOTOGRAPH", title: "Visual Evolution", preview: "Five primary-source tattoo records documenting the visual chronology.", source: "Primary source, Facebook screenshots", status: "SOURCE MATCHED", route: "/media/visual-evolution", image: "https://u234214232.p.clickup-attachments.com/u234214232/5b262759-e576-49a4-a049-4c36c03c8484/water_fish_2018.png?view=open" },
+  { id: "005", type: "ARCHIVIST'S OBSERVATION", title: "Recurring Symbolism", preview: "Recurring imagery appears across artwork, journals, and later visual identity, aligning with the evidence used to support the recovered manuscript.", source: "Cross Reference", status: "UNDER RESTORATION", route: "/record/007" },
 ];
 
 export function MediaPage() {
-  useEffect(() => {
-    document.title = "Visual Documentation | GRVEZ VAULT";
-    return () => { document.title = "GRVEZ VAULT | Music \u00b7 Archive \u00b7 Manuscripts \u00b7 Media"; };
-  }, []);
-
-  return (
-    <section className="page-section manuscripts-page" aria-labelledby="media-heading">
-      <div className="page-content">
-
-        <Breadcrumb items={[
-          { label: "Archive", to: "/archive" },
-          { label: "Visual Documentation" },
-        ]} />
-
-        <p className="eyebrow">ARCHIVE RECORD // 003</p>
-        <h1 id="media-heading">Visual Documentation</h1>
-
-        <p className="page-description">
-          Artwork. Photography. Concepts. Symbols.
-          Visual evidence preserved throughout the archive's investigation.
-          These images and designs are part of the same documentary trail
-          that supports the recovered manuscript and its twelve-stage
-          relational model.
-        </p>
-
-        <section className="archive-note">
-          <p className="eyebrow">VISUAL EVIDENCE</p>
-          <h2>Archive In Progress</h2>
-          <p>
-            The visual archive documents recurring motifs, early concept
-            language, and symbolic patterns found across music, writing,
-            manuscripts, and recovered artifacts. It serves as supporting
-            evidence for the investigative narrative rather than a separate
-            gallery.
-          </p>
-          <p style={{ marginTop: "1rem", color: "var(--muted)", fontSize: "0.95rem" }}>
-            Visual records below are being restored and catalogued.
-            Source imagery, artwork files, and supporting documentation
-            will be added as restoration progresses.
-          </p>
-        </section>
-
-        <section className="archive-section">
-          <div className="section-heading">
-            <p className="eyebrow">RECOVERED VISUAL RECORDS</p>
-            <h2>Catalogued Evidence</h2>
-          </div>
-          <div className="fragment-grid">
-            {records.map((record) => (
-              <article key={record.id} className="fragment-card">
-                <div className="fragment-header">
-                  <span className="fragment-id">VISUAL {record.id}</span>
-                  <span className="fragment-type">{record.type}</span>
-                </div>
-                <h3>{record.title}</h3>
-                <p className="fragment-preview">{record.preview}</p>
-                <div className="fragment-footer">
-                  <p>
-                    <strong>Recovered From</strong>
-                    <br />
-                    {record.source}
-                  </p>
-                  <div className="fragment-status">{record.status}</div>
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="archive-note" style={{ marginTop: "4rem" }}>
-          <p className="eyebrow">ARCHIVIST'S NOTE</p>
-          <h2>Restoration Ongoing</h2>
-          <p>
-            Visual records are being preserved in their original form.
-            As source imagery and supporting documentation become available,
-            each record will be updated with the recovered material.
-          </p>
-        </section>
-
-      </div>
-    </section>
-  );
+  useEffect(() => { document.title = "Visual Documentation | GRVEZ VAULT"; return () => { document.title = "GRVEZ VAULT | Music · Archive · Manuscripts · Media"; }; }, []);
+  return <section className="page-section manuscripts-page" aria-labelledby="media-heading"><div className="page-content">
+    <Breadcrumb items={[{ label: "Archive", to: "/archive" }, { label: "Visual Documentation" }]} />
+    <p className="eyebrow">ARCHIVE RECORD // 003</p><h1 id="media-heading">Visual Documentation</h1>
+    <p className="page-description">Artwork. Photography. Concepts. Symbols. Visual evidence preserved throughout the archive's investigation.</p>
+    <section className="archive-note"><p className="eyebrow">SOURCE-GROUNDED RESTORATION</p><h2>Images now matched.</h2><p>Redacted primary-source screenshots are wired to their detail shells. Names and photos of third-party commenters are blurred; artifact and provenance dates remain visible.</p><p style={{ marginTop: "1rem", color: "var(--muted)", fontSize: "0.95rem" }}>Interpretive claims remain labeled as interpretation. The archive does not turn motif comparison into proof.</p></section>
+    <section className="archive-section"><div className="section-heading"><p className="eyebrow">RECOVERED VISUAL RECORDS</p><h2>Catalogued Evidence</h2></div><div className="fragment-grid">{records.map((record) => { const content = <><div className="fragment-header"><span className="fragment-id">VISUAL {record.id}</span><span className="fragment-type">{record.type}</span></div>{record.image && <img src={record.image} alt={`${record.title} source image`} style={{ width: "100%", aspectRatio: "16 / 9", objectFit: "cover", margin: "1rem 0", borderRadius: "2px" }} />}<h3>{record.title}</h3><p className="fragment-preview">{record.preview}</p><div className="fragment-footer"><p><strong>Recovered From</strong><br />{record.source}</p><div className="fragment-status">{record.status} →</div></div></>; return record.image ? <Link key={record.id} to={record.route} className="fragment-card" style={{ textDecoration: "none" }}>{content}</Link> : <article key={record.id} className="fragment-card">{content}</article>; })}</div></section>
+    <section className="archive-note" style={{ marginTop: "4rem" }}><p className="eyebrow">ARCHIVIST'S NOTE</p><h2>Restoration ongoing.</h2><p>These records preserve what the supplied sources actually establish: artifact identity, documented date, source type, and provenance context. Open questions stay open.</p></section>
+  </div></section>;
 }
