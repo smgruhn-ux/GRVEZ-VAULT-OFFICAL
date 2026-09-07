@@ -8,6 +8,7 @@ const records = [
   { id: "003", type: "TATTOO", title: "Hourglass Tattoo", preview: "Primary Facebook screenshot documenting the completed tattoo.", source: "Primary source, Facebook screenshot", status: "SOURCE MATCHED", route: "/media/hourglass-tattoo", image: "/HOURGLASS_TATTOO.png" },
   { id: "004", type: "PHOTOGRAPH", title: "Visual Evolution", preview: "Five primary-source tattoo records documenting the visual chronology.", source: "Primary source, Facebook screenshots", status: "SOURCE MATCHED", route: "/media/visual-evolution", image: "https://u234214232.p.clickup-attachments.com/u234214232/5b262759-e576-49a4-a049-4c36c03c8484/water_fish_2018.png?view=open" },
   { id: "005", type: "ARCHIVIST'S OBSERVATION", title: "Recurring Symbolism", preview: "Recurring imagery appears across artwork, journals, and later visual identity, aligning with the evidence used to support the recovered manuscript.", source: "Cross Reference", status: "UNDER RESTORATION", route: "/record/007" },
+  { id: "006", type: "TATTOO", title: "Water / Fish Tattoo", preview: "Primary visual source documenting the original water/fishing intent.", source: "Primary visual source, Facebook post screenshot", status: "PRE-FRAMEWORK VISUAL DOCUMENTATION", route: "/media/water-fish-tattoo", image: "/WATER_TATTOO.png" },
 ];
 
 export function MediaPage() {
