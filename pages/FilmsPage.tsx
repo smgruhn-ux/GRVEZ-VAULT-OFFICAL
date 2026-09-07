@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 const documentaryQuestions = [
   { title: "WHAT DOES THE BASKETBALL MEAN?", slug: "basketball", label: "SYMBOL / EVENT" },
-  { title: "WHAT WERE THE MIMIC EXPERIENCES?", slug: "mimic-experiences", label: "EXPERIENCE / TESTIMONY" },
   { title: "WHAT HAPPENED DURING THE MAY 23 EPIPHANY?", slug: "may-23-epiphany", label: "CHRONOLOGY / TESTIMONY" },
   { title: "WHY DO THE SAME SYMBOLS KEEP REAPPEARING?", slug: "recurring-symbols", label: "SYMBOL / INTERPRETATION" },
   { title: "WHICH EVENTS HAPPENED BEFORE THE FRAMEWORK EXISTED?", slug: "pre-framework-events", label: "CHRONOLOGY / METHOD" },
