@@ -17,12 +17,13 @@ export function RecordPage() {
             <p className="eyebrow">ARCHIVE METADATA</p>
             <p><strong>Archive ID:</strong> 001</p>
             <p><strong>Document Type:</strong> Poem</p>
+            <p><strong>Writer:</strong> Sheldyn Gruhn</p>
             <p><strong>Date Written:</strong> September 5, 2024</p>
             <p><strong>Recovery Status:</strong> Complete</p>
           </section>
           <section className="archive-note">
             <p className="eyebrow">RECOVERED TEXT</p>
-            <blockquote className="record-poem">
+            <blockquote className="record-poem" style={{ whiteSpace: "pre-wrap", lineHeight: 2 }}>
 {`Forevermore
 Shall our souls
 Be intertwined
@@ -42,8 +43,8 @@ Remain in peacefulness`}
             <p>The earliest recovered poetic record currently preserved within the archive. Themes of permanence, devotion, mortality, and continuity introduced here echo throughout later poems, manuscripts, and documentary material.</p>
           </section>
           <div className="record-nav">
-            <Link to="/manuscripts">\u2190 Archive</Link>
-            <Link to="/record/002">Angel of Death \u2192</Link>
+            <Link to="/manuscripts">{"\u2190"} Archive</Link>
+            <Link to="/record/002">Angel of Death {"\u2192"}</Link>
           </div>
         </div>
       </section>
@@ -62,12 +63,13 @@ Remain in peacefulness`}
             <p className="eyebrow">ARCHIVE METADATA</p>
             <p><strong>Archive ID:</strong> 002</p>
             <p><strong>Document Type:</strong> Poem</p>
+            <p><strong>Writer:</strong> Sheldyn Gruhn</p>
             <p><strong>Date Written:</strong> April 17, 2025</p>
             <p><strong>Recovery Status:</strong> Complete</p>
           </section>
           <section className="archive-note">
             <p className="eyebrow">RECOVERED TEXT</p>
-            <blockquote className="record-poem">
+            <blockquote className="record-poem" style={{ whiteSpace: "pre-wrap", lineHeight: 2 }}>
 {`What is calling me
 As I gasp for air
 Trying to breathe
@@ -90,8 +92,8 @@ Is what's calling me`}
             <p>This record expands the archive's developing themes of darkness, prophecy, mortality, and loss of liberty. Several symbolic elements introduced here later reappear throughout the broader archive.</p>
           </section>
           <div className="record-nav">
-            <Link to="/record/001">\u2190 Forevermore</Link>
-            <Link to="/record/003">Agony \u2192</Link>
+            <Link to="/record/001">{"\u2190"} Forevermore</Link>
+            <Link to="/record/003">Agony {"\u2192"}</Link>
           </div>
         </div>
       </section>
@@ -110,12 +112,13 @@ Is what's calling me`}
             <p className="eyebrow">ARCHIVE METADATA</p>
             <p><strong>Archive ID:</strong> 003</p>
             <p><strong>Document Type:</strong> Poem</p>
+            <p><strong>Writer:</strong> Sheldyn Gruhn</p>
             <p><strong>Date Written:</strong> April 19, 2025</p>
             <p><strong>Recovery Status:</strong> Complete</p>
           </section>
           <section className="archive-note">
             <p className="eyebrow">RECOVERED TEXT</p>
-            <blockquote className="record-poem">
+            <blockquote className="record-poem" style={{ whiteSpace: "pre-wrap", lineHeight: 2 }}>
 {`Pondering me in agony
 As you load your barrel
 So pistic in supremacy
@@ -140,8 +143,8 @@ Pleading in Agony`}
             <p>This recovered record introduces imagery of conflict, betrayal, resistance, and moral confrontation. The weapon symbolism and emotional tension continue themes that evolve throughout later works in the archive.</p>
           </section>
           <div className="record-nav">
-            <Link to="/record/002">\u2190 Angel of Death</Link>
-            <Link to="/record/004">Embers \u2192</Link>
+            <Link to="/record/002">{"\u2190"} Angel of Death</Link>
+            <Link to="/record/004">Embers {"\u2192"}</Link>
           </div>
         </div>
       </section>
@@ -160,13 +163,14 @@ Pleading in Agony`}
             <p className="eyebrow">ARCHIVE METADATA</p>
             <p><strong>Archive ID:</strong> 004</p>
             <p><strong>Document Type:</strong> Poem</p>
+            <p><strong>Writer:</strong> Sheldyn Gruhn</p>
             <p><strong>Date Written:</strong> April 23, 2025</p>
             <p><strong>Source:</strong> Poetry Nation</p>
             <p><strong>Recovery Status:</strong> Complete</p>
           </section>
           <section className="archive-note">
             <p className="eyebrow">RECOVERED TEXT</p>
-            <blockquote className="record-poem">
+            <blockquote className="record-poem" style={{ whiteSpace: "pre-wrap", lineHeight: 2 }}>
 {`The fire cracks and the embers brew
 Whilst the stars sing as I cry and plead,
 For I render you, my love
@@ -203,8 +207,8 @@ The embers in your flame.`}
             <p>This record marks a significant evolution in the archive. Fire, memory, loss, shadows, and enduring attachment begin converging into recurring motifs that continue throughout later poems, manuscripts, songs, symbols, and documentary material.</p>
           </section>
           <div className="record-nav">
-            <Link to="/record/003">\u2190 Agony</Link>
-            <Link to="/record/005">Next Record \u2192</Link>
+            <Link to="/record/003">{"\u2190"} Agony</Link>
+            <Link to="/record/005">Next Record {"\u2192"}</Link>
           </div>
         </div>
       </section>
@@ -224,8 +228,8 @@ The embers in your flame.`}
             <p>This archive record has been identified within the chronology but has not yet been fully restored.</p>
           </section>
           <div className="record-nav">
-            <Link to="/record/004">\u2190 Embers</Link>
-            <Link to="/record/006">Next \u2192</Link>
+            <Link to="/record/004">{"\u2190"} Embers</Link>
+            <Link to="/record/006">Next {"\u2192"}</Link>
           </div>
         </div>
       </section>
@@ -245,8 +249,8 @@ The embers in your flame.`}
             <p>This recovered record is currently being preserved and catalogued within the archive.</p>
           </section>
           <div className="record-nav">
-            <Link to="/record/005">\u2190 Previous</Link>
-            <Link to="/record/007">Next \u2192</Link>
+            <Link to="/record/005">{"\u2190"} Previous</Link>
+            <Link to="/record/007">Next {"\u2192"}</Link>
           </div>
         </div>
       </section>
@@ -266,8 +270,8 @@ The embers in your flame.`}
             <p>Restoration of this record is still in progress. Additional documents and supporting material will be added as the archive expands.</p>
           </section>
           <div className="record-nav">
-            <Link to="/record/006">\u2190 Previous</Link>
-            <Link to="/record/008">Founding Edition \u2192</Link>
+            <Link to="/record/006">{"\u2190"} Previous</Link>
+            <Link to="/record/008">Founding Edition {"\u2192"}</Link>
           </div>
         </div>
       </section>
@@ -309,8 +313,8 @@ The embers in your flame.`}
             <p>The Founding Edition represents the current endpoint of the recovered archive chronology. Earlier records preserve the creative works that preceded its publication and form part of the broader documentary timeline presented throughout this archive.</p>
           </section>
           <div className="record-nav">
-            <Link to="/record/007">\u2190 Previous</Link>
-            <Link to="/manuscripts">Return to Archive \u2192</Link>
+            <Link to="/record/007">{"\u2190"} Previous</Link>
+            <Link to="/manuscripts">Return to Archive {"\u2192"}</Link>
           </div>
         </div>
       </section>
@@ -325,7 +329,7 @@ The embers in your flame.`}
         <h1>Record {id}</h1>
         <p>This archive record is currently undergoing restoration.</p>
         <div className="record-nav">
-          <Link to="/manuscripts">\u2190 Return to Archive</Link>
+          <Link to="/manuscripts">{"\u2190"} Return to Archive</Link>
           <span />
         </div>
       </div>

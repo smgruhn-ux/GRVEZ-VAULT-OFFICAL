@@ -31,13 +31,6 @@ const restoredRecords = [
     preview: '"Once the fire dies,\nSo do I.\nFor I am drawn to the shadows..."',
     source: "Early Poetry Archive",
   },
-  {
-    id: "008",
-    type: "FOUNDING EDITION",
-    title: "Relational Continuity Hypothesis",
-    preview: "A recovered research manuscript outlining the Relational Continuity Hypothesis and its twelve-stage model of relational consciousness.",
-    source: "Founding Edition Manuscript",
-  },
 ];
 
 const underRestoration = [
