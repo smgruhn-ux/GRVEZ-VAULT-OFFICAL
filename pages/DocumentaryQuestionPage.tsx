@@ -5,7 +5,6 @@ type QuestionConfig = { title: string; label: string; prompts?: string[] };
 
 const questions: Record<string, QuestionConfig> = {
   basketball: { title: "WHAT DOES THE BASKETBALL MEAN?", label: "SYMBOL / EVENT", prompts: ["The basketball / black mist / sparkles experience", "Where it occurred in the chronology", "What was happening immediately beforehand", "What was observed directly", "Later interpretation", "The distinction between testimony and verified evidence"] },
-  "mimic-experiences": { title: "WHAT WERE THE MIMIC EXPERIENCES?", label: "EXPERIENCE / TESTIMONY" },
   "may-23-epiphany": { title: "WHAT HAPPENED DURING THE MAY 23 EPIPHANY?", label: "CHRONOLOGY / TESTIMONY" },
   "recurring-symbols": { title: "WHY DO THE SAME SYMBOLS KEEP REAPPEARING?", label: "SYMBOL / INTERPRETATION" },
   "pre-framework-events": { title: "WHICH EVENTS HAPPENED BEFORE THE FRAMEWORK EXISTED?", label: "CHRONOLOGY / METHOD" },
