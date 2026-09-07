@@ -632,8 +632,6 @@ h2 { font-size: clamp(1.4rem, 2.4vw, 1.9rem); }
   .hero-content { padding: 2rem; }
   .hero-image { height: 66vh; }
   .profile-page .hero-image { height: 68vh; }
-  .profile-editorial { grid-template-columns: 1fr; gap: 2rem; padding-top: 3rem; }
-  .profile-portrait img { max-height: 560px; }
   .release-card { grid-template-columns: 1fr; }
   .content-grid,
   .contact-grid,
@@ -719,7 +717,6 @@ h2 { font-size: clamp(1.4rem, 2.4vw, 1.9rem); }
 .vaultline-latest h2 {
   margin: 0.5rem 0 1rem;
   font-size: clamp(2rem, 5vw, 4rem);
-  line-height: 1;
 }
 
 .vaultline-latest p {
@@ -1183,7 +1180,6 @@ width:100%;
 padding:48px;
 
 background:linear-gradient(to top,rgba(0,0,0,.95),transparent);
-
 }
 
 .archive-panel p{
@@ -1197,7 +1193,6 @@ opacity:.7;
 margin-bottom:12px;
 
 color:white;
-
 }
 
 .archive-panel h2{
@@ -1207,7 +1202,6 @@ font-size:2.4rem;
 margin-bottom:18px;
 
 color:white;
-
 }
 
 .archive-panel span{
@@ -1217,7 +1211,6 @@ color:#B63A50;
 font-weight:700;
 
 letter-spacing:.12em;
-
 }
 
 @media(max-width:900px){
@@ -1227,7 +1220,6 @@ letter-spacing:.12em;
 grid-template-columns:1fr;
 
 }
-
 }
 /* ===============================
    VAULTLINE PRODUCT SHOWCASE
@@ -1455,50 +1447,6 @@ grid-template-columns:1fr;
 
 .archive-record-card:hover .archive-arrow{
   transform:translateX(6px);
-}
-
-.archive-feature{
-  margin:8rem 0;
-  padding:5rem;
-  border:1px solid var(--border);
-  border-radius:24px;
-  background:
-    linear-gradient(
-      180deg,
-      rgba(255,255,255,.02),
-      rgba(255,255,255,.01)
-    );
-}
-
-.archive-feature-content{
-  max-width:760px;
-}
-
-.archive-feature h2{
-  margin:1rem 0 2rem;
-  font-size:clamp(2.5rem,5vw,4.5rem);
-  line-height:1;
-}
-
-.archive-feature p{
-  line-height:1.9;
-}
-
-.archive-closing{
-  text-align:center;
-  margin-top:8rem;
-  padding-top:5rem;
-  border-top:1px solid var(--border);
-}
-
-.archive-closing h2{
-  margin:1rem 0 2rem;
-}
-
-.archive-closing p{
-  max-width:720px;
-  margin:0 auto 2rem;
-  line-height:1.9;
 }
 
 @media (max-width:900px){
@@ -1778,8 +1726,8 @@ border-color:#b63a50;
 
 .about-page .about-work-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   margin-top: 2rem;
 }
 
@@ -1840,4 +1788,12 @@ border-color:#b63a50;
   .about-page .about-identity-card {
     padding: 1.5rem;
   }
+}
+
+.fragment-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
