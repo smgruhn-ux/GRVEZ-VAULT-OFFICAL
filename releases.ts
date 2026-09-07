@@ -47,8 +47,8 @@ export const gizzyGravesFeatDmonix: Release[] = [
 ];
 
 export const dxxdGrvezReleases: Release[] = [
-  { title: 'UNDER AND OVER', artist: 'DXXD GRVEZ', image: '', listenUrl: '', lyricsUrl: '', creditsUrl: '' },
-  { title: 'PRESSURE SICK', artist: 'DXXD GRVEZ', image: '', listenUrl: '', lyricsUrl: '', creditsUrl: '' },
+  { title: 'UNDER AND OVER', artist: 'DXXD GRVEZ', image: '/UNDER AND OVER COVER.png', listenUrl: '', lyricsUrl: '', creditsUrl: '' },
+  { title: 'PRESSURE SICK', artist: 'DXXD GRVEZ', image: '/PRESSURE SICK COVER.png', listenUrl: '', lyricsUrl: '', creditsUrl: '' },
 ];
 
 export const dxxdGrvezFeatDmonix: Release[] = [];
