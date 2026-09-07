@@ -17,6 +17,7 @@ import { DmonixPage } from './pages/DmonixPage';
 import { DxxdGrvezPage } from './pages/DxxdGrvezPage';
 import { RelationalContinuityPage } from './pages/RelationalContinuityPage';
 import { FilmsPage } from './pages/FilmsPage';
+import { DocumentaryQuestionPage } from './pages/DocumentaryQuestionPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 
 export function App() {
@@ -34,6 +35,7 @@ export function App() {
           <Route path="/manuscripts" element={<ManuscriptsPage />} />
           <Route path="/relational-continuity" element={<RelationalContinuityPage />} />
           <Route path="/films" element={<FilmsPage />} />
+          <Route path="/films/questions/:question" element={<DocumentaryQuestionPage />} />
           <Route path="/record/:id" element={<RecordPage />} />
           <Route path="/media" element={<MediaPage />} />
           <Route path="/vaultline" element={<VaultlinePage />} />

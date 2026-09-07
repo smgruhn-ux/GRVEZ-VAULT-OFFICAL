@@ -1,6 +1,13 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
+const documentaryQuestions = [
+  { title: "WHAT DOES THE BASKETBALL MEAN?", slug: "basketball", label: "SYMBOL / EVENT" },
+  { title: "WHAT HAPPENED DURING THE MAY 23 EPIPHANY?", slug: "may-23-epiphany", label: "CHRONOLOGY / TESTIMONY" },
+  { title: "WHY DO THE SAME SYMBOLS KEEP REAPPEARING?", slug: "recurring-symbols", label: "SYMBOL / INTERPRETATION" },
+  { title: "WHICH EVENTS HAPPENED BEFORE THE FRAMEWORK EXISTED?", slug: "pre-framework-events", label: "CHRONOLOGY / METHOD" },
+];
+
 export function FilmsPage() {
   useEffect(() => { document.title = "Films & Media | GRVEZ VAULT"; return () => { document.title = "GRVEZ VAULT | Music · Archive · Manuscripts · Media"; }; }, []);
 
@@ -31,6 +38,20 @@ export function FilmsPage() {
             <p style={{ margin: 0 }}><strong>Musicbed reference</strong> · MB010UHWLTT02Z2</p>
             <p style={{ margin: '1rem 0 0' }}>© 2026 GRVEZ VAULT. All rights reserved.</p>
           </div>
+
+          <section className="documentary-question-pathways" aria-labelledby="documentary-questions-heading">
+            <p className="eyebrow">EXPLORE THE INVESTIGATION</p>
+            <h2 id="documentary-questions-heading">QUESTIONS RAISED BY THE FILM</h2>
+            <div className="documentary-question-card-grid">
+              {documentaryQuestions.map((question) => (
+                <Link to={`/films/questions/${question.slug}`} className="documentary-question-card" key={question.slug}>
+                  <span className="documentary-question-card-label">{question.label}</span>
+                  <span className="documentary-question-card-title">{question.title}</span>
+                  <span className="documentary-question-card-arrow">Explore pathway →</span>
+                </Link>
+              ))}
+            </div>
+          </section>
         </article>
 
         <section className="archive-note" style={{ marginTop: '2rem' }}>
