@@ -1,7 +1,5 @@
 /* ==============================================
    VISUAL DOCUMENTATION — EDITORIAL / ARCHIVAL
-   Exhibit-style layout for the Visual Documentation section.
-   Tier separation: original artifacts vs. interpretation graphics.
 ================================================= */
 .visdoc-tier-label { margin-top: 3.5rem; margin-bottom: .75rem; padding-bottom: .75rem; border-bottom: 1px solid var(--gv-rule-soft, rgba(201,210,218,.11)); }
 .visdoc-tier-label .eyebrow { margin-bottom: .25rem; }
@@ -22,11 +20,11 @@
 .visdoc-exhibit-card .eyebrow { margin-bottom: .5rem; }
 .visdoc-exhibit-card h3 { font-size: clamp(1.15rem, 1.8vw, 1.55rem); margin-bottom: .75rem; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 400; }
 .visdoc-exhibit-card > p { line-height: 1.75; color: var(--muted, #b7b0a8); flex: 1; }
+.visdoc-exhibit-card > img { width: 100%; margin: .75rem 0; border: 1px solid var(--gv-rule-soft, rgba(201,210,218,.11)); }
 .visdoc-integration { display: grid; grid-template-columns: repeat(2, 1fr); gap: .6rem; margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--gv-rule-soft, rgba(201,210,218,.11)); }
 .visdoc-integration-card { position: relative; overflow: hidden; border: 1px solid var(--gv-rule-soft, rgba(201,210,218,.11)); }
 .visdoc-integration-card img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; object-position: center top; filter: brightness(.82) saturate(.88); }
 .visdoc-integration-label { position: absolute; bottom: 0; left: 0; right: 0; padding: .55rem .6rem .5rem; background: linear-gradient(transparent, rgba(10,10,11,.94)); font-size: .56rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gv-bone, #E9E9EA); line-height: 1.4; }
-.visdoc-integration-label span { display: block; margin-top: .15rem; font-size: .48rem; color: var(--gv-crimson, #7A1F25); letter-spacing: .12em; }
 .visdoc-methodology { max-width: 800px; margin: 4rem auto 0; padding: 2.5rem; border: 1px solid var(--gv-rule-soft, rgba(201,210,218,.11)); background: linear-gradient(145deg, rgba(22,29,37,.52), rgba(10,10,11,.86)); text-align: center; }
 .visdoc-methodology h2 { margin: .5rem 0 0; }
 .visdoc-methodology p { max-width: 640px; margin: 1rem auto 0; line-height: 1.8; color: var(--muted, #b7b0a8); }
@@ -40,9 +38,9 @@
 .visdoc-detail-integration-item img { width: 100%; display: block; }
 .visdoc-detail-integration-item figcaption { padding: .75rem; font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--gv-steel, #6A737D); line-height: 1.5; }
 .visdoc-detail-integration-item figcaption span { display: block; margin-top: .2rem; font-size: .62rem; color: var(--gv-crimson, #7A1F25); letter-spacing: .1em; }
-.visdoc-asset-pending { margin-top: 1.25rem; padding: 1rem; border: 1px dashed rgba(201,210,218,.28); background: rgba(255,255,255,.025); color: var(--muted, #b7b0a8); }
-.visdoc-asset-pending .eyebrow { margin-bottom: .35rem; }
-.visdoc-asset-pending strong { display: block; color: var(--gv-bone, #E9E9EA); letter-spacing: .06em; }
-.visdoc-asset-pending p:last-child { margin: .35rem 0 0; font-size: .82rem; line-height: 1.6; }
-@media (max-width: 900px) { .visdoc-exhibit-featured { grid-template-columns: 1fr; gap: 1.5rem; padding: 1.5rem; } .visdoc-grid { grid-template-columns: 1fr; } .visdoc-detail-integration-grid { grid-template-columns: 1fr; } .profile-symbol-card { padding: 1.5rem; } }
+.visdoc-motif-gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+.visdoc-motif-gallery figure { margin: 0; border: 1px solid var(--gv-rule-soft, rgba(201,210,218,.11)); background: rgba(255,255,255,.02); }
+.visdoc-motif-gallery img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; }
+.visdoc-motif-gallery figcaption { padding: .75rem; font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; color: var(--gv-steel, #6A737D); }
+@media (max-width: 900px) { .visdoc-exhibit-featured { grid-template-columns: 1fr; gap: 1.5rem; padding: 1.5rem; } .visdoc-grid, .visdoc-motif-gallery { grid-template-columns: 1fr; } .visdoc-detail-integration-grid { grid-template-columns: 1fr; } .profile-symbol-card { padding: 1.5rem; } }
 @media (max-width: 600px) { .visdoc-integration { grid-template-columns: 1fr; } .visdoc-exhibit-featured, .visdoc-exhibit-card { padding: 1.25rem; } .visdoc-methodology { padding: 1.5rem; } .profile-symbol-card img { max-width: 100%; } }
