@@ -47,6 +47,23 @@ export function GizzyGravesPage() {
             </p>
           </div>
         </section>
+
+        {/* SYMBOLIC DOSSIER CARD */}
+        <section className="profile-symbol-card">
+          <p className="eyebrow">THE BUILDER // {"\u03b1"} MARK</p>
+          <h2>Symbolic Dossier</h2>
+          <p>
+            Supporting visual documenting the Gizzy Graves identity within
+            the GRVEZ VAULT symbolic system. The {"\u03b1"} (Alpha) mark represents
+            origin, initiation, and the will to see and to create.
+          </p>
+          <img
+            src="/gizzy-graves-alpha-card.jpg"
+            alt="Gizzy Graves symbolic dossier. The Builder. Alpha Mark."
+            loading="lazy"
+          />
+        </section>
+
         <div className="inline-actions profile-actions">
           <Link className="metal-button" to="/about">
             Back to About
