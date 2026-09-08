@@ -2,77 +2,9 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { HeroArtwork } from "../HeroArtwork";
 
+function PendingDossier() { return <div className="profile-symbol-card"><p className="eyebrow">THE BUILDER // α MARK</p><h2>Symbolic Dossier</h2><p>The approved Gizzy Graves Alpha dossier card will appear here when the attachment is available. No placeholder or broken image is shown.</p><div className="visdoc-asset-pending" role="status"><p className="eyebrow">SOURCE IMAGE PENDING</p><strong>Gizzy Graves Alpha dossier card</strong><p>Expected asset: gizzy-graves-alpha-card.jpg</p></div></div>; }
+
 export function GizzyGravesPage() {
-  useEffect(() => {
-    const previousTitle = document.title;
-    const description = document.querySelector('meta[name="description"]');
-    const previousDescription = description?.getAttribute("content");
-
-    document.title = "Gizzy Graves | GRVEZ VAULT";
-    description?.setAttribute(
-      "content",
-      "Gizzy Graves, an artist identity curated by Sheldyn Gruhn, inside the GRVEZ VAULT creative archive."
-    );
-
-    return () => {
-      document.title = previousTitle;
-      if (description && previousDescription) description.setAttribute("content", previousDescription);
-    };
-  }, []);
-
-  return (
-    <section className="page-section profile-page gizzy-profile" aria-labelledby="gizzy-graves-heading">
-      <div className="page-hero">
-        <HeroArtwork
-          image="/gizzy-graves-hero.png"
-          alt="Gizzy Graves"
-          loading="eager"
-        />
-        <div className="profile-hero-title">
-          <p className="eyebrow">ARTIST IDENTITY</p>
-          <h1 id="gizzy-graves-heading">GIZZY GRAVES</h1>
-        </div>
-      </div>
-
-      <div className="page-content">
-        <section className="profile-editorial" aria-labelledby="gizzy-profile-heading">
-          <figure className="profile-portrait">
-            <img src="/gizzy-graves-portrait.jpeg" alt="Portrait of Gizzy Graves" loading="lazy" />
-          </figure>
-          <div className="profile-copy">
-            <p className="eyebrow">THE ARTIST</p>
-            <h2 id="gizzy-profile-heading">Gizzy Graves</h2>
-            <p>
-              An artist identity curated by songwriter and creative director Sheldyn Gruhn. Through Gizzy Graves, Gruhn creates original music rooted in dark alternative rock, industrial metal, hard rock, and nu-metal, while directing the visual identity and creative world surrounding the work.
-            </p>
-          </div>
-        </section>
-
-        {/* SYMBOLIC DOSSIER CARD */}
-        <section className="profile-symbol-card">
-          <p className="eyebrow">THE BUILDER // {"\u03b1"} MARK</p>
-          <h2>Symbolic Dossier</h2>
-          <p>
-            Supporting visual documenting the Gizzy Graves identity within
-            the GRVEZ VAULT symbolic system. The {"\u03b1"} (Alpha) mark represents
-            origin, initiation, and the will to see and to create.
-          </p>
-          <img
-            src="/gizzy-graves-alpha-card.jpg"
-            alt="Gizzy Graves symbolic dossier. The Builder. Alpha Mark."
-            loading="lazy"
-          />
-        </section>
-
-        <div className="inline-actions profile-actions">
-          <Link className="metal-button" to="/about">
-            Back to About
-          </Link>
-          <Link className="metal-button secondary" to="/music">
-            Music
-          </Link>
-        </div>
-      </div>
-    </section>
-  );
+  useEffect(() => { const previousTitle = document.title; const description = document.querySelector('meta[name="description"]'); const previousDescription = description?.getAttribute("content"); document.title = "Gizzy Graves | GRVEZ VAULT"; description?.setAttribute("content", "Gizzy Graves, an artist identity curated by Sheldyn Gruhn, inside the GRVEZ VAULT creative archive."); return () => { document.title = previousTitle; if (description && previousDescription) description.setAttribute("content", previousDescription); }; }, []);
+  return <section className="page-section profile-page gizzy-profile" aria-labelledby="gizzy-graves-heading"><div className="page-hero"><HeroArtwork image="/gizzy-graves-hero.png" alt="Gizzy Graves" loading="eager" /><div className="profile-hero-title"><p className="eyebrow">ARTIST IDENTITY</p><h1 id="gizzy-graves-heading">GIZZY GRAVES</h1></div></div><div className="page-content"><section className="profile-editorial" aria-labelledby="gizzy-profile-heading"><figure className="profile-portrait"><img src="/gizzy-graves-portrait.jpeg" alt="Portrait of Gizzy Graves" loading="lazy" /></figure><div className="profile-copy"><p className="eyebrow">THE ARTIST</p><h2 id="gizzy-profile-heading">Gizzy Graves</h2><p>An artist identity curated by songwriter and creative director Sheldyn Gruhn. Through Gizzy Graves, Gruhn creates original music rooted in dark alternative rock, industrial metal, hard rock, and nu-metal, while directing the visual identity and creative world surrounding the work.</p></div></section><PendingDossier /><div className="inline-actions profile-actions"><Link className="metal-button" to="/about">Back to About</Link><Link className="metal-button secondary" to="/music">Music</Link></div></div></section>;
 }
