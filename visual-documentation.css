@@ -64,5 +64,8 @@
 .visdoc-development-item img { max-height: 360px; }
 .visdoc-dod-artwork { margin: 2rem 0 2.5rem; padding: clamp(2rem, 5vw, 4rem); background: #6b7178; }
 .visdoc-dod-artwork img { display: block; width: min(100%, 800px); margin: 0 auto; }
+.visdoc-raven-exhibit { margin: 0; padding: 0; }
+.visdoc-raven-exhibit img { width: 100%; max-width: 720px; max-height: 80vh; object-fit: contain; border: 1px solid var(--gv-rule-soft, rgba(201,210,218,.11)); background: rgba(0,0,0,.12); }
+.visdoc-raven-exhibit figcaption { max-width: 720px; margin-top: 1.5rem; color: var(--muted, #b7b0a8); line-height: 1.8; font-size: .95rem; }
 @media (max-width: 900px) { .visdoc-exhibit-featured { grid-template-columns: 1fr; gap: 1.5rem; padding: 1.5rem; } .visdoc-grid, .visdoc-motif-gallery, .visdoc-chronology-columns { grid-template-columns: 1fr; } .visdoc-detail-integration-grid { grid-template-columns: 1fr; } .profile-symbol-card { padding: 1.5rem; } }
-@media (max-width: 600px) { .visdoc-integration { grid-template-columns: 1fr; } .visdoc-exhibit-featured, .visdoc-exhibit-card { padding: 1.25rem; } .visdoc-methodology { padding: 1.5rem; } .profile-symbol-card img { max-width: 100%; } .visdoc-chronology-section { padding: 2.5rem 0; } .visdoc-evidence-panel, .visdoc-interpretation-panel { padding: 1rem; } .visdoc-dod-artwork { padding: 1.25rem; } }
+@media (max-width: 600px) { .visdoc-integration { grid-template-columns: 1fr; } .visdoc-exhibit-featured, .visdoc-exhibit-card { padding: 1.25rem; } .visdoc-methodology { padding: 1.5rem; } .profile-symbol-card img { max-width: 100%; } .visdoc-chronology-section { padding: 2.5rem 0; } .visdoc-evidence-panel, .visdoc-interpretation-panel { padding: 1rem; } .visdoc-dod-artwork { padding: 1.25rem; } .visdoc-raven-exhibit img { max-height: 60vh; } }
