@@ -4,12 +4,12 @@ import { HeroArtwork } from "../HeroArtwork";
 const products = [
   {
     title: "IXXI Vaultline Tee",
-    image: "",
+    image: "/ixxi-vaultline-tee.avif",
     url: "https://vaultlineofficial.us/products/ixxi-vaultline-tee",
   },
   {
     title: "Vaultline Northstar Baby Tee",
-    image: "",
+    image: "/vaultline-northstar-baby-tee.avif",
     url: "https://vaultlineofficial.us/products/vaultline-northstar-baby-tee",
   },
   {
@@ -54,7 +54,7 @@ export function VaultlinePage() {
 
         <section className="vaultline-showcase">
           <article className="vaultline-feature">
-            <div className="vaultline-feature-image">{products[0].image ? <img src={products[0].image} alt={products[0].title} loading="eager" /> : <div className="vaultline-image-needed" role="img" aria-label="Product image needed for IXXI Vaultline Tee" />}</div>
+            <div className="vaultline-feature-image"><img src={products[0].image} alt={products[0].title} loading="eager" /></div>
             <div className="vaultline-feature-copy">
               <p className="eyebrow">ARTIFACT</p><h2>{products[0].title}</h2>
               <p>View the current Vaultline product at the official storefront.</p>
@@ -67,7 +67,7 @@ export function VaultlinePage() {
               <p>View the current Vaultline product at the official storefront.</p>
               <a className="metal-button" href={products[1].url} target="_blank" rel="noreferrer">INSPECT ARTIFACT</a>
             </div>
-            <div className="vaultline-feature-image">{products[1].image ? <img src={products[1].image} alt={products[1].title} loading="lazy" /> : <div className="vaultline-image-needed" role="img" aria-label="Product image needed for Vaultline Northstar Baby Tee" />}</div>
+            <div className="vaultline-feature-image"><img src={products[1].image} alt={products[1].title} loading="lazy" /></div>
           </article>
           <section className="vaultline-grid-section">
             <div className="section-heading"><p className="eyebrow">SIGNATURE PIECES</p><h2>Complete the Artifact Set</h2><p>Every release is designed as part of the same visual language. Continue the artifact investigation across the current Vaultline archive.</p></div>
