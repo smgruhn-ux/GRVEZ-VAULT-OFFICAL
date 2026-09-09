@@ -33,30 +33,6 @@ const restoredRecords = [
   },
 ];
 
-const underRestoration = [
-  {
-    id: "005",
-    type: "RESEARCH NOTE",
-    title: "Pattern Recognition",
-    preview: "Recovered research notes documenting early observations.",
-    source: "Research Archive",
-  },
-  {
-    id: "006",
-    type: "SYMBOL STUDY",
-    title: "Omega Development",
-    preview: "Early handwritten notes exploring Omega, the eight-point star, continuity, and the origins of the archive.",
-    source: "Journal Archive",
-  },
-  {
-    id: "007",
-    type: "EVIDENCE RECORD",
-    title: "The Raven Motif",
-    preview: "The raven appears repeatedly across unrelated works created over multiple years.",
-    source: "Cross Reference",
-  },
-];
-
 export function ManuscriptsPage() {
   const navigate = useNavigate();
   return (
@@ -94,7 +70,6 @@ export function ManuscriptsPage() {
           </p>
         </section>
 
-        {/* RESTORED RECORDS */}
         <section className="archive-section">
           <div className="section-heading">
             <p className="eyebrow">RECOVERED MATERIAL</p>
@@ -119,44 +94,7 @@ export function ManuscriptsPage() {
                     <strong>Recovered From</strong><br />
                     {record.source}
                   </p>
-                  <div className="fragment-status">CLICK TO OPEN \u2192</div>
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        {/* UNDER RESTORATION */}
-        <section className="archive-section" style={{ marginTop: "4rem" }}>
-          <div className="section-heading">
-            <p className="eyebrow">PENDING RESTORATION</p>
-            <h2>Records Under Restoration</h2>
-            <p style={{ color: "var(--muted)", fontSize: "0.95rem", marginTop: "0.5rem", maxWidth: "640px" }}>
-              These records have been identified within the archive chronology
-              but have not yet been fully restored. They remain preserved
-              and will be updated as restoration progresses.
-            </p>
-          </div>
-          <div className="fragment-grid">
-            {underRestoration.map((record) => (
-              <article
-                key={record.id}
-                className="fragment-card"
-                style={{ cursor: "pointer", opacity: 0.75 }}
-                onClick={() => navigate(`/record/${record.id}`)}
-              >
-                <div className="fragment-header">
-                  <span className="fragment-id">RECORD {record.id}</span>
-                  <span className="fragment-type">{record.type}</span>
-                </div>
-                <h3>{record.title}</h3>
-                <p className="fragment-preview">{record.preview}</p>
-                <div className="fragment-footer">
-                  <p>
-                    <strong>Recovered From</strong><br />
-                    {record.source}
-                  </p>
-                  <div className="fragment-status">UNDER RESTORATION</div>
+                  <div className="fragment-status">CLICK TO OPEN →</div>
                 </div>
               </article>
             ))}
