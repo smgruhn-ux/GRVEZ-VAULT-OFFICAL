@@ -104,7 +104,7 @@ Is what's calling me`}
     return (
       <section className="page-section">
         <div className="page-content">
-          <Breadcrumb items={[{ label: "Archive", to: "/archive" }, { label: "Manuscripts", to: "/manuscripts" }, { label: "Agony" }]} />
+          <Breadcrumb items={[{ label: "Archive", to: "/archive" }, { label: "Manuscripts" }, { label: "Agony" }]} />
           <p className="eyebrow">RECOVERED POEM // 003</p>
           <h1>Agony</h1>
           <p className="record-subtitle">EARLY POETRY ARCHIVE</p>
@@ -155,7 +155,7 @@ Pleading in Agony`}
     return (
       <section className="page-section">
         <div className="page-content">
-          <Breadcrumb items={[{ label: "Archive", to: "/archive" }, { label: "Manuscripts", to: "/manuscripts" }, { label: "Embers" }]} />
+          <Breadcrumb items={[{ label: "Archive", to: "/archive" }, { label: "Manuscripts" }, { label: "Embers" }]} />
           <p className="eyebrow">RECOVERED POEM // 004</p>
           <h1>Embers</h1>
           <p className="record-subtitle">EARLY POETRY ARCHIVE</p>
@@ -219,7 +219,7 @@ The embers in your flame.`}
     return (
       <section className="page-section">
         <div className="page-content">
-          <Breadcrumb items={[{ label: "Archive", to: "/archive" }, { label: "Manuscripts", to: "/manuscripts" }, { label: "Record 005" }]} />
+          <Breadcrumb items={[{ label: "Archive", to: "/archive" }, { label: "Manuscripts" }, { label: "Record 005" }]} />
           <p className="eyebrow">RECOVERED RECORD // 005</p>
           <h1>Archive Fragment</h1>
           <section className="archive-note">
@@ -240,7 +240,7 @@ The embers in your flame.`}
     return (
       <section className="page-section">
         <div className="page-content">
-          <Breadcrumb items={[{ label: "Archive", to: "/archive" }, { label: "Manuscripts", to: "/manuscripts" }, { label: "Record 006" }]} />
+          <Breadcrumb items={[{ label: "Archive", to: "/archive" }, { label: "Manuscripts" }, { label: "Record 006" }]} />
           <p className="eyebrow">RECOVERED RECORD // 006</p>
           <h1>Archive Fragment</h1>
           <section className="archive-note">
@@ -261,7 +261,7 @@ The embers in your flame.`}
     return (
       <section className="page-section">
         <div className="page-content">
-          <Breadcrumb items={[{ label: "Archive", to: "/archive" }, { label: "Manuscripts", to: "/manuscripts" }, { label: "Record 007" }]} />
+          <Breadcrumb items={[{ label: "Archive", to: "/archive" }, { label: "Manuscripts" }, { label: "Record 007" }]} />
           <p className="eyebrow">RECOVERED RECORD // 007</p>
           <h1>Archive Fragment</h1>
           <section className="archive-note">
@@ -282,7 +282,7 @@ The embers in your flame.`}
     return (
       <section className="page-section">
         <div className="page-content">
-          <Breadcrumb items={[{ label: "Archive", to: "/archive" }, { label: "Manuscripts", to: "/manuscripts" }, { label: "Founding Edition" }]} />
+          <Breadcrumb items={[{ label: "Archive", to: "/archive" }, { label: "Manuscripts" }, { label: "Founding Edition" }]} />
           <p className="eyebrow">RECOVERED FRAGMENT // 008</p>
           <h1>Relational Continuity Hypothesis</h1>
           <p className="record-subtitle">FOUNDING EDITION</p>
@@ -298,7 +298,7 @@ The embers in your flame.`}
           <section className="archive-note">
             <p className="eyebrow">ARCHIVE RECORD</p>
             <h2>Manuscript Documentation</h2>
-            <p>This archival record preserves the provenance, publication history, and documentary role of the Founding Edition within GRVEZ VAULT. The manuscript anchors the archive by linking symbolic evidence, continuity research, and the larger narrative of relational development that appears throughout the recovered documents.</p>
+            <p>This archival record preserves the publication history and documentary role of the Founding Edition within GRVEZ VAULT. The manuscript anchors the archive by linking symbolic evidence, continuity research, and the larger narrative of relational development that appears throughout the recovered documents.</p>
             <a href="/founding-edition.jpeg" target="_blank" rel="noopener noreferrer">
               <img src="/founding-edition.jpeg" alt="Relational Continuity Hypothesis Founding Edition" style={{ width: "340px", maxWidth: "100%", display: "block", margin: "2rem auto", borderRadius: "3px", boxShadow: "0 16px 40px rgba(0,0,0,.4)" }} />
             </a>
@@ -324,7 +324,7 @@ The embers in your flame.`}
   return (
     <section className="page-section">
       <div className="page-content">
-        <Breadcrumb items={[{ label: "Archive", to: "/archive" }, { label: "Manuscripts", to: "/manuscripts" }, { label: `Record ${id}` }]} />
+        <Breadcrumb items={[{ label: "Archive", to: "/archive" }, { label: "Manuscripts" }, { label: `Record ${id}` }]} />
         <p className="eyebrow">ARCHIVE RECORD</p>
         <h1>Record {id}</h1>
         <p>This archive record is currently undergoing restoration.</p>
