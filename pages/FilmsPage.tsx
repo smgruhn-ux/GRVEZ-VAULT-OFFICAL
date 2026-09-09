@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { HeroArtwork } from "../HeroArtwork";
 
 const documentaryQuestions = [
   { title: "WHAT DOES THE BASKETBALL MEAN?", slug: "basketball", label: "SYMBOL / EVENT" },
@@ -12,7 +13,10 @@ export function FilmsPage() {
   useEffect(() => { document.title = "Films & Media | GRVEZ VAULT"; return () => { document.title = "GRVEZ VAULT | Music · Archive · Manuscripts · Media"; }; }, []);
 
   return (
-    <section className="page-section" aria-labelledby="films-heading">
+    <section className="page-section films-page" aria-labelledby="films-heading">
+      <div className="page-hero">
+        <HeroArtwork image="/GRVEZ_VAULT_Films_and_Media_Pathway.png" alt="GRVEZ VAULT films and media" loading="eager" clean />
+      </div>
       <div className="page-content">
         <div className="page-intro">
           <p className="eyebrow">FILMS &amp; MEDIA</p>
