@@ -1,106 +1,126 @@
-/* GRVEZ VAULT — sitewide aesthetic pass
-   Extends the visual language already established on Home + Music
-   without rewriting page content or routes. */
+/* GRVEZ VAULT — SITEWIDE AESTHETIC V2
+   Strong visual unification pass based on the current Home + Music direction.
+   Content and routes are preserved; this file intentionally overrides older page styling. */
 
 :root {
   --vault-bg: #050507;
-  --vault-surface: rgba(11, 12, 16, 0.88);
-  --vault-surface-strong: rgba(16, 17, 22, 0.96);
-  --vault-line: rgba(255,255,255,0.11);
-  --vault-line-strong: rgba(255,255,255,0.18);
+  --vault-panel: #0a0b0f;
+  --vault-panel-2: #101117;
+  --vault-copy: #f4efe9;
+  --vault-muted: #aaa39d;
+  --vault-line: rgba(255,255,255,.10);
+  --vault-line-strong: rgba(255,255,255,.18);
   --vault-crimson: #b63a50;
-  --vault-crimson-soft: rgba(182,58,80,0.14);
-  --vault-copy: rgba(245,239,232,0.96);
-  --vault-muted: rgba(214,207,199,0.68);
+  --vault-crimson-soft: rgba(182,58,80,.14);
 }
+
+html,
+body { background: #050507 !important; }
 
 body {
-  background:
-    radial-gradient(circle at 12% 0%, rgba(182,58,80,0.10), transparent 30rem),
-    radial-gradient(circle at 88% 38%, rgba(255,255,255,0.025), transparent 28rem),
-    linear-gradient(180deg, #050507 0%, #08090d 48%, #050507 100%);
+  color: var(--vault-copy);
+  background-image:
+    radial-gradient(circle at 12% 0%, rgba(182,58,80,.12), transparent 26rem),
+    linear-gradient(180deg, #050507 0%, #090a0e 50%, #050507 100%) !important;
 }
 
-/* Make the same cinematic surface treatment carry through every interior page. */
+/* REMOVE THE OLD "CARD WEBSITE" FEEL */
 .page-section {
-  position: relative;
-  isolation: isolate;
-  padding-top: 0;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 0 7rem !important;
   overflow: hidden;
 }
 
-.page-section::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -2;
-  pointer-events: none;
-  opacity: 0.17;
-  background-image:
-    linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
-  background-size: 30px 30px;
-  mask-image: linear-gradient(to bottom, rgba(0,0,0,.55), transparent 82%);
+.page-content {
+  width: min(1240px, calc(100% - 3rem)) !important;
+  max-width: none !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
 }
 
-.page-section::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  background:
-    linear-gradient(180deg, rgba(5,5,7,0.02) 0%, rgba(5,5,7,0.72) 34rem, rgba(5,5,7,0.98) 64rem),
-    radial-gradient(circle at 50% 12rem, rgba(182,58,80,0.055), transparent 34rem);
-}
-
-/* Full-width cinematic heroes like the new Music direction. */
+/* CINEMATIC HERO SYSTEM — EVERY INTERIOR PAGE */
 .page-section > .page-hero,
 .page-section .page-hero:first-child {
-  width: 100vw;
-  max-width: none;
-  margin: 0 0 clamp(3rem, 6vw, 6rem) calc(50% - 50vw);
-  border: 0;
-  border-radius: 0;
-  box-shadow: none;
-  position: relative;
-  background: #030304;
+  position: relative !important;
+  width: 100vw !important;
+  max-width: none !important;
+  height: min(72vh, 820px) !important;
+  min-height: 460px !important;
+  margin: 0 0 clamp(4rem, 8vw, 8rem) calc(50% - 50vw) !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  overflow: hidden !important;
+  background: #030304 !important;
 }
 
-.page-section > .page-hero::after,
-.page-section .page-hero:first-child::after {
+.page-section > .page-hero::before,
+.page-section .page-hero:first-child::before {
   content: "";
   position: absolute;
   inset: 0;
+  z-index: 3;
   pointer-events: none;
   background:
-    linear-gradient(180deg, rgba(3,3,4,0.03) 0%, rgba(5,5,7,0.18) 55%, #050507 100%),
-    linear-gradient(90deg, rgba(5,5,7,0.32), transparent 30%, transparent 70%, rgba(5,5,7,0.32));
+    linear-gradient(180deg, rgba(3,3,4,.04) 0%, rgba(3,3,4,.10) 42%, #050507 100%),
+    linear-gradient(90deg, rgba(5,5,7,.42) 0%, transparent 25%, transparent 70%, rgba(5,5,7,.36) 100%);
 }
 
-.page-section .page-hero .hero-image,
-.page-section .page-hero img {
-  width: 100%;
-  min-height: clamp(360px, 58vw, 760px);
-  max-height: 78vh;
-  object-fit: cover;
-  border-radius: 0;
-  filter: saturate(.88) contrast(1.08) brightness(.78);
+.page-section .page-hero .hero-frame,
+.page-section .page-hero .hero-backdrop-wrap {
+  width: 100% !important;
+  height: 100% !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
 }
 
-/* Consistent editorial content width + spacing. */
-.page-content {
-  width: min(1180px, calc(100% - 2rem));
-  margin: 0 auto;
-  padding: 0 0 clamp(4rem, 8vw, 8rem);
+.page-section .page-hero img,
+.page-section .page-hero .hero-image {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  border-radius: 0 !important;
+  filter: saturate(.80) contrast(1.12) brightness(.66) !important;
+  transform: none !important;
 }
 
+/* BIG EDITORIAL INTRO — mirrors the visual weight of Home/Music */
 .page-intro {
-  position: relative;
-  max-width: 920px;
-  margin: 0 0 clamp(4rem, 7vw, 7rem);
-  padding: 0 0 clamp(2rem, 4vw, 3.25rem);
-  border-bottom: 1px solid var(--vault-line);
+  position: relative !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, .55fr) !important;
+  column-gap: clamp(2rem, 7vw, 7rem) !important;
+  align-items: end !important;
+  max-width: none !important;
+  margin: 0 0 clamp(5rem, 10vw, 9rem) !important;
+  padding: 0 0 clamp(3rem, 5vw, 5rem) !important;
+  border-bottom: 1px solid var(--vault-line) !important;
+}
+
+.page-intro .eyebrow {
+  grid-column: 1 / -1;
+  margin-bottom: 1.25rem !important;
+}
+
+.page-intro h1 {
+  margin: 0 !important;
+  font-size: clamp(4rem, 8.2vw, 8rem) !important;
+  line-height: .86 !important;
+  letter-spacing: -.035em !important;
+  color: var(--vault-copy) !important;
+}
+
+.page-intro > p:not(.eyebrow) {
+  margin: 0 !important;
+  max-width: 520px !important;
+  color: var(--vault-muted) !important;
+  font-size: clamp(1rem, 1.3vw, 1.2rem) !important;
+  line-height: 1.8 !important;
 }
 
 .page-intro::after {
@@ -108,45 +128,53 @@ body {
   position: absolute;
   left: 0;
   bottom: -1px;
-  width: min(150px, 28vw);
-  height: 1px;
+  width: clamp(90px, 14vw, 180px);
+  height: 2px;
   background: var(--vault-crimson);
-  box-shadow: 0 0 18px rgba(182,58,80,.42);
+  box-shadow: 0 0 22px rgba(182,58,80,.55);
 }
 
-.page-intro h1,
+/* TYPE */
+.eyebrow {
+  color: var(--vault-crimson) !important;
+  font-size: .68rem !important;
+  font-weight: 700 !important;
+  letter-spacing: .34em !important;
+}
+
+.page-content h2,
 .page-content > h1,
+.archive-record-card h3,
+.artist-section h2,
 .companion-intro h2,
-.archive-closing h2 {
-  color: var(--vault-copy);
-  text-wrap: balance;
-  letter-spacing: -0.015em;
+.companion-analysis h2,
+.companion-cross h2 {
+  color: var(--vault-copy) !important;
 }
 
-.page-intro h1,
-.page-content > h1 {
-  font-size: clamp(3rem, 7vw, 6.8rem);
-  line-height: .92;
+.page-content h2 {
+  font-size: clamp(2.6rem, 5.6vw, 5.6rem) !important;
+  line-height: .92 !important;
+  letter-spacing: -.025em !important;
 }
 
-.page-intro > p:not(.eyebrow),
-.page-content > p,
+.page-content h3 {
+  font-size: clamp(1.6rem, 2.8vw, 2.6rem) !important;
+}
+
+.page-content p,
 .archive-description,
 .artist-intro,
 .companion-deck,
 .companion-intro p,
 .companion-analysis p,
-.companion-cross p {
-  color: var(--vault-muted);
+.companion-cross p,
+.visdoc-motif-analysis span,
+.visdoc-motif-card-caption span {
+  color: var(--vault-muted) !important;
 }
 
-.eyebrow {
-  color: var(--vault-crimson);
-  font-weight: 600;
-  letter-spacing: .32em;
-}
-
-/* Give older box-based sections the same restrained, editorial panels used by Music. */
+/* SECTIONS BECOME EDITORIAL BANDS, NOT FLOATING ROUNDED BOXES */
 .archive-note,
 .archive-feature,
 .artist-section,
@@ -156,188 +184,226 @@ body {
 .companion-analysis,
 .companion-cross,
 .companion-intro,
-.visdoc-chronology-section,
-.visdoc-motif-analysis,
 .moodboard-section,
 .film-card,
-.manuscript-card {
-  background:
-    linear-gradient(145deg, rgba(255,255,255,0.035), transparent 42%),
-    var(--vault-surface);
-  border: 1px solid var(--vault-line);
-  border-radius: 2px;
-  box-shadow: 0 24px 70px rgba(0,0,0,.24);
+.manuscript-card,
+.visdoc-chronology-section {
+  position: relative !important;
+  margin: 0 0 clamp(3.5rem, 7vw, 7rem) !important;
+  padding: clamp(2rem, 4.8vw, 4.5rem) 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-top: 1px solid var(--vault-line) !important;
+  border-bottom: 1px solid var(--vault-line) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
 }
 
-.archive-note,
-.archive-feature,
-.artist-section,
-.companion-analysis,
-.companion-cross,
-.companion-intro {
-  padding: clamp(1.5rem, 4vw, 3.25rem);
+.archive-note::before,
+.archive-feature::before,
+.artist-section::before,
+.companion-intro::before,
+.companion-analysis::before,
+.companion-cross::before,
+.visdoc-chronology-section::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -1px;
+  width: 110px;
+  height: 1px;
+  background: var(--vault-crimson);
 }
 
-.archive-feature,
-.artist-section,
-.companion-analysis,
-.companion-cross,
-.companion-intro {
-  margin-bottom: clamp(2rem, 5vw, 4.5rem);
-}
-
-/* Archive/directory cards: less dashboard, more cinematic record tiles. */
+/* RECORD GRIDS — strong photographic/editorial tile system */
 .archive-record-grid,
 .visdoc-motif-gallery,
-.featured-release-list {
-  gap: clamp(1rem, 2vw, 1.5rem);
+.featured-release-list,
+.card-grid,
+.catalog-grid {
+  gap: 1px !important;
+  background: var(--vault-line) !important;
+  border: 1px solid var(--vault-line) !important;
 }
 
 .archive-record-card,
 .featured-release,
 .visdoc-motif-analysis,
-.home-row-item {
-  position: relative;
-  overflow: hidden;
-  border: 1px solid var(--vault-line);
-  border-radius: 2px;
-  background: rgba(9,10,14,.78);
-  transition: transform 220ms ease, border-color 220ms ease, background 220ms ease, box-shadow 220ms ease;
+.detail-card,
+.release-card,
+.film-card,
+.manuscript-card {
+  position: relative !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background:
+    linear-gradient(150deg, rgba(255,255,255,.035), transparent 42%),
+    rgba(9,10,14,.96) !important;
+  box-shadow: none !important;
+  transition: background 220ms ease, transform 220ms ease !important;
 }
 
-.archive-record-card::before,
-.featured-release::before,
-.visdoc-motif-analysis::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 1px;
-  background: linear-gradient(to bottom, transparent, var(--vault-crimson), transparent);
-  opacity: .65;
-}
+.archive-record-card { padding: clamp(1.6rem, 3vw, 2.5rem) !important; }
 
 .archive-record-card:hover,
 .featured-release:hover,
 .visdoc-motif-analysis:hover,
-.home-row-item:hover {
-  transform: translateY(-3px);
-  border-color: rgba(182,58,80,.42);
-  background: rgba(15,16,21,.92);
-  box-shadow: 0 20px 48px rgba(0,0,0,.32);
+.detail-card:hover,
+.release-card:hover {
+  background:
+    linear-gradient(150deg, rgba(182,58,80,.10), transparent 52%),
+    #111218 !important;
+  transform: translateY(-2px) !important;
 }
 
-.archive-record-card {
-  padding: clamp(1.35rem, 3vw, 2rem);
-}
-
-.archive-record-status,
-.archive-record-id,
-.archive-action,
-.record-nav a,
-.streaming-pill {
-  text-transform: uppercase;
-  letter-spacing: .18em;
-  font-size: .72rem;
-}
-
-/* Unified button language: squared, metallic, restrained crimson edge. */
-.metal-button,
-.streaming-pill,
-.record-nav a {
-  border-radius: 2px;
-  border-color: var(--vault-line-strong);
-  background: rgba(8,9,12,.72);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.06);
-}
-
-.metal-button:hover,
-.streaming-pill:hover,
-.record-nav a:hover {
-  border-color: rgba(182,58,80,.62);
-  background: var(--vault-crimson-soft);
-  box-shadow: 0 0 0 1px rgba(182,58,80,.08), 0 16px 38px rgba(0,0,0,.32);
-}
-
-/* Media and imagery should read as one photographic system. */
+/* IMAGE TREATMENT */
 .page-content figure img,
 .archive-feature img,
 .visdoc-motif-analysis img,
 .companion-feature img,
 .black-maw-gallery img,
-.featured-release > img {
-  filter: saturate(.88) contrast(1.05);
+.featured-release > img,
+.release-card img,
+.detail-card img,
+.film-card img,
+.manuscript-card img {
+  border-radius: 0 !important;
+  filter: saturate(.80) contrast(1.10) brightness(.90) !important;
 }
 
 .page-content figure,
 .companion-feature,
 .black-maw-gallery figure {
-  border-radius: 2px;
+  border-radius: 0 !important;
+  overflow: hidden;
 }
 
-/* Typography hierarchy shared across records, archive, media, films and profiles. */
-.page-content h2,
-.archive-record-card h3,
-.artist-section h2,
-.companion-analysis h2,
-.companion-cross h2 {
-  color: var(--vault-copy);
+/* BUTTONS / LINKS — remove pills */
+.metal-button,
+.streaming-pill,
+.record-nav a,
+.archive-action {
+  border-radius: 0 !important;
+  text-transform: uppercase !important;
+  letter-spacing: .18em !important;
+  font-size: .70rem !important;
 }
 
-.page-content h2 {
-  font-size: clamp(2rem, 4vw, 3.8rem);
-  line-height: 1;
+.metal-button,
+.streaming-pill,
+.record-nav a {
+  min-height: 44px;
+  padding: .8rem 1.1rem !important;
+  border: 1px solid var(--vault-line-strong) !important;
+  background: rgba(7,8,11,.86) !important;
+  box-shadow: none !important;
 }
 
-.page-content h3 {
-  font-size: clamp(1.45rem, 2.6vw, 2.2rem);
+.metal-button:hover,
+.streaming-pill:hover,
+.record-nav a:hover {
+  border-color: var(--vault-crimson) !important;
+  background: var(--vault-crimson-soft) !important;
 }
 
+/* QUOTES */
 blockquote,
 .vault-quote {
-  margin-left: 0;
-  padding-left: clamp(1.25rem, 3vw, 2rem);
-  border-left: 1px solid var(--vault-crimson);
-  color: rgba(245,239,232,.82);
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: clamp(1.35rem, 2.6vw, 2.1rem);
-  line-height: 1.35;
+  margin: clamp(2rem, 5vw, 4rem) 0 0 !important;
+  padding: 0 0 0 clamp(1.5rem, 3vw, 2.5rem) !important;
+  border: 0 !important;
+  border-left: 2px solid var(--vault-crimson) !important;
+  color: rgba(244,239,233,.90) !important;
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: clamp(1.8rem, 4vw, 3.5rem) !important;
+  line-height: 1.15 !important;
 }
 
-/* Footer/header should feel like part of the same system, not separate chrome. */
+/* COMPANION / VISUAL DOC PAGES */
+.companion-page .page-content > .eyebrow,
+.companion-page .page-content > h1,
+.visdoc-detail-page .page-content > .eyebrow,
+.visdoc-detail-page .page-content > h1 {
+  max-width: 1000px;
+}
+
+.companion-page .page-content > h1,
+.visdoc-detail-page .page-content > h1 {
+  font-size: clamp(4rem, 8vw, 7.5rem) !important;
+  line-height: .88 !important;
+  margin-bottom: 2rem !important;
+}
+
+.companion-deck {
+  font-size: clamp(1.15rem, 2vw, 1.5rem) !important;
+  max-width: 700px !important;
+  margin-bottom: 5rem !important;
+}
+
+/* ARCHIVE DIRECTORY */
+.archive-directory {
+  margin: 0 0 clamp(6rem, 10vw, 10rem) !important;
+}
+
+.archive-record-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+}
+
+.archive-record-card {
+  min-height: 320px !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.archive-record-card .archive-action { margin-top: auto !important; }
+
+/* HEADER / FOOTER */
+.site-header {
+  width: 100% !important;
+  max-width: none !important;
+  padding-left: clamp(1rem, 3vw, 3rem) !important;
+  padding-right: clamp(1rem, 3vw, 3rem) !important;
+}
+
 .site-header.scrolled {
-  background: rgba(5,5,7,.88);
-  border-bottom-color: var(--vault-line);
+  background: rgba(5,5,7,.92) !important;
+  border-bottom: 1px solid var(--vault-line) !important;
 }
 
 .site-footer {
-  border-top: 1px solid var(--vault-line);
+  width: min(1240px, calc(100% - 3rem)) !important;
+  border-top: 1px solid var(--vault-line) !important;
+  padding-top: 3rem !important;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 900px) {
   .page-content {
-    width: min(100% - 1.25rem, 1180px);
+    width: min(100% - 1.4rem, 1240px) !important;
   }
 
-  .page-section .page-hero .hero-image,
-  .page-section .page-hero img {
-    min-height: 320px;
-    height: 54vh;
+  .page-section > .page-hero,
+  .page-section .page-hero:first-child {
+    height: 58vh !important;
+    min-height: 340px !important;
   }
 
-  .page-intro h1,
-  .page-content > h1 {
-    font-size: clamp(2.65rem, 14vw, 4.6rem);
+  .page-intro {
+    display: block !important;
   }
 
-  .archive-note,
-  .archive-feature,
-  .artist-section,
-  .companion-analysis,
-  .companion-cross,
-  .companion-intro {
-    padding: 1.25rem;
+  .page-intro h1 {
+    font-size: clamp(3.2rem, 15vw, 5.6rem) !important;
+    margin-bottom: 2rem !important;
+  }
+
+  .archive-record-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .archive-record-card {
+    min-height: 240px !important;
   }
 }
 
@@ -345,7 +411,6 @@ blockquote,
   .archive-record-card,
   .featured-release,
   .visdoc-motif-analysis,
-  .home-row-item {
-    transition: none;
-  }
+  .detail-card,
+  .release-card { transition: none !important; }
 }
