@@ -1,6 +1,73 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600;700&display=swap');
 
-body { font-family: 'Inter', 'Segoe UI', sans-serif; }
+:root {
+  --font-display: 'Cinzel', Georgia, serif;
+  --font-editorial: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Inter', 'Segoe UI', sans-serif;
+}
 
-h1, h2, h3 { font-family: 'Cormorant Garamond', Georgia, serif; }
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  letter-spacing: 0;
+}
 
+h1,
+h2,
+h3,
+.home-hero-headline,
+.pathway-panel h2,
+.profile-hero-title h1,
+.rch-hero h1,
+.about-hero h1,
+.about-section-intro h2,
+.about-chronology h2,
+.about-directory h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+}
+
+h4,
+h5,
+h6,
+blockquote,
+.vault-quote,
+.archive-quote,
+.home-row-title {
+  font-family: var(--font-editorial);
+}
+
+p,
+li,
+a,
+button,
+input,
+textarea,
+select,
+figcaption {
+  font-family: var(--font-body);
+}
+
+.eyebrow,
+.nav-link,
+.streaming-pill,
+.metal-button,
+.archive-action,
+.archive-record-status,
+.archive-record-id,
+.visdoc-status,
+.breadcrumb,
+.record-nav a {
+  font-family: var(--font-body);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+}
+
+em {
+  font-family: var(--font-editorial);
+  font-weight: 500;
+  text-transform: none;
+}
