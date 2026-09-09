@@ -1,0 +1,351 @@
+/* GRVEZ VAULT — sitewide aesthetic pass
+   Extends the visual language already established on Home + Music
+   without rewriting page content or routes. */
+
+:root {
+  --vault-bg: #050507;
+  --vault-surface: rgba(11, 12, 16, 0.88);
+  --vault-surface-strong: rgba(16, 17, 22, 0.96);
+  --vault-line: rgba(255,255,255,0.11);
+  --vault-line-strong: rgba(255,255,255,0.18);
+  --vault-crimson: #b63a50;
+  --vault-crimson-soft: rgba(182,58,80,0.14);
+  --vault-copy: rgba(245,239,232,0.96);
+  --vault-muted: rgba(214,207,199,0.68);
+}
+
+body {
+  background:
+    radial-gradient(circle at 12% 0%, rgba(182,58,80,0.10), transparent 30rem),
+    radial-gradient(circle at 88% 38%, rgba(255,255,255,0.025), transparent 28rem),
+    linear-gradient(180deg, #050507 0%, #08090d 48%, #050507 100%);
+}
+
+/* Make the same cinematic surface treatment carry through every interior page. */
+.page-section {
+  position: relative;
+  isolation: isolate;
+  padding-top: 0;
+  overflow: hidden;
+}
+
+.page-section::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  opacity: 0.17;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 30px 30px;
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,.55), transparent 82%);
+}
+
+.page-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(5,5,7,0.02) 0%, rgba(5,5,7,0.72) 34rem, rgba(5,5,7,0.98) 64rem),
+    radial-gradient(circle at 50% 12rem, rgba(182,58,80,0.055), transparent 34rem);
+}
+
+/* Full-width cinematic heroes like the new Music direction. */
+.page-section > .page-hero,
+.page-section .page-hero:first-child {
+  width: 100vw;
+  max-width: none;
+  margin: 0 0 clamp(3rem, 6vw, 6rem) calc(50% - 50vw);
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  position: relative;
+  background: #030304;
+}
+
+.page-section > .page-hero::after,
+.page-section .page-hero:first-child::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(3,3,4,0.03) 0%, rgba(5,5,7,0.18) 55%, #050507 100%),
+    linear-gradient(90deg, rgba(5,5,7,0.32), transparent 30%, transparent 70%, rgba(5,5,7,0.32));
+}
+
+.page-section .page-hero .hero-image,
+.page-section .page-hero img {
+  width: 100%;
+  min-height: clamp(360px, 58vw, 760px);
+  max-height: 78vh;
+  object-fit: cover;
+  border-radius: 0;
+  filter: saturate(.88) contrast(1.08) brightness(.78);
+}
+
+/* Consistent editorial content width + spacing. */
+.page-content {
+  width: min(1180px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 0 0 clamp(4rem, 8vw, 8rem);
+}
+
+.page-intro {
+  position: relative;
+  max-width: 920px;
+  margin: 0 0 clamp(4rem, 7vw, 7rem);
+  padding: 0 0 clamp(2rem, 4vw, 3.25rem);
+  border-bottom: 1px solid var(--vault-line);
+}
+
+.page-intro::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: min(150px, 28vw);
+  height: 1px;
+  background: var(--vault-crimson);
+  box-shadow: 0 0 18px rgba(182,58,80,.42);
+}
+
+.page-intro h1,
+.page-content > h1,
+.companion-intro h2,
+.archive-closing h2 {
+  color: var(--vault-copy);
+  text-wrap: balance;
+  letter-spacing: -0.015em;
+}
+
+.page-intro h1,
+.page-content > h1 {
+  font-size: clamp(3rem, 7vw, 6.8rem);
+  line-height: .92;
+}
+
+.page-intro > p:not(.eyebrow),
+.page-content > p,
+.archive-description,
+.artist-intro,
+.companion-deck,
+.companion-intro p,
+.companion-analysis p,
+.companion-cross p {
+  color: var(--vault-muted);
+}
+
+.eyebrow {
+  color: var(--vault-crimson);
+  font-weight: 600;
+  letter-spacing: .32em;
+}
+
+/* Give older box-based sections the same restrained, editorial panels used by Music. */
+.archive-note,
+.archive-feature,
+.artist-section,
+.info-page,
+.detail-card,
+.release-card,
+.companion-analysis,
+.companion-cross,
+.companion-intro,
+.visdoc-chronology-section,
+.visdoc-motif-analysis,
+.moodboard-section,
+.film-card,
+.manuscript-card {
+  background:
+    linear-gradient(145deg, rgba(255,255,255,0.035), transparent 42%),
+    var(--vault-surface);
+  border: 1px solid var(--vault-line);
+  border-radius: 2px;
+  box-shadow: 0 24px 70px rgba(0,0,0,.24);
+}
+
+.archive-note,
+.archive-feature,
+.artist-section,
+.companion-analysis,
+.companion-cross,
+.companion-intro {
+  padding: clamp(1.5rem, 4vw, 3.25rem);
+}
+
+.archive-feature,
+.artist-section,
+.companion-analysis,
+.companion-cross,
+.companion-intro {
+  margin-bottom: clamp(2rem, 5vw, 4.5rem);
+}
+
+/* Archive/directory cards: less dashboard, more cinematic record tiles. */
+.archive-record-grid,
+.visdoc-motif-gallery,
+.featured-release-list {
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+.archive-record-card,
+.featured-release,
+.visdoc-motif-analysis,
+.home-row-item {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--vault-line);
+  border-radius: 2px;
+  background: rgba(9,10,14,.78);
+  transition: transform 220ms ease, border-color 220ms ease, background 220ms ease, box-shadow 220ms ease;
+}
+
+.archive-record-card::before,
+.featured-release::before,
+.visdoc-motif-analysis::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--vault-crimson), transparent);
+  opacity: .65;
+}
+
+.archive-record-card:hover,
+.featured-release:hover,
+.visdoc-motif-analysis:hover,
+.home-row-item:hover {
+  transform: translateY(-3px);
+  border-color: rgba(182,58,80,.42);
+  background: rgba(15,16,21,.92);
+  box-shadow: 0 20px 48px rgba(0,0,0,.32);
+}
+
+.archive-record-card {
+  padding: clamp(1.35rem, 3vw, 2rem);
+}
+
+.archive-record-status,
+.archive-record-id,
+.archive-action,
+.record-nav a,
+.streaming-pill {
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  font-size: .72rem;
+}
+
+/* Unified button language: squared, metallic, restrained crimson edge. */
+.metal-button,
+.streaming-pill,
+.record-nav a {
+  border-radius: 2px;
+  border-color: var(--vault-line-strong);
+  background: rgba(8,9,12,.72);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.06);
+}
+
+.metal-button:hover,
+.streaming-pill:hover,
+.record-nav a:hover {
+  border-color: rgba(182,58,80,.62);
+  background: var(--vault-crimson-soft);
+  box-shadow: 0 0 0 1px rgba(182,58,80,.08), 0 16px 38px rgba(0,0,0,.32);
+}
+
+/* Media and imagery should read as one photographic system. */
+.page-content figure img,
+.archive-feature img,
+.visdoc-motif-analysis img,
+.companion-feature img,
+.black-maw-gallery img,
+.featured-release > img {
+  filter: saturate(.88) contrast(1.05);
+}
+
+.page-content figure,
+.companion-feature,
+.black-maw-gallery figure {
+  border-radius: 2px;
+}
+
+/* Typography hierarchy shared across records, archive, media, films and profiles. */
+.page-content h2,
+.archive-record-card h3,
+.artist-section h2,
+.companion-analysis h2,
+.companion-cross h2 {
+  color: var(--vault-copy);
+}
+
+.page-content h2 {
+  font-size: clamp(2rem, 4vw, 3.8rem);
+  line-height: 1;
+}
+
+.page-content h3 {
+  font-size: clamp(1.45rem, 2.6vw, 2.2rem);
+}
+
+blockquote,
+.vault-quote {
+  margin-left: 0;
+  padding-left: clamp(1.25rem, 3vw, 2rem);
+  border-left: 1px solid var(--vault-crimson);
+  color: rgba(245,239,232,.82);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(1.35rem, 2.6vw, 2.1rem);
+  line-height: 1.35;
+}
+
+/* Footer/header should feel like part of the same system, not separate chrome. */
+.site-header.scrolled {
+  background: rgba(5,5,7,.88);
+  border-bottom-color: var(--vault-line);
+}
+
+.site-footer {
+  border-top: 1px solid var(--vault-line);
+}
+
+@media (max-width: 760px) {
+  .page-content {
+    width: min(100% - 1.25rem, 1180px);
+  }
+
+  .page-section .page-hero .hero-image,
+  .page-section .page-hero img {
+    min-height: 320px;
+    height: 54vh;
+  }
+
+  .page-intro h1,
+  .page-content > h1 {
+    font-size: clamp(2.65rem, 14vw, 4.6rem);
+  }
+
+  .archive-note,
+  .archive-feature,
+  .artist-section,
+  .companion-analysis,
+  .companion-cross,
+  .companion-intro {
+    padding: 1.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .archive-record-card,
+  .featured-release,
+  .visdoc-motif-analysis,
+  .home-row-item {
+    transition: none;
+  }
+}
