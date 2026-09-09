@@ -40,8 +40,9 @@ export function ArchivePage() {
     >
       <div className="page-hero">
         <HeroArtwork
-          image="/manuscripts-hero.png"
+          image="/GRVEZ_VAULT_Archive_Pathway.png"
           alt="GRVEZ VAULT Archive"
+          loading="eager"
           clean
         />
       </div>
@@ -76,7 +77,6 @@ export function ArchivePage() {
           </div>
         </div>
 
-        {/* COLLECTIONS */}
         <section className="archive-directory">
           <p className="eyebrow">ARCHIVE COLLECTIONS</p>
           <h2>Select a collection.</h2>
@@ -99,20 +99,17 @@ export function ArchivePage() {
                 )}
                 <span className="archive-action">
                   {col.action}
-                  <span className="archive-arrow">\u2192</span>
+                  <span className="archive-arrow">→</span>
                 </span>
               </Link>
             ))}
           </div>
         </section>
 
-        {/* FOUNDING EDITION: dual-role card */}
         <section className="archive-feature">
           <div className="archive-feature-content">
             <p className="eyebrow">RECOVERED MANUSCRIPT</p>
-            <h2>
-              The Founding Edition
-            </h2>
+            <h2>The Founding Edition</h2>
             <p>
               The recovered research manuscript documenting the Relational
               Continuity Hypothesis and its twelve-stage model of relational
@@ -120,25 +117,16 @@ export function ArchivePage() {
               symbolic evidence, case studies, and methodological notes.
             </p>
             <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", marginTop: "2rem" }}>
-              <Link to="/relational-continuity" className="metal-button">
-                EXPLORE THE FRAMEWORK
-              </Link>
-              <Link to="/record/008" className="metal-button secondary">
-                VIEW FOUNDING RECORD
-              </Link>
+              <Link to="/relational-continuity" className="metal-button">EXPLORE THE FRAMEWORK</Link>
+              <Link to="/record/008" className="metal-button secondary">VIEW FOUNDING RECORD</Link>
             </div>
           </div>
         </section>
 
-        {/* CHRONOLOGY STATEMENT */}
         <section className="archive-feature" style={{ marginTop: "4rem" }}>
           <div className="archive-feature-content">
             <p className="eyebrow">CHRONOLOGY</p>
-            <h2>
-              Chronology
-              <br />
-              is evidence.
-            </h2>
+            <h2>Chronology<br />is evidence.</h2>
             <p>
               Every entry inside GRVEZ VAULT remains exactly where
               it was originally created. The archive does not reorganize
@@ -146,31 +134,23 @@ export function ArchivePage() {
               sequence so every connection can be discovered in context.
             </p>
             <blockquote className="vault-quote">
-              Nothing has been rewritten.
-              <br />
-              Nothing has been relocated.
-              <br />
+              Nothing has been rewritten.<br />
+              Nothing has been relocated.<br />
               Nothing has been removed.
             </blockquote>
           </div>
         </section>
 
-        {/* CLOSING */}
         <section className="archive-closing">
           <p className="eyebrow">THE RECORD REMAINS</p>
-          <h2>
-            Every new release
-            <br />
-            becomes another record.
-          </h2>
+          <h2>Every new release<br />becomes another record.</h2>
           <p>
             The archive continues to grow one entry at a time.
             Every song, manuscript, symbol, film, and design is
             preserved as part of the same ongoing chronology.
           </p>
           <blockquote className="vault-quote">
-            The archive is never finished.
-            <br />
+            The archive is never finished.<br />
             It is only waiting for its next record.
           </blockquote>
         </section>

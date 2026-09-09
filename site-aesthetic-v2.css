@@ -1,0 +1,674 @@
+/* GRVEZ VAULT — SITEWIDE VISUAL SYSTEM
+   Full retrofit: typography, hero treatment, layout rhythm, color, accents,
+   navigation, cards, editorial sections and responsive behavior. */
+
+:root {
+  --vault-bg: #050507;
+  --vault-bg-2: #090a0f;
+  --vault-panel: #0d0f14;
+  --vault-panel-2: #141720;
+  --vault-copy: #f4f0ea;
+  --vault-pearl: #ece8e2;
+  --vault-steel: #9ba2aa;
+  --vault-muted: #a8a19a;
+  --vault-line: rgba(255,255,255,.10);
+  --vault-line-strong: rgba(255,255,255,.20);
+  --vault-crimson: #b63a50;
+  --vault-crimson-soft: rgba(182,58,80,.14);
+  --vault-crimson-glow: rgba(182,58,80,.34);
+  --vault-max: 1240px;
+}
+
+html,
+body {
+  background: var(--vault-bg) !important;
+  color: var(--vault-copy) !important;
+}
+
+body {
+  background-image:
+    radial-gradient(circle at 14% 0%, rgba(182,58,80,.13), transparent 28rem),
+    radial-gradient(circle at 90% 42%, rgba(155,162,170,.05), transparent 30rem),
+    linear-gradient(180deg, #050507 0%, #0a0b10 46%, #050507 100%) !important;
+}
+
+body::before {
+  opacity: .10 !important;
+  background-size: 38px 38px !important;
+}
+
+body::after {
+  opacity: .065 !important;
+}
+
+/* ===== SHELL / NAV ===== */
+.site-header {
+  width: 100% !important;
+  max-width: none !important;
+  padding: 1.05rem clamp(1rem, 3vw, 3rem) !important;
+  border-bottom: 1px solid transparent;
+}
+
+.site-header.scrolled {
+  background: rgba(5,5,7,.90) !important;
+  backdrop-filter: blur(18px) !important;
+  border-bottom-color: var(--vault-line) !important;
+}
+
+.brand-mark img {
+  height: 38px !important;
+  filter: brightness(1.08) contrast(1.08);
+}
+
+.nav-link {
+  border-radius: 0 !important;
+  padding: .6rem .72rem !important;
+  color: rgba(236,232,226,.68) !important;
+  font-size: .68rem !important;
+  letter-spacing: .20em !important;
+}
+
+.nav-link:hover,
+.nav-link:focus-visible,
+.nav-link.active {
+  color: var(--vault-copy) !important;
+  background: transparent !important;
+  box-shadow: inset 0 -1px 0 var(--vault-crimson);
+}
+
+.nav-dropdown {
+  border-radius: 0 !important;
+  background: rgba(8,9,13,.97) !important;
+  border: 1px solid var(--vault-line) !important;
+  box-shadow: 0 24px 60px rgba(0,0,0,.42) !important;
+}
+
+.site-footer {
+  width: min(var(--vault-max), calc(100% - 3rem)) !important;
+  border-top: 1px solid var(--vault-line) !important;
+  padding-top: clamp(2.5rem, 5vw, 4rem) !important;
+}
+
+.site-footer h2 {
+  font-family: var(--font-display) !important;
+  font-size: .95rem !important;
+  letter-spacing: .12em !important;
+  text-transform: uppercase !important;
+}
+
+/* ===== GLOBAL PAGE CANVAS ===== */
+.page-section,
+.about-destination,
+.rch-page {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 0 clamp(5rem, 9vw, 9rem) !important;
+  overflow: hidden;
+}
+
+.page-content,
+.about-content {
+  width: min(var(--vault-max), calc(100% - 3rem)) !important;
+  max-width: none !important;
+  margin: 0 auto !important;
+}
+
+/* ===== HERO SYSTEM ===== */
+.page-section > .page-hero,
+.page-section .page-hero:first-child,
+.about-hero,
+.rch-hero {
+  position: relative !important;
+  width: 100vw !important;
+  max-width: none !important;
+  min-height: clamp(460px, 68vh, 820px) !important;
+  margin: 0 0 clamp(4rem, 8vw, 8rem) calc(50% - 50vw) !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  overflow: hidden !important;
+  background: #030304 !important;
+  box-shadow: none !important;
+}
+
+.page-section > .page-hero::before,
+.page-section .page-hero:first-child::before,
+.about-hero::after,
+.rch-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(3,3,4,.03) 0%, rgba(3,3,4,.10) 48%, rgba(5,5,7,.96) 100%),
+    linear-gradient(90deg, rgba(5,5,7,.44) 0%, transparent 28%, transparent 70%, rgba(5,5,7,.34) 100%);
+}
+
+.page-section .page-hero .hero-frame,
+.page-section .page-hero .hero-backdrop-wrap,
+.about-hero .hero-frame,
+.about-hero .hero-backdrop-wrap {
+  width: 100% !important;
+  height: 100% !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.page-section .page-hero img,
+.page-section .page-hero .hero-image,
+.about-hero img,
+.about-hero .hero-image {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: clamp(460px, 68vh, 820px) !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  border-radius: 0 !important;
+  filter: saturate(.78) contrast(1.13) brightness(.70) !important;
+}
+
+.rch-hero {
+  display: grid !important;
+  place-items: end start !important;
+  background:
+    linear-gradient(180deg, rgba(3,3,4,.10), rgba(5,5,7,.86)),
+    url('/GRVEZ_VAULT_Relational_Continuity_Pathway.png') center/cover no-repeat !important;
+}
+
+.rch-hero-inner,
+.about-hero-copy {
+  position: relative !important;
+  z-index: 5 !important;
+}
+
+.rch-hero-inner {
+  width: min(var(--vault-max), calc(100% - 3rem)) !important;
+  margin: 0 auto !important;
+  padding: 0 0 clamp(3rem, 7vw, 6rem) !important;
+}
+
+/* ===== PAGE TITLES / INTRO ===== */
+.page-intro,
+.manuscripts-page .page-content > .breadcrumb + .eyebrow,
+.companion-page .page-content > .breadcrumb + .eyebrow {
+  position: relative;
+}
+
+.page-intro {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.4fr) minmax(280px, .6fr) !important;
+  gap: 1rem clamp(2rem, 7vw, 7rem) !important;
+  align-items: end !important;
+  max-width: none !important;
+  margin: 0 0 clamp(5rem, 10vw, 9rem) !important;
+  padding: 0 0 clamp(3rem, 5vw, 5rem) !important;
+  border-bottom: 1px solid var(--vault-line) !important;
+}
+
+.page-intro .eyebrow {
+  grid-column: 1 / -1;
+}
+
+.page-intro::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: clamp(90px, 14vw, 180px);
+  height: 2px;
+  background: var(--vault-crimson);
+  box-shadow: 0 0 20px var(--vault-crimson-glow);
+}
+
+.page-intro h1,
+.manuscripts-page .page-content > h1,
+.companion-page .page-content > h1,
+.visdoc-detail-page .page-content > h1,
+.rch-hero h1,
+.about-hero h1 {
+  color: var(--vault-copy) !important;
+  font-family: var(--font-display) !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: .015em !important;
+  line-height: .90 !important;
+}
+
+.page-intro h1,
+.manuscripts-page .page-content > h1,
+.companion-page .page-content > h1,
+.visdoc-detail-page .page-content > h1 {
+  font-size: clamp(3.6rem, 7.4vw, 7.4rem) !important;
+}
+
+.rch-hero h1,
+.about-hero h1 {
+  font-size: clamp(4rem, 8vw, 8rem) !important;
+}
+
+.page-intro > p:not(.eyebrow),
+.page-description,
+.companion-deck,
+.rch-subtitle,
+.about-hero-copy > p:not(.eyebrow) {
+  color: var(--vault-muted) !important;
+  font-size: clamp(1rem, 1.25vw, 1.18rem) !important;
+  line-height: 1.8 !important;
+  max-width: 620px !important;
+}
+
+.eyebrow {
+  color: var(--vault-crimson) !important;
+  font-size: .67rem !important;
+  font-weight: 700 !important;
+  letter-spacing: .30em !important;
+}
+
+/* ===== SECTION TYPOGRAPHY ===== */
+.page-content h2,
+.about-content h2,
+.rch-page h2 {
+  color: var(--vault-copy) !important;
+  font-family: var(--font-display) !important;
+  font-size: clamp(2.2rem, 4.8vw, 4.7rem) !important;
+  line-height: .95 !important;
+  letter-spacing: .015em !important;
+  text-transform: uppercase !important;
+}
+
+.page-content h3,
+.about-content h3,
+.rch-page h3 {
+  color: var(--vault-pearl) !important;
+  font-family: var(--font-display) !important;
+  font-size: clamp(1.35rem, 2.4vw, 2.2rem) !important;
+  line-height: 1.05 !important;
+}
+
+.page-content p,
+.about-content p,
+.rch-page p,
+.page-content li,
+.about-content li,
+.rch-page li,
+figcaption,
+.archive-description,
+.artist-intro {
+  color: var(--vault-muted) !important;
+}
+
+/* ===== EDITORIAL LAYOUT ===== */
+.archive-note,
+.archive-feature,
+.artist-section,
+.info-page,
+.companion-intro,
+.companion-analysis,
+.companion-cross,
+.visdoc-chronology-section,
+.visdoc-methodology,
+.about-identities,
+.about-pillars,
+.about-chronology,
+.about-directory,
+.rch-tiers,
+.rch-arc,
+.rch-pillars,
+.rch-feelings {
+  position: relative !important;
+  margin: 0 0 clamp(4rem, 8vw, 8rem) !important;
+  padding: clamp(2rem, 5vw, 4.5rem) 0 !important;
+  border: 0 !important;
+  border-top: 1px solid var(--vault-line) !important;
+  border-bottom: 1px solid var(--vault-line) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.archive-note::before,
+.archive-feature::before,
+.artist-section::before,
+.companion-intro::before,
+.companion-analysis::before,
+.companion-cross::before,
+.visdoc-chronology-section::before,
+.visdoc-methodology::before,
+.about-identities::before,
+.about-pillars::before,
+.about-chronology::before,
+.about-directory::before,
+.rch-arc::before,
+.rch-pillars::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 110px;
+  height: 1px;
+  background: var(--vault-crimson);
+}
+
+/* ===== GRIDS / CARDS ===== */
+.archive-record-grid,
+.visdoc-grid,
+.visdoc-motif-gallery,
+.featured-release-list,
+.documentary-question-card-grid,
+.rch-stages-grid,
+.about-identity-list,
+.about-pillar-list {
+  gap: 1px !important;
+  background: var(--vault-line) !important;
+  border: 1px solid var(--vault-line) !important;
+}
+
+.archive-record-card,
+.visdoc-exhibit-card,
+.visdoc-exhibit-featured,
+.visdoc-motif-analysis,
+.featured-release,
+.documentary-question-card,
+.rch-stage,
+.rch-pillar,
+.about-identity-list article,
+.about-pillar-list article,
+.detail-card,
+.release-card,
+.manuscript-card {
+  border: 0 !important;
+  border-radius: 0 !important;
+  background:
+    linear-gradient(150deg, rgba(255,255,255,.035), transparent 42%),
+    rgba(9,10,14,.97) !important;
+  box-shadow: none !important;
+  transition: transform 220ms ease, background 220ms ease !important;
+}
+
+.archive-record-card:hover,
+.visdoc-exhibit-card:hover,
+.visdoc-exhibit-featured:hover,
+.visdoc-motif-analysis:hover,
+.featured-release:hover,
+.documentary-question-card:hover,
+.rch-stage:hover,
+.about-identity-list article:hover,
+.about-pillar-list article:hover {
+  transform: translateY(-2px) !important;
+  background:
+    linear-gradient(150deg, rgba(182,58,80,.10), transparent 50%),
+    #11131a !important;
+}
+
+.archive-record-card,
+.documentary-question-card,
+.rch-stage {
+  padding: clamp(1.35rem, 3vw, 2.25rem) !important;
+}
+
+/* ===== IMAGE LANGUAGE ===== */
+.page-content img,
+.about-content img,
+.rch-page img,
+.film-poster,
+.visdoc-exhibit-card img,
+.visdoc-exhibit-featured img,
+.featured-release img,
+.companion-feature img,
+.black-maw-gallery img {
+  border-radius: 0 !important;
+  filter: saturate(.80) contrast(1.10) brightness(.90) !important;
+}
+
+.film-poster,
+.black-maw-gallery img,
+.companion-feature img,
+.visdoc-exhibit-featured img {
+  width: 100% !important;
+}
+
+.film-video iframe,
+.companion-video video {
+  width: 100% !important;
+  aspect-ratio: 16 / 9;
+  height: auto !important;
+  border: 1px solid var(--vault-line) !important;
+  border-radius: 0 !important;
+  background: #000;
+}
+
+/* ===== BUTTONS / ACCENTS ===== */
+.metal-button,
+.streaming-pill,
+.record-nav a,
+.vault-button,
+.about-inline-link,
+.archive-action {
+  border-radius: 0 !important;
+  text-transform: uppercase !important;
+  letter-spacing: .18em !important;
+  font-size: .69rem !important;
+}
+
+.metal-button,
+.streaming-pill,
+.record-nav a,
+.vault-button {
+  min-height: 44px;
+  padding: .82rem 1.15rem !important;
+  border: 1px solid var(--vault-line-strong) !important;
+  background: rgba(7,8,11,.86) !important;
+  color: var(--vault-copy) !important;
+  box-shadow: none !important;
+}
+
+.metal-button:hover,
+.streaming-pill:hover,
+.record-nav a:hover,
+.vault-button:hover {
+  border-color: var(--vault-crimson) !important;
+  background: var(--vault-crimson-soft) !important;
+}
+
+.about-inline-link,
+.archive-action,
+.documentary-question-card-arrow {
+  color: var(--vault-crimson) !important;
+}
+
+/* ===== QUOTES ===== */
+blockquote,
+.vault-quote,
+.archive-quote {
+  color: rgba(244,240,234,.92) !important;
+  font-family: var(--font-editorial) !important;
+}
+
+blockquote,
+.vault-quote {
+  margin: clamp(2rem, 5vw, 4rem) 0 0 !important;
+  padding: 0 0 0 clamp(1.5rem, 3vw, 2.5rem) !important;
+  border-left: 2px solid var(--vault-crimson) !important;
+  font-size: clamp(1.7rem, 3.7vw, 3.2rem) !important;
+  line-height: 1.18 !important;
+}
+
+/* ===== VISUAL DOCUMENTATION / DETAIL PAGES ===== */
+.manuscripts-page .page-content > .breadcrumb,
+.companion-page .page-content > .breadcrumb,
+.visdoc-detail-page .page-content > .breadcrumb {
+  margin-top: clamp(2rem, 4vw, 4rem) !important;
+}
+
+.manuscripts-page .page-content > h1,
+.companion-page .page-content > h1,
+.visdoc-detail-page .page-content > h1 {
+  margin: .5rem 0 1.5rem !important;
+}
+
+.page-description,
+.companion-deck {
+  margin-bottom: clamp(3rem, 7vw, 6rem) !important;
+}
+
+.visdoc-tier-label {
+  margin: clamp(5rem, 9vw, 8rem) 0 2rem !important;
+}
+
+.visdoc-status {
+  color: var(--vault-steel) !important;
+  border-radius: 0 !important;
+}
+
+/* Turn Black Maw's major pairing artwork into a cinematic feature band. */
+.black-maw-gallery {
+  width: 100vw !important;
+  margin-left: calc(50% - 50vw) !important;
+  margin-bottom: clamp(5rem, 10vw, 9rem) !important;
+  background: #030304;
+}
+
+.black-maw-gallery figure {
+  width: min(1500px, 100%) !important;
+  margin: 0 auto !important;
+  position: relative;
+}
+
+.black-maw-gallery img {
+  max-height: 82vh;
+  object-fit: cover;
+}
+
+.black-maw-gallery figcaption {
+  padding: 1.25rem clamp(1rem, 3vw, 2rem) 1.75rem !important;
+  border-top: 1px solid var(--vault-line) !important;
+}
+
+/* ===== ABOUT ===== */
+.about-hero-copy {
+  left: clamp(1.5rem, 6vw, 6rem) !important;
+  bottom: clamp(2rem, 7vw, 6rem) !important;
+  max-width: 780px !important;
+}
+
+.about-hero-index {
+  color: rgba(244,240,234,.48) !important;
+}
+
+.about-section-intro,
+.about-chronology,
+.about-directory {
+  max-width: none !important;
+}
+
+/* ===== RCH ===== */
+.rch-fracture {
+  height: 1px !important;
+  background: linear-gradient(90deg, transparent, var(--vault-crimson), transparent) !important;
+  opacity: .55 !important;
+}
+
+.rch-stage-num,
+.rch-tier-label,
+.rch-feeling-name,
+.rch-dyad-stage,
+.rch-pillar-num {
+  color: var(--vault-crimson) !important;
+}
+
+/* ===== FILMS ===== */
+.film-poster {
+  margin: 2rem 0 2.5rem !important;
+  max-height: 720px;
+  object-fit: cover;
+}
+
+/* ===== ARCHIVE ===== */
+.archive-record-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+}
+
+.archive-record-card {
+  min-height: 320px !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.archive-record-card .archive-action {
+  margin-top: auto !important;
+}
+
+.archive-manifest {
+  grid-column: 1 / -1;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--vault-line);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .page-content,
+  .about-content,
+  .rch-hero-inner {
+    width: min(100% - 1.35rem, var(--vault-max)) !important;
+  }
+
+  .page-section > .page-hero,
+  .page-section .page-hero:first-child,
+  .about-hero,
+  .rch-hero,
+  .page-section .page-hero img,
+  .page-section .page-hero .hero-image,
+  .about-hero img,
+  .about-hero .hero-image {
+    min-height: 380px !important;
+    height: 58vh !important;
+  }
+
+  .page-intro {
+    display: block !important;
+  }
+
+  .page-intro h1,
+  .manuscripts-page .page-content > h1,
+  .companion-page .page-content > h1,
+  .visdoc-detail-page .page-content > h1 {
+    font-size: clamp(3rem, 14vw, 5.2rem) !important;
+    margin-bottom: 1.75rem !important;
+  }
+
+  .rch-hero h1,
+  .about-hero h1 {
+    font-size: clamp(3rem, 14vw, 5.4rem) !important;
+  }
+
+  .archive-record-grid,
+  .visdoc-grid,
+  .rch-stages-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .archive-record-card {
+    min-height: 240px !important;
+  }
+
+  .about-hero-copy {
+    left: 1.1rem !important;
+    right: 1.1rem !important;
+    bottom: 2rem !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .archive-record-card,
+  .visdoc-exhibit-card,
+  .visdoc-exhibit-featured,
+  .featured-release,
+  .documentary-question-card,
+  .rch-stage,
+  .about-identity-list article,
+  .about-pillar-list article {
+    transition: none !important;
+  }
+}
