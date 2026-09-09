@@ -3,59 +3,6 @@ import { Link } from "react-router-dom";
 import { HeroArtwork } from "../HeroArtwork";
 
 export function GizzyGravesPage() {
-  useEffect(() => {
-    const previousTitle = document.title;
-    const description = document.querySelector('meta[name="description"]');
-    const previousDescription = description?.getAttribute("content");
-
-    document.title = "Gizzy Graves | GRVEZ VAULT";
-    description?.setAttribute(
-      "content",
-      "Gizzy Graves, an artist identity curated by Sheldyn Gruhn, inside the GRVEZ VAULT creative archive."
-    );
-
-    return () => {
-      document.title = previousTitle;
-      if (description && previousDescription) description.setAttribute("content", previousDescription);
-    };
-  }, []);
-
-  return (
-    <section className="page-section profile-page gizzy-profile" aria-labelledby="gizzy-graves-heading">
-      <div className="page-hero">
-        <HeroArtwork
-          image="/gizzy-graves-hero.png"
-          alt="Gizzy Graves"
-          loading="eager"
-        />
-        <div className="profile-hero-title">
-          <p className="eyebrow">ARTIST IDENTITY</p>
-          <h1 id="gizzy-graves-heading">GIZZY GRAVES</h1>
-        </div>
-      </div>
-
-      <div className="page-content">
-        <section className="profile-editorial" aria-labelledby="gizzy-profile-heading">
-          <figure className="profile-portrait">
-            <img src="/gizzy-graves-portrait.jpeg" alt="Portrait of Gizzy Graves" loading="lazy" />
-          </figure>
-          <div className="profile-copy">
-            <p className="eyebrow">THE ARTIST</p>
-            <h2 id="gizzy-profile-heading">Gizzy Graves</h2>
-            <p>
-              An artist identity curated by songwriter and creative director Sheldyn Gruhn. Through Gizzy Graves, Gruhn creates original music rooted in dark alternative rock, industrial metal, hard rock, and nu-metal, while directing the visual identity and creative world surrounding the work.
-            </p>
-          </div>
-        </section>
-        <div className="inline-actions profile-actions">
-          <Link className="metal-button" to="/about">
-            Back to About
-          </Link>
-          <Link className="metal-button secondary" to="/music">
-            Music
-          </Link>
-        </div>
-      </div>
-    </section>
-  );
+  useEffect(() => { const previousTitle = document.title; document.title = "Gizzy Graves | GRVEZ VAULT"; return () => { document.title = previousTitle; }; }, []);
+  return <section className="page-section profile-page gizzy-profile" aria-labelledby="gizzy-graves-heading"><div className="page-hero"><HeroArtwork image="/gizzy-graves-hero.png" alt="Gizzy Graves" loading="eager" /><div className="profile-hero-title"><p className="eyebrow">ARTIST IDENTITY</p><h1 id="gizzy-graves-heading">GIZZY GRAVES</h1></div></div><div className="page-content"><section className="profile-editorial" aria-labelledby="gizzy-profile-heading"><figure className="profile-portrait"><img src="/gizzy-graves-portrait.jpeg" alt="Portrait of Gizzy Graves" loading="lazy" /></figure><div className="profile-copy"><p className="eyebrow">THE ARTIST</p><h2 id="gizzy-profile-heading">Gizzy Graves</h2><p>An artist identity curated by songwriter and creative director Sheldyn Gruhn. Through Gizzy Graves, Gruhn creates original music rooted in dark alternative rock, industrial metal, hard rock, and nu-metal, while directing the visual identity and creative world surrounding the work.</p></div></section><section className="profile-symbol-card"><p className="eyebrow">THE BUILDER // α MARK</p><h2>Symbolic Dossier</h2><p>Supporting visual documenting the Gizzy Graves identity within the GRVEZ VAULT symbolic system. The α mark is presented here as a later supporting identity graphic.</p><img src="/gizzy-alpha-dossier.webp" alt="Gizzy Graves Alpha symbolic dossier" loading="lazy" /></section><section className="profile-companion-card"><p className="eyebrow">COMPANION THROUGH CONTINUUM</p><h2>The Murmur</h2><p>The Murmur is Gizzy's recurring Raven companion and watcher. The relationship moves from a distinct presence beside her toward black-wing imagery integrated into her own visual identity.</p><Link className="metal-button secondary" to="/media/raven-motif">Explore The Murmur</Link></section><div className="inline-actions profile-actions"><Link className="metal-button" to="/about">Back to About</Link><Link className="metal-button secondary" to="/music">Music</Link></div></div></section>;
 }

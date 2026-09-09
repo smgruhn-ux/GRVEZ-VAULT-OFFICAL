@@ -3,61 +3,6 @@ import { Link } from "react-router-dom";
 import { HeroArtwork } from "../HeroArtwork";
 
 export function DmonixPage() {
-  useEffect(() => {
-    const previousTitle = document.title;
-    const description = document.querySelector('meta[name="description"]');
-    const previousDescription = description?.getAttribute("content");
-    document.title = "DMONIX | GRVEZ VAULT";
-    description?.setAttribute("content", "DMONIX, a distinct creative identity within the GRVEZ VAULT archive and the counterpart to Gizzy Graves.");
-    return () => {
-      document.title = previousTitle;
-      if (description && previousDescription) description.setAttribute("content", previousDescription);
-    };
-  }, []);
-
-  return (
-    <section className="page-section profile-page dmonix-profile" aria-labelledby="dmonix-heading">
-      <div className="page-hero">
-        <HeroArtwork image="/dmonix-hero.png" alt="DMONIX" loading="eager" />
-        <div className="profile-hero-title">
-          <p className="eyebrow">CREATIVE IDENTITY</p>
-          <h1 id="dmonix-heading">DMONIX</h1>
-        </div>
-      </div>
-
-      <div className="page-content">
-        <section className="profile-editorial" aria-labelledby="dmonix-profile-heading">
-          <figure className="profile-portrait">
-            <img src="/dmonix-portrait.PNG" alt="Portrait of DMONIX" loading="lazy" />
-          </figure>
-          <div className="profile-copy">
-            <p className="eyebrow">THE IDENTITY</p>
-            <h2 id="dmonix-profile-heading">DMONIX</h2>
-            <p>
-              DMONIX is a distinct creative identity within GRVEZ VAULT and the counterpart
-              to Gizzy Graves. He exists within the same creative world while maintaining
-              his own presence across the music and visual identity surrounding the project.
-            </p>
-            <p style={{ marginTop: '1rem' }}>
-              DMONIX is also one half of DXXD GRVEZ, the heavy music project formed with
-              Gizzy Graves. Within that project, the two identities operate as a paired
-              creative unit rather than separate solo acts placed beside one another. DMONIX
-              also appears as a featured collaborator on select Gizzy Graves releases,
-              including \u201cVoodoo Bane,\u201d \u201cWarning Sign,\u201d and \u201cForevermore.\u201d
-            </p>
-            <p style={{ marginTop: '1rem' }}>
-              His role within GRVEZ VAULT is therefore both individual and collaborative:
-              a standalone identity, a recurring featured presence, and part of the
-              DXXD GRVEZ project.
-            </p>
-          </div>
-        </section>
-        <div className="inline-actions profile-actions">
-          <Link className="metal-button" to="/dxxd-grvez">DXXD GRVEZ</Link>
-          <Link className="metal-button secondary" to="/music">Music</Link>
-          <Link className="metal-button secondary" to="/about">About</Link>
-        </div>
-      </div>
-    </section>
-  );
+  useEffect(() => { const previousTitle = document.title; document.title = "DMONIX | GRVEZ VAULT"; return () => { document.title = previousTitle; }; }, []);
+  return <section className="page-section profile-page dmonix-profile" aria-labelledby="dmonix-heading"><div className="page-hero"><HeroArtwork image="/dmonix-hero.png" alt="DMONIX" loading="eager" /><div className="profile-hero-title"><p className="eyebrow">CREATIVE IDENTITY</p><h1 id="dmonix-heading">DMONIX</h1></div></div><div className="page-content"><section className="profile-editorial" aria-labelledby="dmonix-profile-heading"><figure className="profile-portrait"><img src="/dmonix-portrait.PNG" alt="Portrait of DMONIX" loading="lazy" /></figure><div className="profile-copy"><p className="eyebrow">THE IDENTITY</p><h2 id="dmonix-profile-heading">DMONIX</h2><p>DMONIX is a distinct creative identity within GRVEZ VAULT and the counterpart to Gizzy Graves. He exists within the same creative world while maintaining his own presence across the music and visual identity surrounding the project.</p><p style={{ marginTop: '1rem' }}>DMONIX is also one half of DXXD GRVEZ, the heavy music project formed with Gizzy Graves. Within that project, the two identities operate as a paired creative unit rather than separate solo acts placed beside one another.</p><p style={{ marginTop: '1rem' }}>His role within GRVEZ VAULT is therefore both individual and collaborative: a standalone identity, a recurring featured presence, and part of the DXXD GRVEZ project.</p></div></section><section className="profile-symbol-card"><p className="eyebrow">THE SINREAPER // Ω MARK</p><h2>Symbolic Dossier</h2><p>Supporting visual documenting the DMONIX identity within the GRVEZ VAULT symbolic system. The Ω mark is presented here as a later supporting identity graphic.</p><img src="/dmonix-omega-dossier.webp" alt="DMONIX Omega SinReaper symbolic dossier" loading="lazy" /></section><section className="profile-companion-card"><p className="eyebrow">COMPANION FIGURE</p><h2>Black Maw</h2><p>Black Maw is DMONIX's black dog companion, a recurring presence placed close to him across the visual system. The pairing gives DMONIX a distinct companion figure with its own stance, weight, and watchful presence.</p><Link className="metal-button secondary" to="/media/black-maw">Explore Black Maw</Link></section><div className="inline-actions profile-actions"><Link className="metal-button" to="/dxxd-grvez">DXXD GRVEZ</Link><Link className="metal-button secondary" to="/music">Music</Link><Link className="metal-button secondary" to="/about">About</Link></div></div></section>;
 }

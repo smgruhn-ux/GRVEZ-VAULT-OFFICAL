@@ -1,0 +1,30 @@
+GRVEZ STAGING ASSET PACK
+
+Branch target:
+staging/visual-doc-character-cards
+
+Continue from:
+708148c85ebb8a40ab3d9f81a3b9da2c78986bc5
+
+Included assets:
+- gizzy-alpha-dossier.webp
+- dmonix-omega-dossier.webp
+- death-of-deceit-pre-may23-2026.webp
+- omega-reference-card.webp
+- omega-mark-reference.webp
+- dmonix-jerry-one-eyed-skull.webp
+- dmonix-jerry-anubis.webp
+- dmonix-jerry-all-seeing-eye.webp
+- dmonix-jerry-beetle-sphere.webp
+- dmonix-jerry-fish-waves.webp
+- dmonix-jerry-flame.webp
+- dmonix-jerry-mummy-chains.webp
+- dmonix-jerry-diamond-star.webp
+- dmonix-jerry-spiral-spears.webp
+
+Rules:
+- Staging only.
+- Do not merge to main.
+- Do not deploy to production.
+- Replace pending states only with these real supplied assets.
+- Alpha iconography uses Greek alpha α, not Latin A.
