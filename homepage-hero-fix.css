@@ -1,0 +1,52 @@
+/* Homepage hero height correction
+   Removes the oversized empty canvas under the approved hero artwork on desktop and mobile.
+   Keeps the existing overlay content positioned on top of the image. */
+
+.home-hero-v2 {
+  position: relative !important;
+  min-height: 0 !important;
+  height: auto !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  background: #07090c !important;
+}
+
+.home-hero-v2-bg {
+  position: relative !important;
+  inset: auto !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  display: block !important;
+}
+
+.home-hero-v2-bg img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  object-position: center top !important;
+}
+
+.home-hero-v2-grain {
+  position: absolute !important;
+  inset: 0 !important;
+}
+
+.home-hero-v2-content {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 4 !important;
+  box-sizing: border-box !important;
+}
+
+@media (max-width: 768px) {
+  .home-hero-v2,
+  .home-hero-v2-bg,
+  .home-hero-v2-bg img {
+    min-height: 0 !important;
+    height: auto !important;
+  }
+}
