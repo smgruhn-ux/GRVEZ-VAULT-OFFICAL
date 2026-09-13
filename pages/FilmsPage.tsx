@@ -38,13 +38,6 @@ export function FilmsPage() {
           <p>Documentary, film, and visual-media projects connected to GRVEZ VAULT. This section preserves work that documents the creative world surrounding Gizzy Graves, DMONIX, and the broader archive.</p>
         </div>
 
-        <section className="documentary-question-index" aria-labelledby="question-index-heading">
-          <p className="eyebrow">THE QUESTIONS</p>
-          <h2 id="question-index-heading">Follow the Investigation</h2>
-          <p className="documentary-question-index-copy">A central index of questions raised across GRVEZ VAULT films and media. Each question opens its own pathway through the relevant chronology, testimony, symbols, and documented material.</p>
-          <QuestionCards />
-        </section>
-
         <article className="archive-note">
           <p className="eyebrow">DOCUMENTARY</p>
           <h2>SOMEWHERE BETWEEN</h2>
