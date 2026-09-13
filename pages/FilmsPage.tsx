@@ -9,6 +9,20 @@ const documentaryQuestions = [
   { title: "WHICH EVENTS HAPPENED BEFORE THE FRAMEWORK EXISTED?", slug: "pre-framework-events", label: "CHRONOLOGY / METHOD" },
 ];
 
+function QuestionCards() {
+  return (
+    <div className="documentary-question-card-grid">
+      {documentaryQuestions.map((question) => (
+        <Link to={`/films/questions/${question.slug}`} className="documentary-question-card" key={question.slug}>
+          <span className="documentary-question-card-label">{question.label}</span>
+          <span className="documentary-question-card-title">{question.title}</span>
+          <span className="documentary-question-card-arrow">Explore question →</span>
+        </Link>
+      ))}
+    </div>
+  );
+}
+
 export function FilmsPage() {
   useEffect(() => { document.title = "Films & Media | GRVEZ VAULT"; return () => { document.title = "GRVEZ VAULT | Music · Archive · Manuscripts · Media"; }; }, []);
 
@@ -23,6 +37,13 @@ export function FilmsPage() {
           <h1 id="films-heading">Visual Projects</h1>
           <p>Documentary, film, and visual-media projects connected to GRVEZ VAULT. This section preserves work that documents the creative world surrounding Gizzy Graves, DMONIX, and the broader archive.</p>
         </div>
+
+        <section className="documentary-question-index" aria-labelledby="question-index-heading">
+          <p className="eyebrow">THE QUESTIONS</p>
+          <h2 id="question-index-heading">Follow the Investigation</h2>
+          <p className="documentary-question-index-copy">A central index of questions raised across GRVEZ VAULT films and media. Each question opens its own pathway through the relevant chronology, testimony, symbols, and documented material.</p>
+          <QuestionCards />
+        </section>
 
         <article className="archive-note">
           <p className="eyebrow">DOCUMENTARY</p>
@@ -46,15 +67,7 @@ export function FilmsPage() {
           <section className="documentary-question-pathways" aria-labelledby="documentary-questions-heading">
             <p className="eyebrow">EXPLORE THE INVESTIGATION</p>
             <h2 id="documentary-questions-heading">QUESTIONS RAISED BY THE FILM</h2>
-            <div className="documentary-question-card-grid">
-              {documentaryQuestions.map((question) => (
-                <Link to={`/films/questions/${question.slug}`} className="documentary-question-card" key={question.slug}>
-                  <span className="documentary-question-card-label">{question.label}</span>
-                  <span className="documentary-question-card-title">{question.title}</span>
-                  <span className="documentary-question-card-arrow">Explore pathway →</span>
-                </Link>
-              ))}
-            </div>
+            <QuestionCards />
           </section>
         </article>
 
