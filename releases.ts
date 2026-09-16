@@ -47,6 +47,7 @@ export const gizzyGravesFeatDmonix: Release[] = [
 ];
 
 export const dxxdGrvezReleases: Release[] = [
+  { title: 'HEAD NOISE', artist: 'DXXD GRVEZ', image: '/HEAD NOISE COVER.svg', listenUrl: 'https://soundcloud.com/sheldyn-gruhn', lyricsUrl: '', creditsUrl: '' },
   { title: 'UNDER AND OVER', artist: 'DXXD GRVEZ', image: '/UNDER AND OVER COVER.png', listenUrl: '', lyricsUrl: '', creditsUrl: '' },
   { title: 'PRESSURE SICK', artist: 'DXXD GRVEZ', image: '/PRESSURE SICK COVER.png', listenUrl: '', lyricsUrl: '', creditsUrl: '' },
 ];
