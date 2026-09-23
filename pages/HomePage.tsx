@@ -15,7 +15,7 @@ export function HomePage() {
   return (
     <>
       <a href="#pathways" className="home-hero-v2" aria-label="Enter the GRVEZ Vault">
-        <div className="home-hero-v2-bg"><ApprovedImage src="/GRVEZ_VAULT_Home_Hero.png" fallback="/home-hero.png" alt="GRVEZ Vault" loading="eager" /></div>
+        <div className="home-hero-v2-bg"><ApprovedImage src="/GRVEZ_VAULT_HERO.png" fallback="/home-hero.png" alt="GRVEZ Vault" loading="eager" /></div>
         <div className="home-hero-v2-grain" aria-hidden="true" />
       </a>
       <section className="pathways-grid" id="pathways">
