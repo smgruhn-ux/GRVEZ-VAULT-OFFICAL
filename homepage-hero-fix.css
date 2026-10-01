@@ -1,9 +1,12 @@
-/* Homepage hero height correction
-   Removes the oversized empty canvas under the approved hero artwork on desktop and mobile.
-   Keeps the existing overlay content positioned on top of the image. */
+/* Homepage hero loading/layout stability
+   Reserve the hero's final 3:2 canvas before the PNG finishes decoding so
+   the pathways section cannot jump up into the hero during page load. */
 
 .home-hero-v2 {
   position: relative !important;
+  display: block !important;
+  width: 100% !important;
+  aspect-ratio: 3 / 2 !important;
   min-height: 0 !important;
   height: auto !important;
   padding: 0 !important;
@@ -12,18 +15,20 @@
 }
 
 .home-hero-v2-bg {
-  position: relative !important;
-  inset: auto !important;
+  position: absolute !important;
+  inset: 0 !important;
   width: 100% !important;
-  height: auto !important;
+  height: 100% !important;
   min-height: 0 !important;
   display: block !important;
 }
 
 .home-hero-v2-bg img {
+  position: absolute !important;
+  inset: 0 !important;
   display: block !important;
   width: 100% !important;
-  height: auto !important;
+  height: 100% !important;
   min-height: 0 !important;
   max-height: none !important;
   object-fit: contain !important;
@@ -33,6 +38,7 @@
 .home-hero-v2-grain {
   position: absolute !important;
   inset: 0 !important;
+  pointer-events: none !important;
 }
 
 .home-hero-v2-content {
@@ -43,10 +49,17 @@
 }
 
 @media (max-width: 768px) {
-  .home-hero-v2,
-  .home-hero-v2-bg,
-  .home-hero-v2-bg img {
+  .home-hero-v2 {
+    width: 100% !important;
+    aspect-ratio: 3 / 2 !important;
     min-height: 0 !important;
     height: auto !important;
+  }
+
+  .home-hero-v2-bg,
+  .home-hero-v2-bg img {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
   }
 }
