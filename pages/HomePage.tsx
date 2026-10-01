@@ -1,21 +1,62 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function ApprovedImage({ src, fallback, alt, className, loading = "lazy" }: { src: string; fallback?: string; alt: string; className?: string; loading?: "eager" | "lazy" }) {
+function ApprovedImage({
+  src,
+  fallback,
+  alt,
+  className,
+  loading = "lazy",
+  fetchPriority,
+  width,
+  height,
+}: {
+  src: string;
+  fallback?: string;
+  alt: string;
+  className?: string;
+  loading?: "eager" | "lazy";
+  fetchPriority?: "high" | "low" | "auto";
+  width?: number;
+  height?: number;
+}) {
   const handleError = (event: React.SyntheticEvent<HTMLImageElement>) => {
     if (fallback && event.currentTarget.dataset.fallbackApplied !== "true") {
       event.currentTarget.dataset.fallbackApplied = "true";
       event.currentTarget.src = fallback;
     }
   };
-  return <img src={src} alt={alt} className={className} loading={loading} decoding="async" onError={handleError} />;
+
+  return (
+    <img
+      src={src}
+      alt={alt}
+      className={className}
+      loading={loading}
+      decoding="async"
+      fetchPriority={fetchPriority}
+      width={width}
+      height={height}
+      onError={handleError}
+    />
+  );
 }
 
 export function HomePage() {
   return (
     <>
       <a href="#pathways" className="home-hero-v2" aria-label="Enter the GRVEZ Vault">
-        <div className="home-hero-v2-bg"><ApprovedImage src="/GRVEZ_VAULT_HERO.png" fallback="/home-hero.png" alt="GRVEZ Vault" loading="eager" /></div>
+        <div className="home-hero-v2-bg">
+          <ApprovedImage
+            src="/GRVEZ_VAULT_HERO.png"
+            fallback="/home-hero.png"
+            alt="GRVEZ Vault"
+            loading="eager"
+            fetchPriority="high"
+            width={1536}
+            height={1024}
+          />
+        </div>
         <div className="home-hero-v2-grain" aria-hidden="true" />
       </a>
       <section className="pathways-grid" id="pathways">
