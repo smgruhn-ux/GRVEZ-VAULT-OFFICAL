@@ -184,6 +184,7 @@ export function Layout({ children }: LayoutProps) {
             <li><Link to="/relational-continuity">Relational Continuity</Link></li>
             <li><Link to="/films">Films & Media</Link></li>
             <li><Link to="/vaultline">Vaultline</Link></li>
+            <li><Link to="/after-dark-dwellings">After Dark Dwellings</Link></li>
           </ul>
         </div>
         <div className="footer-column">
