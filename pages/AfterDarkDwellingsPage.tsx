@@ -518,7 +518,14 @@ export function AfterDarkTermsPage() {
 }
 
 
-type GuideStep = [string, string, string];
+type StepRecommendation = {
+  name: string;
+  merchant: string;
+  url: string;
+  note: string;
+};
+
+type GuideStep = [string, string, string, StepRecommendation?];
 
 function AfterDarkGuideArticle({
   title,
@@ -529,6 +536,8 @@ function AfterDarkGuideArticle({
   readTime,
   steps,
   rule,
+  heroImage,
+  heroAlt,
 }: {
   title: string;
   deck: string;
@@ -538,6 +547,8 @@ function AfterDarkGuideArticle({
   readTime: string;
   steps: GuideStep[];
   rule: string;
+  heroImage?: string;
+  heroAlt?: string;
 }) {
   return (
     <AfterDarkFrame title={title + ' | After Dark Dwellings'} description={description} path={path} section="guides">
@@ -548,17 +559,31 @@ function AfterDarkGuideArticle({
           <p className="after-dark-article-deck">{deck}</p>
           <div className="after-dark-article-meta">AFTER DARK DWELLINGS · {readTime}</div>
         </header>
+        {heroImage && (
+          <figure className="after-dark-guide-photo">
+            <img src={heroImage} alt={heroAlt || title} />
+          </figure>
+        )}
         <div className="after-dark-article-study" aria-hidden="true">
           <span>AFTER DARK / FIELD NOTE</span>
           <strong>CARBON · STONE · STEEL · LIGHT</strong>
         </div>
         <div className="after-dark-article-body">
-          {steps.map(([number, heading, copy]) => (
+          {steps.map(([number, heading, copy, recommendation]) => (
             <section className="after-dark-article-step" key={number}>
               <span className="after-dark-step-number">{number}</span>
               <div>
                 <h2>{heading}</h2>
                 <p>{copy}</p>
+                {recommendation && (
+                  <aside className="after-dark-shop-idea">
+                    <span>SHOP THE IDEA / {recommendation.merchant}</span>
+                    <h3>{recommendation.name}</h3>
+                    <p>{recommendation.note}</p>
+                    <a href={recommendation.url} target="_blank" rel="nofollow noreferrer">View at {recommendation.merchant} →</a>
+                    <small>Retailer link. Pricing and availability may change. Affiliate tracking will be disclosed if added later.</small>
+                  </aside>
+                )}
               </div>
             </section>
           ))}
@@ -667,10 +692,10 @@ export function AfterDarkGuidesPage() {
 
 export function AfterDarkLightingGuidePage() {
   const steps: GuideStep[] = [
-    ['01', 'Start With Ambient Light, Not a Bright Ceiling', 'A dark room needs enough overall illumination to remain usable, but one bright overhead source can erase depth. Use dimmable indirect light, concealed LEDs or low-output ceiling fixtures as the base layer.'],
-    ['02', 'Add Task Light Where the Room Actually Works', 'Reading chairs, desks, counters and bedside areas need focused light. Keeping task light local lets the rest of the room stay atmospheric instead of forcing the entire space brighter.'],
-    ['03', 'Use Accent Light to Reveal Material', 'Aim light across stone, plaster, wood grain, artwork or textured textiles. Grazing light creates shadow and makes surfaces feel dimensional, which is especially important when the palette is mostly black or charcoal.'],
-    ['04', 'Keep Color Temperature Consistent', 'Mixing very cool and very warm bulbs can make a dark room feel accidental. A warm, consistent temperature usually keeps black, graphite and natural materials cohesive.'],
+    ['01', 'Start With Ambient Light, Not a Bright Ceiling', 'A dark room needs enough overall illumination to remain usable, but one bright overhead source can erase depth. Use dimmable indirect light, concealed LEDs or low-output ceiling fixtures as the base layer.', { name: 'IUEST Dimmable Black Up/Down LED Wall Sconce', merchant: "Lowe's", url: 'https://www.lowes.com/pd/IUEST-Indoor-Wall-Sconce-Dimmable-10W-Modern-LED-Wall-Lamp-Black-Up-Down-Wall-Mount-Mini-Metal-for-Living-Room-Bedroom-Hallway-Decor-Warm-White/105789421', note: 'Warm 3000K up/down light gives a dark wall a soft architectural wash without blasting the whole room.' }],
+    ['02', 'Add Task Light Where the Room Actually Works', 'Reading chairs, desks, counters and bedside areas need focused light. Keeping task light local lets the rest of the room stay atmospheric instead of forcing the entire space brighter.', { name: 'Brightech Linden Black LED Pharmacy Floor Lamp', merchant: "Lowe's", url: 'https://www.lowes.com/pd/Brightech-65-in-Linden-Black-LED-Pharmacy-Floor-Lamp-with-Adjustable-Shade/7626400', note: 'A focused, adjustable warm task light for reading chairs, desks and work zones.' }],
+    ['03', 'Use Accent Light to Reveal Material', 'Aim light across stone, plaster, wood grain, artwork or textured textiles. Grazing light creates shadow and makes surfaces feel dimensional, which is especially important when the palette is mostly black or charcoal.', { name: 'Origin 21 Corbiel Matte Black Wall Sconce', merchant: "Lowe's", url: 'https://www.lowes.com/pd/Origin-21-Corbiel-5-91-in-W-1-Light-Matte-Black-Industrial-Wall-Sconce/5013839451', note: 'A compact black wall light that can create a tighter pool of light over textured walls, artwork or entry details.' }],
+    ['04', 'Keep Color Temperature Consistent', 'Mixing very cool and very warm bulbs can make a dark room feel accidental. A warm, consistent temperature usually keeps black, graphite and natural materials cohesive.', { name: 'Hadineeon Matte Black Stepless-Dimming Table Lamp', merchant: 'Walmart', url: 'https://www.walmart.com/ip/5331069843', note: 'A warm 2700K black table lamp with dimming for keeping color temperature consistent across a darker room.' }],
     ['05', 'Let Some Areas Stay Dark', 'A room does not need equal brightness everywhere. Controlled shadow is part of the composition. Light the surfaces and activities that matter, then allow quieter zones to recede.'],
   ];
   return <AfterDarkGuideArticle
@@ -678,6 +703,8 @@ export function AfterDarkLightingGuidePage() {
     deck="Dark interiors depend on light more than bright rooms do. The goal is not maximum brightness — it is controlled visibility, depth and atmosphere."
     description="How to layer ambient, task and accent lighting in dark interiors without flattening the room."
     path={LIGHTING_GUIDE_PATH}
+    heroImage="https://img.tailwindapp.net/images/d276/0d96/2e2e/ec535ba2569cf4f48006.png"
+    heroAlt="Dark architectural entry with warm wall lighting and layered illumination."
     label="GUIDE / LIGHTING"
     readTime="3 MIN READ"
     steps={steps}
@@ -690,7 +717,7 @@ export function AfterDarkBedroomGuidePage() {
     ['01', 'Use More Than One Dark Tone', 'Pure black on every surface can feel visually dense. Pair black with charcoal, graphite, deep brown-black or smoky gray so the room has separation without losing the darker mood.'],
     ['02', 'Soften the Room With Texture, Not Pastel Color', 'Linen, wool, velvet, brushed cotton and matte wood can make a dark bedroom feel comfortable without turning it beige or overly soft.'],
     ['03', 'Keep the Bed Visually Simple', 'Because the bed is usually the largest object in the room, too many pillows, patterns or competing details can make the space feel crowded. Let material and proportion do the work.'],
-    ['04', 'Use Low Light at More Than One Height', 'Bedside lamps, wall sconces and a low floor lamp create a calmer rhythm than a single ceiling fixture. Keep the brightest light close to the tasks that need it.'],
+    ['04', 'Use Low Light at More Than One Height', 'Bedside lamps, wall sconces and a low floor lamp create a calmer rhythm than a single ceiling fixture. Keep the brightest light close to the tasks that need it.', { name: 'Hunter Valley Park Matte Black Wall Sconce', merchant: "Lowe's", url: 'https://www.lowes.com/collections/Hunter-2-Pack-Valley-Park-6-in-W-1-Light-Matte-Black-Transitional-Wall-Sconce/GR_27244', note: 'Warm 3000K dimmable wall lighting that works well beside a bed or in a reading corner.' }],
     ['05', 'Protect Negative Space', 'Leave some wall area, nightstand surface and floor area unfilled. Dark rooms feel more expensive when strong objects have enough space around them to register.'],
   ];
   return <AfterDarkGuideArticle
@@ -698,6 +725,8 @@ export function AfterDarkBedroomGuidePage() {
     deck="A dark bedroom should feel cocooning, not crowded. Tonal variation, tactile materials and disciplined lighting keep the room quiet without making it oppressive."
     description="Dark bedroom design ideas using tonal variation, texture, lighting, scale and negative space."
     path={BEDROOM_GUIDE_PATH}
+    heroImage={PIN_IMAGE}
+    heroAlt="Dark layered interior in black and charcoal with warm low lighting."
     label="GUIDE / BEDROOM"
     readTime="3 MIN READ"
     steps={steps}
@@ -710,7 +739,7 @@ export function AfterDarkKitchenGuidePage() {
     ['01', 'Separate Black Surfaces by Finish', 'Matte cabinetry beside honed stone and brushed metal reads as layered even when the colors are similar. If every surface has the same sheen, the room can collapse into one flat block.'],
     ['02', 'Use Stone With Visible Movement', 'Veining, mineral variation or a subtle aggregate pattern gives the eye something to read. The stone does not need to be white; even dark stone can provide movement.'],
     ['03', 'Bring In Grain', 'Wood grain, reeded panels or another linear texture can soften large fields of black cabinetry while keeping the palette controlled.'],
-    ['04', 'Light the Work Surfaces', 'Under-cabinet lighting and focused pendants should make counters readable without flooding the entire kitchen. Good task light also reveals the texture of the backsplash and stone.'],
+    ['04', 'Light the Work Surfaces', 'Under-cabinet lighting and focused pendants should make counters readable without flooding the entire kitchen. Good task light also reveals the texture of the backsplash and stone.', { name: 'BLACK+DECKER 18-in Warm White LED Under-Cabinet Light Bar', merchant: "Lowe's", url: 'https://www.lowes.com/pd/BLACK-DECKER-18-in-Plug-in-Light-Bar/1000332161', note: 'Warm 2700K under-cabinet light with multiple dimming levels for readable counters without flattening the whole kitchen.' }],
     ['05', 'Use Metal as a Controlled Highlight', 'Brushed steel, blackened metal, aged nickel or restrained brass can create small points of reflection. Keep the finish consistent so the room does not become visually noisy.'],
   ];
   return <AfterDarkGuideArticle
@@ -718,6 +747,8 @@ export function AfterDarkKitchenGuidePage() {
     deck="A black kitchen needs material contrast more than color contrast. Finish, grain, stone movement and directional light keep the room dimensional."
     description="How to design a black kitchen with depth using stone, wood grain, metal, varied finishes and architectural lighting."
     path={KITCHEN_GUIDE_PATH}
+    heroImage={PIN_IMAGE}
+    heroAlt="Dark architectural interior with black surfaces, stone and warm task lighting."
     label="GUIDE / KITCHEN"
     readTime="3 MIN READ"
     steps={steps}
@@ -777,7 +808,7 @@ export function AfterDarkDisclosurePage() {
 export function AfterDarkBathroomGuidePage() {
   const steps: GuideStep[] = [
     ['01', 'Let Stone Carry the Detail', 'Dark bathrooms look stronger when material variation does more of the visual work. Honed stone, veining, textured tile or a mineral finish can create depth without adding decorative clutter.'],
-    ['02', 'Use Warm Light Around the Mirror', 'Face-level lighting matters more than a dramatic ceiling fixture. Warm sconces or integrated mirror lighting make the room usable while keeping the rest of the space subdued.'],
+    ['02', 'Use Warm Light Around the Mirror', 'Face-level lighting matters more than a dramatic ceiling fixture. Warm sconces or integrated mirror lighting make the room usable while keeping the rest of the space subdued.', { name: 'IUEST Dimmable Black Up/Down LED Wall Sconce', merchant: "Lowe's", url: 'https://www.lowes.com/pd/IUEST-Indoor-Wall-Sconce-Dimmable-10W-Modern-LED-Wall-Lamp-Black-Up-Down-Wall-Mount-Mini-Metal-for-Living-Room-Bedroom-Hallway-Decor-Warm-White/105789421', note: 'Warm 3000K up/down light gives a dark wall a soft architectural wash without blasting the whole room.' }],
     ['03', 'Mix Matte and Reflective Surfaces', 'A matte wall beside glass, mirror, brushed metal and polished stone creates contrast even when everything stays in a narrow color range.'],
     ['04', 'Keep Hardware Consistent', 'Choose one metal direction and repeat it across faucets, shower hardware, pulls and accessories. Too many finishes can make a compact dark bathroom feel fragmented.'],
     ['05', 'Leave the Counter Mostly Clear', 'Dark rooms show clutter quickly because every object interrupts the composition. Limit visible products and let the strongest surfaces remain exposed.'],
@@ -787,6 +818,8 @@ export function AfterDarkBathroomGuidePage() {
     deck="Dark bathrooms become convincing when stone, reflection, hardware and light are treated as one composition instead of separate decorating decisions."
     description="Dark bathroom design ideas using stone, mirror, metal, layered lighting and controlled contrast."
     path={BATHROOM_GUIDE_PATH}
+    heroImage="https://img.tailwindapp.net/images/c662/ea9f/c1b1/e3bb9198d75259925f41.png"
+    heroAlt="Dark luxury bathroom with black stone, mirror lighting and warm architectural glow."
     label="GUIDE / BATHROOM"
     readTime="3 MIN READ"
     steps={steps}
@@ -797,7 +830,7 @@ export function AfterDarkBathroomGuidePage() {
 export function AfterDarkOfficeGuidePage() {
   const steps: GuideStep[] = [
     ['01', 'Separate the Work Surface From the Wall', 'A black desk against a black wall can disappear into one mass. Use a slight shift in tone, finish or material so the work surface remains readable.'],
-    ['02', 'Prioritize Task Light Over Ambient Brightness', 'Keep a strong, focused light at the desk and let the rest of the room stay darker. That creates concentration without flattening the whole space.'],
+    ['02', 'Prioritize Task Light Over Ambient Brightness', 'Keep a strong, focused light at the desk and let the rest of the room stay darker. That creates concentration without flattening the whole space.', { name: 'Newhouse Lighting Zlata Black LED Desk Lamp', merchant: 'Walmart', url: 'https://www.walmart.com/ip/663683486', note: 'A dimmable black task lamp with adjustable brightness and color temperature for focused work light.' }],
     ['03', 'Use One Warm Material to Break the Field', 'Wood grain, leather, cork or another tactile warm material can prevent graphite and black from feeling sterile without turning the room soft or rustic.'],
     ['04', 'Keep Storage Visually Quiet', 'Closed cabinetry, dark shelving and fewer visible objects keep the room focused. Open storage should be edited rather than filled edge to edge.'],
     ['05', 'Protect One Empty Plane', 'Leave at least one wall, corner or surface intentionally sparse. Negative space gives the office a sense of width and stops darker colors from closing in.'],
@@ -807,6 +840,8 @@ export function AfterDarkOfficeGuidePage() {
     deck="A dark office should support concentration, not make the room feel smaller. Contrast, local task lighting and disciplined storage keep the space focused and open."
     description="How to design a dark home office with focused lighting, tonal contrast, quiet storage and enough negative space."
     path={OFFICE_GUIDE_PATH}
+    heroImage="https://img.tailwindapp.net/images/21ab/7418/1f87/41a53b6c9d7cb992d231.png"
+    heroAlt="Dark home office with black wood, warm shelf lighting and a focused desk lamp."
     label="GUIDE / HOME OFFICE"
     readTime="3 MIN READ"
     steps={steps}
@@ -820,13 +855,15 @@ export function AfterDarkSmallSpaceGuidePage() {
     ['02', 'Choose Fewer Pieces With Cleaner Profiles', 'Too many small furnishings create more visual edges, which makes a compact room feel busier. Fewer, better-scaled pieces usually make the room feel larger.'],
     ['03', 'Use Reflection Strategically', 'A mirror, glass surface or subtle sheen can bounce existing light deeper into the room. Reflection works best when it is placed to extend a useful view rather than simply adding shine.'],
     ['04', 'Keep the Floor Line Visible', 'Furniture with some visual lift or clear floor around it helps the eye understand the full footprint of the room. Dark color feels less heavy when the boundaries remain readable.'],
-    ['05', 'Light Vertical Surfaces', 'Wall sconces, picture lights or upward washes draw the eye vertically and make the room feel taller. Brightening every surface equally is less effective than placing light with intent.'],
+    ['05', 'Light Vertical Surfaces', 'Wall sconces, picture lights or upward washes draw the eye vertically and make the room feel taller. Brightening every surface equally is less effective than placing light with intent.', { name: 'Origin 21 Corbiel Matte Black Wall Sconce', merchant: "Lowe's", url: 'https://www.lowes.com/pd/Origin-21-Corbiel-5-91-in-W-1-Light-Matte-Black-Industrial-Wall-Sconce/5013839451', note: 'A compact black wall light that can create a tighter pool of light over textured walls, artwork or entry details.' }],
   ];
   return <AfterDarkGuideArticle
     title="Small Dark Spaces That Still Feel Open"
     deck="Small rooms do not have to be pale. Scale, reflection, tonal variation and carefully placed light can keep a dark palette atmospheric without making the room feel cramped."
     description="Small dark room ideas using scale, reflection, tonal variation, negative space and architectural lighting."
     path={SMALL_SPACE_GUIDE_PATH}
+    heroImage="https://img.tailwindapp.net/images/c687/cfb1/3488/8c0ee7e6c1a024dede23.png"
+    heroAlt="Small dark interior with black finishes, warm lighting and open sightlines."
     label="GUIDE / SMALL SPACES"
     readTime="3 MIN READ"
     steps={steps}
@@ -839,7 +876,7 @@ export function AfterDarkLivingRoomGuidePage() {
   const steps: GuideStep[] = [
     ['01', 'Start With One Dominant Dark Tone', 'Choose a main black, charcoal or graphite for the largest surfaces, then move one or two shades lighter or warmer for upholstery, rugs and secondary furniture so the room does not collapse into one value.'],
     ['02', 'Use One Large Anchor Instead of Many Small Pieces', 'A substantial sofa, coffee table or artwork gives the room weight. Too many small objects create visual noise and make a dark living room feel cheaper and more crowded.'],
-    ['03', 'Let Lighting Reveal the Room in Layers', 'Combine a low floor lamp, table lamp, sconces or concealed lighting. Separate pools of light make the room feel deeper and more architectural than one bright overhead fixture.'],
+    ['03', 'Let Lighting Reveal the Room in Layers', 'Combine a low floor lamp, table lamp, sconces or concealed lighting. Separate pools of light make the room feel deeper and more architectural than one bright overhead fixture.', { name: 'Brightech Linden Black LED Pharmacy Floor Lamp', merchant: "Lowe's", url: 'https://www.lowes.com/pd/Brightech-65-in-Linden-Black-LED-Pharmacy-Floor-Lamp-with-Adjustable-Shade/7626400', note: 'A focused, adjustable warm task light for reading chairs, desks and work zones.' }],
     ['04', 'Mix Matte, Soft and Reflective Surfaces', 'Velvet, brushed textile, honed stone, glass and metal should react differently to light. That surface contrast is what gives a mostly dark palette dimension.'],
     ['05', 'Edit the Styling Hard', 'A dark room already has visual weight. Keep shelves, tables and corners selective so the strongest materials and shapes can register.'],
   ];
@@ -848,6 +885,8 @@ export function AfterDarkLivingRoomGuidePage() {
     deck="A dark living room feels elevated when scale, light and material are controlled. The goal is not more decor — it is stronger composition."
     description="Dark living room ideas using layered lighting, large-scale furniture, material contrast and edited styling."
     path={LIVING_ROOM_GUIDE_PATH}
+    heroImage={PIN_IMAGE}
+    heroAlt="Dark living room with layered black materials, natural stone and warm architectural light."
     label="GUIDE / LIVING ROOM"
     readTime="3 MIN READ"
     steps={steps}
@@ -860,7 +899,7 @@ export function AfterDarkBlackStoneGuidePage() {
     ['01', 'Let the Stone Have Visible Movement', 'Veining, aggregate, mineral variation or a rough edge gives a black interior something natural to read. Perfectly uniform black beside perfectly uniform black can feel flat.'],
     ['02', 'Separate Materials by Sheen', 'Matte walls, honed stone, brushed metal and a small amount of polished reflection can all live in the same color family while still feeling distinct.'],
     ['03', 'Use Stone at Different Scales', 'A large slab creates architectural weight while a smaller stone object or side table can repeat the material without turning the room into a showroom.'],
-    ['04', 'Warm the Composition With Light, Not Orange Decor', 'Warm white lighting can pull bronze, brown and mineral undertones from stone without introducing a separate warm color palette.'],
+    ['04', 'Warm the Composition With Light, Not Orange Decor', 'Warm white lighting can pull bronze, brown and mineral undertones from stone without introducing a separate warm color palette.', { name: 'Hadineeon Matte Black Stepless-Dimming Table Lamp', merchant: 'Walmart', url: 'https://www.walmart.com/ip/5331069843', note: 'A warm 2700K black table lamp with dimming for keeping color temperature consistent across a darker room.' }],
     ['05', 'Keep the Surrounding Objects Quiet', 'When stone is visually active, nearby furniture and accessories should be simpler. Let the material be the ornament.'],
   ];
   return <AfterDarkGuideArticle
@@ -868,6 +907,8 @@ export function AfterDarkBlackStoneGuidePage() {
     deck="Black and natural stone work best when texture, sheen and light do the separating. The material itself should provide most of the visual movement."
     description="How to combine black interiors with marble, slate, travertine, concrete and stone without making the room feel flat."
     path={BLACK_STONE_GUIDE_PATH}
+    heroImage="https://img.tailwindapp.net/images/5564/21e9/a19a/f0be8a5ef8901e494cd6.png"
+    heroAlt="Black and stone interior with marble surfaces and warm architectural lighting."
     label="GUIDE / MATERIAL"
     readTime="3 MIN READ"
     steps={steps}
@@ -877,7 +918,7 @@ export function AfterDarkBlackStoneGuidePage() {
 
 export function AfterDarkEntrywayGuidePage() {
   const steps: GuideStep[] = [
-    ['01', 'Light the Vertical Surfaces', 'Wall sconces, concealed uplight or a narrow wash can make a dark entry feel taller and more intentional than a single ceiling fixture.'],
+    ['01', 'Light the Vertical Surfaces', 'Wall sconces, concealed uplight or a narrow wash can make a dark entry feel taller and more intentional than a single ceiling fixture.', { name: 'Origin 21 Corbiel Matte Black Wall Sconce', merchant: "Lowe's", url: 'https://www.lowes.com/pd/Origin-21-Corbiel-5-91-in-W-1-Light-Matte-Black-Industrial-Wall-Sconce/5013839451', note: 'A compact black wall light that can create a tighter pool of light over textured walls, artwork or entry details.' }],
     ['02', 'Use One Mirror With Purpose', 'Place a mirror where it reflects light or extends a clean view. A mirror is most effective when it makes the entry feel deeper, not when it simply fills an empty wall.'],
     ['03', 'Choose One Strong Console or Bench', 'Keep the furniture count low. One well-scaled piece gives the entry a clear anchor and leaves enough open floor for the space to breathe.'],
     ['04', 'Use Stone or Metal for Visual Weight', 'A dark stone top, blackened metal detail or sculptural object can make the entry feel finished without adding a lot of color or decoration.'],
@@ -888,6 +929,8 @@ export function AfterDarkEntrywayGuidePage() {
     deck="A dark entryway works when the first sightline is controlled. Vertical light, one reflective surface and fewer stronger objects create a sharper first impression."
     description="Dark entryway ideas using architectural lighting, mirrors, stone, metal, contrast and negative space."
     path={ENTRYWAY_GUIDE_PATH}
+    heroImage="https://img.tailwindapp.net/images/d276/0d96/2e2e/ec535ba2569cf4f48006.png"
+    heroAlt="Dark entryway with black stone, warm wall sconces and a clean architectural sightline."
     label="GUIDE / ENTRYWAY"
     readTime="3 MIN READ"
     steps={steps}
