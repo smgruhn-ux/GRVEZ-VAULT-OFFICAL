@@ -266,6 +266,38 @@ export function AfterDarkDwellingsPage() {
         </div>
       </section>
 
+
+      <section className="after-dark-section after-dark-board-section">
+        <div className="after-dark-section-heading">
+          <span>04 / PINTEREST BOARDS</span>
+          <h2>EXPLORE BY SPACE</h2>
+        </div>
+        <div className="after-dark-board-grid">
+          {[
+            ['Dark Interior Ideas', ARTICLE_PATH, 'https://www.pinterest.com/afterdarkdwellings/dark-interior-ideas/'],
+            ['Dark Living Rooms', LIVING_ROOM_GUIDE_PATH, 'https://www.pinterest.com/afterdarkdwellings/dark-living-rooms/'],
+            ['Dark Bedrooms', BEDROOM_GUIDE_PATH, 'https://www.pinterest.com/afterdarkdwellings/dark-bedrooms/'],
+            ['Dark Kitchens', KITCHEN_GUIDE_PATH, 'https://www.pinterest.com/afterdarkdwellings/dark-kitchens/'],
+            ['Dark Bathrooms', BATHROOM_GUIDE_PATH, 'https://www.pinterest.com/afterdarkdwellings/dark-bathrooms/'],
+            ['Dark Home Offices', OFFICE_GUIDE_PATH, 'https://www.pinterest.com/afterdarkdwellings/dark-home-offices/'],
+            ['Lighting After Dark', LIGHTING_GUIDE_PATH, 'https://www.pinterest.com/afterdarkdwellings/lighting-after-dark/'],
+            ['Black & Stone Interiors', BLACK_STONE_GUIDE_PATH, 'https://www.pinterest.com/afterdarkdwellings/black-stone-interiors/'],
+            ['Dark Entryways', ENTRYWAY_GUIDE_PATH, 'https://www.pinterest.com/afterdarkdwellings/dark-entryways/'],
+            ['Small Dark Spaces', SMALL_SPACE_GUIDE_PATH, 'https://www.pinterest.com/afterdarkdwellings/small-dark-spaces/'],
+            ['Curated Home Finds', `${BASE}/curated-finds`, 'https://www.pinterest.com/afterdarkdwellings/curated-home-finds/'],
+          ].map(([name, guide, board]) => (
+            <article className="after-dark-board-card" key={name}>
+              <span>BOARD</span>
+              <h3>{name}</h3>
+              <div>
+                <Link to={guide}>Read the insight →</Link>
+                <a href={board} target="_blank" rel="noreferrer">Open board →</a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section className="after-dark-pinterest">
         <span className="after-dark-kicker">MORE AFTER DARK</span>
         <h2>Save the rooms worth remembering.</h2>
