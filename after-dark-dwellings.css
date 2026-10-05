@@ -1239,3 +1239,97 @@ body.after-dark-active #main-content {
     min-height: 190px;
   }
 }
+
+
+/* Guide photography + contextual shopping links */
+.after-dark-guide-photo {
+  width: min(1180px, 92%);
+  margin: 0 auto;
+  border: 1px solid var(--ad-line);
+  background: #080809;
+  overflow: hidden;
+}
+
+.after-dark-guide-photo img {
+  display: block;
+  width: 100%;
+  height: min(70vw, 760px);
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(0.82) contrast(1.06) brightness(0.83);
+}
+
+.after-dark-shop-idea {
+  margin-top: 2rem;
+  padding: 1.35rem 1.45rem 1.25rem;
+  border: 1px solid var(--ad-line);
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.024), transparent 70%),
+    #09090b;
+}
+
+.after-dark-shop-idea > span {
+  display: block;
+  color: var(--ad-dim);
+  font-size: 0.56rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.after-dark-shop-idea h3 {
+  margin: 0.75rem 0 0.55rem;
+  font-family: Cinzel, serif;
+  font-size: clamp(1.05rem, 1.7vw, 1.45rem);
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.after-dark-shop-idea p {
+  margin: 0;
+  color: var(--ad-muted);
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+
+.after-dark-shop-idea a {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--ad-steel);
+  text-decoration: none;
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border-bottom: 1px solid transparent;
+}
+
+.after-dark-shop-idea a:hover {
+  border-bottom-color: var(--ad-steel);
+}
+
+.after-dark-shop-idea small {
+  display: block;
+  margin-top: 0.9rem;
+  color: #66656a;
+  font-size: 0.62rem;
+  line-height: 1.55;
+}
+
+@media (max-width: 640px) {
+  .after-dark-guide-photo {
+    width: 100%;
+    border-left: 0;
+    border-right: 0;
+  }
+
+  .after-dark-guide-photo img {
+    height: 115vw;
+    max-height: 650px;
+  }
+
+  .after-dark-shop-idea {
+    margin-top: 1.5rem;
+    padding: 1.2rem;
+  }
+}
