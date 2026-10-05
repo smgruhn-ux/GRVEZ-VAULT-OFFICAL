@@ -946,3 +946,123 @@ body.after-dark-active #main-content {
     animation: none !important;
   }
 }
+
+
+/* Expanded editorial guides */
+.after-dark-guide-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid var(--ad-line);
+  border-left: 1px solid var(--ad-line);
+}
+
+.after-dark-home-guide-grid {
+  margin-top: 1px;
+}
+
+.after-dark-guide-card {
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(1.6rem, 3vw, 2.8rem);
+  border-right: 1px solid var(--ad-line);
+  border-bottom: 1px solid var(--ad-line);
+  text-decoration: none;
+  background: linear-gradient(160deg, rgba(255,255,255,0.018), transparent 65%);
+  transition: background 180ms ease, border-color 180ms ease;
+}
+
+.after-dark-guide-card:hover {
+  background: linear-gradient(160deg, rgba(255,255,255,0.04), transparent 70%);
+  border-color: var(--ad-line-strong);
+}
+
+.after-dark-guide-card > span {
+  color: var(--ad-dim);
+  font-size: 0.58rem;
+  letter-spacing: 0.2em;
+}
+
+.after-dark-guide-card h2,
+.after-dark-guide-card h3 {
+  margin: auto 0 1rem;
+  font-family: Cinzel, serif;
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+.after-dark-guide-card h2 {
+  font-size: clamp(1.6rem, 2.7vw, 2.7rem);
+}
+
+.after-dark-guide-card h3 {
+  font-size: clamp(1.35rem, 2.2vw, 2.1rem);
+}
+
+.after-dark-guide-card p {
+  margin: 0;
+  color: var(--ad-muted);
+  line-height: 1.75;
+}
+
+.after-dark-guide-card em {
+  margin-top: 2rem;
+  color: var(--ad-steel);
+  font-size: 0.6rem;
+  font-style: normal;
+  letter-spacing: 0.16em;
+}
+
+.after-dark-article-study {
+  width: min(1180px, 92%);
+  min-height: 260px;
+  margin: 0 auto;
+  padding: clamp(2rem, 5vw, 4rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid var(--ad-line);
+  background:
+    linear-gradient(115deg, transparent 0 56%, rgba(255,255,255,0.03) 56% 56.2%, transparent 56.2%),
+    radial-gradient(circle at 76% 20%, rgba(207,190,158,0.09), transparent 25%),
+    linear-gradient(180deg, #0d0d0f 0%, #060607 100%);
+}
+
+.after-dark-article-study > span {
+  color: var(--ad-dim);
+  font-size: 0.58rem;
+  letter-spacing: 0.2em;
+}
+
+.after-dark-article-study > strong {
+  align-self: flex-end;
+  max-width: 12ch;
+  text-align: right;
+  font-family: Cinzel, serif;
+  font-size: clamp(1.8rem, 4.8vw, 4.5rem);
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: 0.04em;
+  color: rgba(240,236,227,0.72);
+}
+
+.after-dark-text-guide .after-dark-article-body {
+  padding-top: clamp(3.5rem, 7vw, 6rem);
+}
+
+@media (max-width: 760px) {
+  .after-dark-guide-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .after-dark-guide-card {
+    min-height: 250px;
+  }
+
+  .after-dark-article-study {
+    width: 100%;
+    min-height: 220px;
+    border-left: 0;
+    border-right: 0;
+  }
+}
