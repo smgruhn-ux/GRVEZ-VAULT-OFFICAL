@@ -1066,3 +1066,103 @@ body.after-dark-active #main-content {
     border-right: 0;
   }
 }
+
+
+/* Curated Finds */
+.after-dark-finds-section {
+  background:
+    radial-gradient(circle at 82% 8%, rgba(210,194,163,0.04), transparent 22%),
+    #050506;
+}
+
+.after-dark-product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid var(--ad-line);
+  border-left: 1px solid var(--ad-line);
+}
+
+.after-dark-product-card {
+  position: relative;
+  min-height: 390px;
+  padding: clamp(1.7rem, 3.6vw, 3.2rem);
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--ad-line);
+  border-bottom: 1px solid var(--ad-line);
+  background:
+    linear-gradient(145deg, rgba(255,255,255,0.018), transparent 55%),
+    #070708;
+}
+
+.after-dark-product-card:nth-child(5) {
+  grid-column: 1 / -1;
+  min-height: 300px;
+}
+
+.after-dark-product-index {
+  color: #55545a;
+  font-size: 0.56rem;
+  letter-spacing: 0.22em;
+}
+
+.after-dark-product-meta {
+  margin-top: auto;
+  color: var(--ad-dim);
+  font-size: 0.58rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+}
+
+.after-dark-product-card h3 {
+  margin: 1.05rem 0 1rem;
+  max-width: 18ch;
+  font-family: Cinzel, serif;
+  font-size: clamp(1.45rem, 2.5vw, 2.6rem);
+  font-weight: 500;
+  line-height: 1.14;
+}
+
+.after-dark-product-card p {
+  max-width: 58ch;
+  margin: 0;
+  color: var(--ad-muted);
+  line-height: 1.8;
+}
+
+.after-dark-product-card a {
+  margin-top: 2rem;
+  width: fit-content;
+  text-decoration: none;
+  color: var(--ad-steel);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  border-bottom: 1px solid transparent;
+}
+
+.after-dark-product-card a:hover {
+  border-color: var(--ad-steel);
+}
+
+.after-dark-finds-disclosure {
+  max-width: 880px;
+  margin: 2.2rem 0 0;
+}
+
+.after-dark-finds-disclosure a {
+  color: var(--ad-steel);
+}
+
+@media (max-width: 760px) {
+  .after-dark-product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .after-dark-product-card,
+  .after-dark-product-card:nth-child(5) {
+    grid-column: auto;
+    min-height: 300px;
+  }
+}
