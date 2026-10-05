@@ -305,22 +305,83 @@ export function AfterDarkArticlePage() {
 }
 
 export function AfterDarkCuratedFindsPage() {
+  const finds = [
+    {
+      category: 'WALL LIGHTING',
+      merchant: 'WALMART',
+      name: 'Better Homes & Gardens Matte Black 1-Light Indoor Wall Sconce',
+      note: 'A compact matte-black sconce with a sculptural arm and warm LED light. Strong for bedside walls, reading corners, entries and narrow transitions.',
+      url: 'https://www.walmart.com/ip/998572418'
+    },
+    {
+      category: 'FLOOR LIGHTING',
+      merchant: 'WALMART',
+      name: 'Better Homes & Gardens Modern Matte Black 3-Head Arc Floor Lamp',
+      note: 'Three adjustable light sources create layered illumination without relying on a bright ceiling fixture. The black frame keeps the silhouette clean and architectural.',
+      url: 'https://www.walmart.com/ip/142753705'
+    },
+    {
+      category: 'SIDE TABLE',
+      merchant: 'WALMART',
+      name: 'Better Homes & Gardens James Wood End Table — Rich Black',
+      note: 'A solid dark side table with enough visual weight to anchor a chair or sofa without adding ornament or clutter.',
+      url: 'https://www.walmart.com/ip/5678968502'
+    },
+    {
+      category: 'MIRROR',
+      merchant: 'WALMART',
+      name: 'Better Homes & Gardens Soft Organic Wood Frame Wall Mirror — Black',
+      note: 'The irregular outline softens a strict black palette while the dark frame keeps the piece restrained. Useful where a rectangular mirror would feel too rigid.',
+      url: 'https://www.walmart.com/ip/17931801973'
+    },
+    {
+      category: 'OBJECT',
+      merchant: 'WALMART',
+      name: 'Better Homes & Gardens Black Metal Accessory Tray',
+      note: 'A simple low-profile black metal tray for grouping smaller objects so a counter, shelf or console reads as one composition instead of scattered pieces.',
+      url: 'https://www.walmart.com/ip/15339169308'
+    },
+  ];
+
   return (
     <AfterDarkFrame
       title="Curated Finds | After Dark Dwellings"
-      description="Considered furniture, lighting, decor and home upgrades for dark modern interiors. Real products only — no fabricated listings or placeholder prices."
+      description="Verified furniture, lighting, decor and home upgrades selected for dark modern interiors. Real products and real merchant destinations only."
       path={`${BASE}/curated-finds`}
       section="finds"
     >
       <section className="after-dark-simple-hero">
-        <span className="after-dark-kicker">CURATED FINDS</span>
+        <span className="after-dark-kicker">CURATED FINDS / VERIFIED LINKS</span>
         <h1>REAL FINDS,<br />SELECTED AFTER DARK.</h1>
-        <p>This section is being built around verified products and real destination links. Nothing appears here just to make the page look full.</p>
+        <p>Every item below points to a real merchant page. Prices and availability can change, so the retailer page is always the current source of truth.</p>
       </section>
-      <section className="after-dark-coming-soon">
-        <span>THE EDIT IS IN PROGRESS</span>
-        <p>Furniture, lighting, objects and home upgrades will be added only after the source, merchant and destination link are verified.</p>
-        <Link className="after-dark-text-link" to={BASE}>Back to After Dark Dwellings →</Link>
+
+      <section className="after-dark-section after-dark-finds-section">
+        <div className="after-dark-section-heading">
+          <span>01 / THE EDIT</span>
+          <h2>LIGHT / OBJECT / MATERIAL</h2>
+        </div>
+        <div className="after-dark-product-grid">
+          {finds.map((find, index) => (
+            <article className="after-dark-product-card" key={find.url}>
+              <div className="after-dark-product-index">{String(index + 1).padStart(2, '0')}</div>
+              <div className="after-dark-product-meta">{find.category} / {find.merchant}</div>
+              <h3>{find.name}</h3>
+              <p>{find.note}</p>
+              <a href={find.url} target="_blank" rel="nofollow sponsored noreferrer">View at Walmart →</a>
+            </article>
+          ))}
+        </div>
+        <p className="after-dark-disclosure after-dark-finds-disclosure">
+          Some Curated Finds links may become affiliate links. If a qualifying purchase is made through an affiliate link, After Dark Dwellings may earn a commission at no additional cost to the purchaser. <Link to={DISCLOSURE_PATH}>Read the affiliate disclosure.</Link>
+        </p>
+      </section>
+
+      <section className="after-dark-pinterest">
+        <span className="after-dark-kicker">THE STANDARD</span>
+        <h2>No fake products. No filler listings.</h2>
+        <p>Curated Finds is built around verifiable merchant destinations and editorial fit, not invented prices or placeholder inventory.</p>
+        <Link className="after-dark-button ghost" to={GUIDES_PATH}>Read the Guides</Link>
       </section>
     </AfterDarkFrame>
   );
