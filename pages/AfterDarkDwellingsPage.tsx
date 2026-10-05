@@ -9,6 +9,9 @@ const GUIDES_PATH = `${BASE}/guides`;
 const LIGHTING_GUIDE_PATH = `${BASE}/guides/layered-lighting-for-dark-interiors`;
 const BEDROOM_GUIDE_PATH = `${BASE}/guides/dark-bedroom-without-feeling-heavy`;
 const KITCHEN_GUIDE_PATH = `${BASE}/guides/black-kitchen-without-feeling-flat`;
+const BATHROOM_GUIDE_PATH = `${BASE}/guides/dark-bathroom-that-feels-expensive`;
+const OFFICE_GUIDE_PATH = `${BASE}/guides/dark-home-office-without-feeling-closed-in`;
+const SMALL_SPACE_GUIDE_PATH = `${BASE}/guides/small-dark-spaces-that-still-feel-open`;
 const ABOUT_PATH = `${BASE}/about`;
 const DISCLOSURE_PATH = `${BASE}/affiliate-disclosure`;
 const PIN_IMAGE = 'https://img.tailwindapp.net/images/cae9/c356/7631/708a0d852433de724063.png';
@@ -197,6 +200,24 @@ export function AfterDarkDwellingsPage() {
             <span>KITCHEN / GUIDE</span>
             <h3>Black Kitchens Without the Flat Look</h3>
             <p>Use stone, metal, wood grain, sheen and lighting to keep a black kitchen dimensional.</p>
+            <em>READ GUIDE →</em>
+          </Link>
+          <Link className="after-dark-guide-card" to={BATHROOM_GUIDE_PATH}>
+            <span>BATHROOM / GUIDE</span>
+            <h3>How to Make a Dark Bathroom Feel Expensive</h3>
+            <p>Use stone, metal, glass, mirror and warm task lighting to make a smaller dark room feel intentional.</p>
+            <em>READ GUIDE →</em>
+          </Link>
+          <Link className="after-dark-guide-card" to={OFFICE_GUIDE_PATH}>
+            <span>HOME OFFICE / GUIDE</span>
+            <h3>Dark Home Offices Without the Closed-In Feeling</h3>
+            <p>Keep concentration high without sacrificing depth, contrast or usable light.</p>
+            <em>READ GUIDE →</em>
+          </Link>
+          <Link className="after-dark-guide-card" to={SMALL_SPACE_GUIDE_PATH}>
+            <span>SMALL SPACES / GUIDE</span>
+            <h3>Small Dark Spaces That Still Feel Open</h3>
+            <p>Control scale, reflection and contrast so compact rooms stay atmospheric instead of cramped.</p>
             <em>READ GUIDE →</em>
           </Link>
         </div>
@@ -543,6 +564,24 @@ export function AfterDarkGuidesPage() {
       title: 'Black Kitchens Without the Flat Look',
       copy: 'Create dimension with stone, grain, metal, sheen and lighting rather than more color.'
     },
+    {
+      path: BATHROOM_GUIDE_PATH,
+      label: 'BATHROOM',
+      title: 'How to Make a Dark Bathroom Feel Expensive',
+      copy: 'Use stone, mirror, metal and layered light to give a compact bathroom depth and polish.'
+    },
+    {
+      path: OFFICE_GUIDE_PATH,
+      label: 'HOME OFFICE',
+      title: 'Dark Home Offices Without the Closed-In Feeling',
+      copy: 'Balance focused task lighting, graphite surfaces and negative space for a concentrated workspace.'
+    },
+    {
+      path: SMALL_SPACE_GUIDE_PATH,
+      label: 'SMALL SPACES',
+      title: 'Small Dark Spaces That Still Feel Open',
+      copy: 'Use reflection, scale, tonal variation and deliberate emptiness to keep compact rooms breathable.'
+    },
   ];
 
   return (
@@ -679,4 +718,65 @@ export function AfterDarkDisclosurePage() {
       </section>
     </AfterDarkFrame>
   );
+}
+
+
+export function AfterDarkBathroomGuidePage() {
+  const steps: GuideStep[] = [
+    ['01', 'Let Stone Carry the Detail', 'Dark bathrooms look stronger when material variation does more of the visual work. Honed stone, veining, textured tile or a mineral finish can create depth without adding decorative clutter.'],
+    ['02', 'Use Warm Light Around the Mirror', 'Face-level lighting matters more than a dramatic ceiling fixture. Warm sconces or integrated mirror lighting make the room usable while keeping the rest of the space subdued.'],
+    ['03', 'Mix Matte and Reflective Surfaces', 'A matte wall beside glass, mirror, brushed metal and polished stone creates contrast even when everything stays in a narrow color range.'],
+    ['04', 'Keep Hardware Consistent', 'Choose one metal direction and repeat it across faucets, shower hardware, pulls and accessories. Too many finishes can make a compact dark bathroom feel fragmented.'],
+    ['05', 'Leave the Counter Mostly Clear', 'Dark rooms show clutter quickly because every object interrupts the composition. Limit visible products and let the strongest surfaces remain exposed.'],
+  ];
+  return <AfterDarkGuideArticle
+    title="How to Make a Dark Bathroom Feel Expensive"
+    deck="Dark bathrooms become convincing when stone, reflection, hardware and light are treated as one composition instead of separate decorating decisions."
+    description="Dark bathroom design ideas using stone, mirror, metal, layered lighting and controlled contrast."
+    path={BATHROOM_GUIDE_PATH}
+    label="GUIDE / BATHROOM"
+    readTime="3 MIN READ"
+    steps={steps}
+    rule="In a small dark bathroom, fewer materials used well will usually look more expensive than more materials competing for attention."
+  />;
+}
+
+export function AfterDarkOfficeGuidePage() {
+  const steps: GuideStep[] = [
+    ['01', 'Separate the Work Surface From the Wall', 'A black desk against a black wall can disappear into one mass. Use a slight shift in tone, finish or material so the work surface remains readable.'],
+    ['02', 'Prioritize Task Light Over Ambient Brightness', 'Keep a strong, focused light at the desk and let the rest of the room stay darker. That creates concentration without flattening the whole space.'],
+    ['03', 'Use One Warm Material to Break the Field', 'Wood grain, leather, cork or another tactile warm material can prevent graphite and black from feeling sterile without turning the room soft or rustic.'],
+    ['04', 'Keep Storage Visually Quiet', 'Closed cabinetry, dark shelving and fewer visible objects keep the room focused. Open storage should be edited rather than filled edge to edge.'],
+    ['05', 'Protect One Empty Plane', 'Leave at least one wall, corner or surface intentionally sparse. Negative space gives the office a sense of width and stops darker colors from closing in.'],
+  ];
+  return <AfterDarkGuideArticle
+    title="Dark Home Offices Without the Closed-In Feeling"
+    deck="A dark office should support concentration, not make the room feel smaller. Contrast, local task lighting and disciplined storage keep the space focused and open."
+    description="How to design a dark home office with focused lighting, tonal contrast, quiet storage and enough negative space."
+    path={OFFICE_GUIDE_PATH}
+    label="GUIDE / HOME OFFICE"
+    readTime="3 MIN READ"
+    steps={steps}
+    rule="The office can be dark without being dim. Put brightness where the work happens and let the rest of the room stay calm."
+  />;
+}
+
+export function AfterDarkSmallSpaceGuidePage() {
+  const steps: GuideStep[] = [
+    ['01', 'Use Tonal Variation Instead of Bright Contrast', 'Small dark rooms can handle deep color when nearby surfaces are slightly different rather than identical. Charcoal beside black gives separation without cutting the room into pieces.'],
+    ['02', 'Choose Fewer Pieces With Cleaner Profiles', 'Too many small furnishings create more visual edges, which makes a compact room feel busier. Fewer, better-scaled pieces usually make the room feel larger.'],
+    ['03', 'Use Reflection Strategically', 'A mirror, glass surface or subtle sheen can bounce existing light deeper into the room. Reflection works best when it is placed to extend a useful view rather than simply adding shine.'],
+    ['04', 'Keep the Floor Line Visible', 'Furniture with some visual lift or clear floor around it helps the eye understand the full footprint of the room. Dark color feels less heavy when the boundaries remain readable.'],
+    ['05', 'Light Vertical Surfaces', 'Wall sconces, picture lights or upward washes draw the eye vertically and make the room feel taller. Brightening every surface equally is less effective than placing light with intent.'],
+  ];
+  return <AfterDarkGuideArticle
+    title="Small Dark Spaces That Still Feel Open"
+    deck="Small rooms do not have to be pale. Scale, reflection, tonal variation and carefully placed light can keep a dark palette atmospheric without making the room feel cramped."
+    description="Small dark room ideas using scale, reflection, tonal variation, negative space and architectural lighting."
+    path={SMALL_SPACE_GUIDE_PATH}
+    label="GUIDE / SMALL SPACES"
+    readTime="3 MIN READ"
+    steps={steps}
+    rule="A compact room feels smaller because of visual congestion, not simply because the walls are dark. Reduce edges, clutter and competing contrast before you blame the color."
+  />;
 }
