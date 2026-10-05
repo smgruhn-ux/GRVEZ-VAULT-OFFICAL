@@ -12,6 +12,9 @@ const KITCHEN_GUIDE_PATH = `${BASE}/guides/black-kitchen-without-feeling-flat`;
 const BATHROOM_GUIDE_PATH = `${BASE}/guides/dark-bathroom-that-feels-expensive`;
 const OFFICE_GUIDE_PATH = `${BASE}/guides/dark-home-office-without-feeling-closed-in`;
 const SMALL_SPACE_GUIDE_PATH = `${BASE}/guides/small-dark-spaces-that-still-feel-open`;
+const LIVING_ROOM_GUIDE_PATH = `${BASE}/guides/dark-living-room-feel-expensive`;
+const BLACK_STONE_GUIDE_PATH = `${BASE}/guides/black-and-stone-interiors`;
+const ENTRYWAY_GUIDE_PATH = `${BASE}/guides/dark-entryway-lighting-mirrors-contrast`;
 const ABOUT_PATH = `${BASE}/about`;
 const DISCLOSURE_PATH = `${BASE}/affiliate-disclosure`;
 const PIN_IMAGE = 'https://img.tailwindapp.net/images/cae9/c356/7631/708a0d852433de724063.png';
@@ -582,6 +585,24 @@ export function AfterDarkGuidesPage() {
       title: 'Small Dark Spaces That Still Feel Open',
       copy: 'Use reflection, scale, tonal variation and deliberate emptiness to keep compact rooms breathable.'
     },
+    {
+      path: LIVING_ROOM_GUIDE_PATH,
+      label: 'LIVING ROOM',
+      title: 'How to Make a Dark Living Room Feel Expensive',
+      copy: 'Use scale, material variation, low light and edited styling to make the room feel deliberate.'
+    },
+    {
+      path: BLACK_STONE_GUIDE_PATH,
+      label: 'MATERIAL',
+      title: 'Black & Stone Interiors Without the Flat Look',
+      copy: 'Mix black finishes and natural stone by controlling sheen, scale, veining and light.'
+    },
+    {
+      path: ENTRYWAY_GUIDE_PATH,
+      label: 'ENTRYWAY',
+      title: 'Dark Entryways: Lighting, Mirrors & Contrast',
+      copy: 'Make a narrow entrance feel deeper and sharper with vertical light, reflection and fewer objects.'
+    },
   ];
 
   return (
@@ -778,5 +799,66 @@ export function AfterDarkSmallSpaceGuidePage() {
     readTime="3 MIN READ"
     steps={steps}
     rule="A compact room feels smaller because of visual congestion, not simply because the walls are dark. Reduce edges, clutter and competing contrast before you blame the color."
+  />;
+}
+
+
+export function AfterDarkLivingRoomGuidePage() {
+  const steps: GuideStep[] = [
+    ['01', 'Start With One Dominant Dark Tone', 'Choose a main black, charcoal or graphite for the largest surfaces, then move one or two shades lighter or warmer for upholstery, rugs and secondary furniture so the room does not collapse into one value.'],
+    ['02', 'Use One Large Anchor Instead of Many Small Pieces', 'A substantial sofa, coffee table or artwork gives the room weight. Too many small objects create visual noise and make a dark living room feel cheaper and more crowded.'],
+    ['03', 'Let Lighting Reveal the Room in Layers', 'Combine a low floor lamp, table lamp, sconces or concealed lighting. Separate pools of light make the room feel deeper and more architectural than one bright overhead fixture.'],
+    ['04', 'Mix Matte, Soft and Reflective Surfaces', 'Velvet, brushed textile, honed stone, glass and metal should react differently to light. That surface contrast is what gives a mostly dark palette dimension.'],
+    ['05', 'Edit the Styling Hard', 'A dark room already has visual weight. Keep shelves, tables and corners selective so the strongest materials and shapes can register.'],
+  ];
+  return <AfterDarkGuideArticle
+    title="How to Make a Dark Living Room Feel Expensive"
+    deck="A dark living room feels elevated when scale, light and material are controlled. The goal is not more decor — it is stronger composition."
+    description="Dark living room ideas using layered lighting, large-scale furniture, material contrast and edited styling."
+    path={LIVING_ROOM_GUIDE_PATH}
+    label="GUIDE / LIVING ROOM"
+    readTime="3 MIN READ"
+    steps={steps}
+    rule="Expensive-looking dark rooms usually have fewer competing objects, better light and clearer material hierarchy."
+  />;
+}
+
+export function AfterDarkBlackStoneGuidePage() {
+  const steps: GuideStep[] = [
+    ['01', 'Let the Stone Have Visible Movement', 'Veining, aggregate, mineral variation or a rough edge gives a black interior something natural to read. Perfectly uniform black beside perfectly uniform black can feel flat.'],
+    ['02', 'Separate Materials by Sheen', 'Matte walls, honed stone, brushed metal and a small amount of polished reflection can all live in the same color family while still feeling distinct.'],
+    ['03', 'Use Stone at Different Scales', 'A large slab creates architectural weight while a smaller stone object or side table can repeat the material without turning the room into a showroom.'],
+    ['04', 'Warm the Composition With Light, Not Orange Decor', 'Warm white lighting can pull bronze, brown and mineral undertones from stone without introducing a separate warm color palette.'],
+    ['05', 'Keep the Surrounding Objects Quiet', 'When stone is visually active, nearby furniture and accessories should be simpler. Let the material be the ornament.'],
+  ];
+  return <AfterDarkGuideArticle
+    title="Black & Stone Interiors Without the Flat Look"
+    deck="Black and natural stone work best when texture, sheen and light do the separating. The material itself should provide most of the visual movement."
+    description="How to combine black interiors with marble, slate, travertine, concrete and stone without making the room feel flat."
+    path={BLACK_STONE_GUIDE_PATH}
+    label="GUIDE / MATERIAL"
+    readTime="3 MIN READ"
+    steps={steps}
+    rule="When stone has character, do not compete with it. Use black as the field and let natural variation become the detail."
+  />;
+}
+
+export function AfterDarkEntrywayGuidePage() {
+  const steps: GuideStep[] = [
+    ['01', 'Light the Vertical Surfaces', 'Wall sconces, concealed uplight or a narrow wash can make a dark entry feel taller and more intentional than a single ceiling fixture.'],
+    ['02', 'Use One Mirror With Purpose', 'Place a mirror where it reflects light or extends a clean view. A mirror is most effective when it makes the entry feel deeper, not when it simply fills an empty wall.'],
+    ['03', 'Choose One Strong Console or Bench', 'Keep the furniture count low. One well-scaled piece gives the entry a clear anchor and leaves enough open floor for the space to breathe.'],
+    ['04', 'Use Stone or Metal for Visual Weight', 'A dark stone top, blackened metal detail or sculptural object can make the entry feel finished without adding a lot of color or decoration.'],
+    ['05', 'Control What Is Visible From the Door', 'The first view should have one focal point and a clean line of sight. Hide everyday clutter whenever possible and let the architecture carry the impression.'],
+  ];
+  return <AfterDarkGuideArticle
+    title="Dark Entryways: Lighting, Mirrors & Contrast"
+    deck="A dark entryway works when the first sightline is controlled. Vertical light, one reflective surface and fewer stronger objects create a sharper first impression."
+    description="Dark entryway ideas using architectural lighting, mirrors, stone, metal, contrast and negative space."
+    path={ENTRYWAY_GUIDE_PATH}
+    label="GUIDE / ENTRYWAY"
+    readTime="3 MIN READ"
+    steps={steps}
+    rule="The entry does not need more objects. It needs one clear focal point, enough light to read the materials and a clean path into the rest of the home."
   />;
 }
