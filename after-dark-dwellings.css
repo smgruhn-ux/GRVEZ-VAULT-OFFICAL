@@ -1166,3 +1166,76 @@ body.after-dark-active #main-content {
     min-height: 300px;
   }
 }
+
+
+/* Pinterest board hub */
+.after-dark-board-section {
+  background: linear-gradient(180deg, #060607 0%, #040405 100%);
+}
+
+.after-dark-board-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid var(--ad-line);
+  border-left: 1px solid var(--ad-line);
+}
+
+.after-dark-board-card {
+  min-height: 230px;
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--ad-line);
+  border-bottom: 1px solid var(--ad-line);
+  background: linear-gradient(155deg, rgba(255,255,255,0.016), transparent 65%);
+}
+
+.after-dark-board-card > span {
+  color: var(--ad-dim);
+  font-size: 0.56rem;
+  letter-spacing: 0.2em;
+}
+
+.after-dark-board-card h3 {
+  margin: auto 0 1.6rem;
+  font-family: Cinzel, serif;
+  font-size: clamp(1.25rem, 2vw, 2rem);
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+.after-dark-board-card > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.4rem;
+}
+
+.after-dark-board-card a {
+  color: var(--ad-steel);
+  text-decoration: none;
+  font-size: 0.58rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.after-dark-board-card a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+}
+
+@media (max-width: 920px) {
+  .after-dark-board-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .after-dark-board-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .after-dark-board-card {
+    min-height: 190px;
+  }
+}
