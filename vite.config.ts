@@ -3,6 +3,16 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
+  build: {
+    rollupOptions: {
+      input: {
+        main: 'index.html',
+        afterDark: 'after-dark-dwellings/index.html',
+        afterDarkArticle: 'after-dark-dwellings/7-ways-to-make-a-dark-room-feel-expensive/index.html',
+        afterDarkFinds: 'after-dark-dwellings/curated-finds/index.html'
+      }
+    }
+  },
   server: {
     host: '0.0.0.0',
     port: 3000
