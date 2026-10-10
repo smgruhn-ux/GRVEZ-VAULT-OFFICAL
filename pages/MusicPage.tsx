@@ -43,6 +43,12 @@ export function MusicPage() {
       <div className="page-content">
         <div className="page-intro"><p className="eyebrow">MUSIC</p><h1 id="music-heading">Recorded Chapters</h1><p>Music created through the GRVEZ VAULT creative world, spanning the distinct identities of Gizzy Graves and DXXD GRVEZ. All songs written by Sheldyn Gruhn.</p></div>
 
+        <section className="out-of-order-band-feature" aria-label="New DXXD GRVEZ EP">
+          <p className="eyebrow">FEATURED NEW RELEASE</p>
+          <h2>OUT OF ORDER — DXXD GRVEZ</h2>
+          <p>Gizzy Graves × DMONIX. Six tracks. Available now.</p>
+          <Link to="/dxxd-grvez#out-of-order" className="metal-button">Explore Out of Order →</Link>
+        </section>
         <section id="gizzy-graves" className="artist-section">
           <p className="eyebrow">ARTIST</p><h2>Gizzy Graves</h2>
           <p className="artist-intro">Artist identity curated by Sheldyn Gruhn, centered on dark alternative rock, industrial metal, hard rock, and nu-metal.</p>
