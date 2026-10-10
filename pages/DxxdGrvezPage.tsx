@@ -50,6 +50,14 @@ export function DxxdGrvezPage() {
           </ol>
           <p className="dxxd-tracklist-note">Songwriting: Sheldyn Gruhn</p>
         </section>
+        <section className="archive-note" aria-labelledby="dxxd-management-heading">
+          <p className="eyebrow">OFFICIAL ARTIST &amp; LABEL CONTACT</p>
+          <h2 id="dxxd-management-heading">DXXD GRVEZ — Artist Management</h2>
+          <p>DXXD GRVEZ is the collaborative music project of Gizzy Graves (Sheldyn Gruhn) and DMONIX (Jerry Downard).</p>
+          <p><strong>Sheldyn Gruhn</strong>, professionally known as <strong>Gizzy Graves</strong>, is the songwriter and an authorized artist representative for DXXD GRVEZ. <strong>Gizzy Graves</strong> is the credited label and copyright name for the <em>Out of Order</em> EP.</p>
+          <p><strong>Official artist / management contact:</strong> <a href="mailto:smgruhn@icloud.com">smgruhn@icloud.com</a></p>
+          <p><strong>Release reference:</strong> <em>Out of Order</em> EP · UPC 708208127139 · Catalog CAT2398674.</p>
+        </section>
         <section className="archive-note"><p className="eyebrow">CONNECTED</p><h2>Within the Vault</h2><div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginTop: '1rem' }}><Link to="/about/gizzy-graves" className="metal-button">Gizzy Graves</Link><Link to="/about/dmonix" className="metal-button secondary">DMONIX</Link><Link to="/music" className="metal-button secondary">All Releases</Link></div></section>
       </div>
     </section>
