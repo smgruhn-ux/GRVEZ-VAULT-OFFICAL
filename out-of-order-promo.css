@@ -12,3 +12,15 @@
 .out-of-order-band-feature{border:1px solid rgba(215,221,227,.24);padding:clamp(1.5rem,4vw,3rem);margin:2rem 0;background:linear-gradient(130deg,rgba(90,20,32,.15),rgba(12,12,16,.95))}
 .out-of-order-band-feature h2{font-size:clamp(2.1rem,4vw,4rem)}
 @media(max-width:760px){.out-of-order-promo{grid-template-columns:1fr}.out-of-order-promo-art{max-width:440px;width:100%;margin:auto}.out-of-order-promo h2{font-size:clamp(2.2rem,10vw,4rem)}}
+
+/* Discography: distinguish complete EP from historical singles. */
+.dxxd-discography-release{display:grid;grid-template-columns:minmax(160px,260px) minmax(0,1fr);gap:clamp(1.25rem,3vw,2.5rem);align-items:center;margin:1.8rem 0 2rem;padding:1.5rem;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.12)}
+.dxxd-discography-release>img{width:100%;aspect-ratio:1;object-fit:cover;display:block;box-shadow:0 16px 40px #0009}
+.dxxd-discography-info h3{font-size:clamp(2rem,4vw,3.3rem);letter-spacing:.06em;margin:.3rem 0}
+.dxxd-discography-info p{color:var(--muted)}
+.dxxd-section-label{font-size:1.35rem;margin:2rem 0 1rem;color:var(--text)}
+.dxxd-tracklist{list-style:none;counter-reset:none;padding:0;margin:0;border-top:1px solid rgba(255,255,255,.1)}
+.dxxd-tracklist li{display:flex;justify-content:space-between;gap:1rem;padding:.85rem .2rem;border-bottom:1px solid rgba(255,255,255,.1);font-size:.88rem;color:#e7e4e2;letter-spacing:.06em}
+.dxxd-tracklist li span:last-child{color:var(--muted)}
+.dxxd-tracklist-note{color:var(--muted);font-size:.85rem;margin-top:1rem}
+@media(max-width:650px){.dxxd-discography-release{grid-template-columns:1fr;padding:1rem}.dxxd-discography-release>img{max-width:340px;margin:0 auto}}
