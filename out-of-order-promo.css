@@ -1,0 +1,14 @@
+
+/* DXXD GRVEZ — Out of Order release feature */
+.out-of-order-promo{width:min(1200px,calc(100% - 2rem));margin:2rem auto 3rem;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(280px,.9fr);gap:clamp(1.5rem,5vw,4rem);align-items:center;padding:clamp(1.5rem,4vw,3rem);background:linear-gradient(125deg,#13151a,#08090c 75%);border:1px solid rgba(215,221,227,.2);box-shadow:0 22px 60px #0008}
+.out-of-order-promo h2,.out-of-order-band-feature h2{font-family:Georgia,serif;font-size:clamp(2.5rem,5vw,5rem);letter-spacing:.08em;line-height:1.04;color:#eee9e4;margin:.3rem 0 1rem}
+.out-of-order-promo p,.out-of-order-band-feature p{color:#c5c3c5;line-height:1.7}
+.out-of-order-promo .eyebrow,.out-of-order-band-feature .eyebrow{color:#b63a50}
+.out-of-order-promo-byline{letter-spacing:.19em;text-transform:uppercase;font-size:.82rem}
+.out-of-order-promo-detail{font-size:.77rem;letter-spacing:.18em;text-transform:uppercase}
+.out-of-order-promo-actions{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.5rem}
+.out-of-order-promo-art{position:relative;aspect-ratio:1;background:#07080b;border:1px solid #515158;overflow:hidden;box-shadow:0 16px 50px #0009}
+.out-of-order-promo-art img{display:block;width:100%;height:100%;object-fit:cover}
+.out-of-order-band-feature{border:1px solid rgba(215,221,227,.24);padding:clamp(1.5rem,4vw,3rem);margin:2rem 0;background:linear-gradient(130deg,rgba(90,20,32,.15),rgba(12,12,16,.95))}
+.out-of-order-band-feature h2{font-size:clamp(2.1rem,4vw,4rem)}
+@media(max-width:760px){.out-of-order-promo{grid-template-columns:1fr}.out-of-order-promo-art{max-width:440px;width:100%;margin:auto}.out-of-order-promo h2{font-size:clamp(2.2rem,10vw,4rem)}}
