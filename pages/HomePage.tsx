@@ -76,7 +76,7 @@ export function HomePage() {
           <p className="out-of-order-promo-detail">6-TRACK DEBUT EP · AVAILABLE NOW</p>
           <div className="out-of-order-promo-actions">
             <Link to="/dxxd-grvez#out-of-order" className="metal-button">Explore the EP →</Link>
-            <a href="https://music.apple.com/us/search?term=DXXD%20GRVEZ%20Out%20of%20Order" target="_blank" rel="noreferrer" className="metal-button secondary">Find on Apple Music ↗</a>
+            <a href="https://music.apple.com/us/album/out-of-order-ep/6820591312" target="_blank" rel="noreferrer" className="metal-button secondary">Find on Apple Music ↗</a>
           </div>
         </div>
         <div className="out-of-order-promo-art"><img src="/out-of-order-cover.webp" alt="DXXD GRVEZ — Out of Order official EP cover" onError={(event) => { event.currentTarget.onerror = null; event.currentTarget.src = "/DXXD_GRVEZ.PNG"; }} /></div>
