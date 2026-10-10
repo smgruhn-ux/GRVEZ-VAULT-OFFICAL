@@ -21,12 +21,35 @@ export function DxxdGrvezPage() {
           <p>The archive remains. The sound evolved. The grave got louder.</p>
           <p>Six tracks. A new name. One united sound.</p>
           <div className="out-of-order-promo-actions">
-            <a className="metal-button" href="https://music.apple.com/us/search?term=DXXD%20GRVEZ%20Out%20of%20Order" target="_blank" rel="noreferrer">Find on Apple Music ↗</a>
+            <a className="metal-button" href="https://music.apple.com/us/album/out-of-order-ep/6820591312" target="_blank" rel="noreferrer">Find on Apple Music ↗</a>
             <a className="metal-button secondary" href="https://open.spotify.com/search/DXXD%20GRVEZ%20Out%20of%20Order" target="_blank" rel="noreferrer">Find on Spotify ↗</a>
           </div>
         </section>
         <section className="archive-note"><p className="eyebrow">THE PROJECT</p><h2>Sound &amp; Identity</h2><p>Musically, DXXD GRVEZ draws from nu-metal, post-grunge, industrial, alternative metal, and cinematic heavy music. Its identity is darker, heavier, and more unified than the earlier Gizzy Graves featuring DMONIX format, giving the project its own visual and musical presence within GRVEZ VAULT.</p></section>
-        <section className="archive-note"><p className="eyebrow">RELEASES</p><h2>Discography</h2><div className="catalog-list" style={{ marginTop: '1rem' }}><div className="catalog-track"><span className="catalog-track-title">OUT OF ORDER — 6-TRACK EP (2026)</span><span className="catalog-track-artist">AVAILABLE NOW</span></div><div className="catalog-track"><span className="catalog-track-title">UNDER AND OVER</span><span className="catalog-track-artist">DXXD GRVEZ</span></div><div className="catalog-track"><span className="catalog-track-title">PRESSURE SICK</span><span className="catalog-track-artist">DXXD GRVEZ</span></div></div><p style={{ marginTop: '1rem', fontSize: '0.85rem', color: 'var(--muted)' }}>Written by Sheldyn Gruhn</p></section>
+        <section className="archive-note dxxd-discography" aria-labelledby="dxxd-discography-title">
+          <p className="eyebrow">OFFICIAL DISCOGRAPHY</p>
+          <h2 id="dxxd-discography-title">Releases</h2>
+          <article className="dxxd-discography-release">
+            <img src="/out-of-order-cover.webp" alt="Out of Order EP cover" loading="lazy" />
+            <div className="dxxd-discography-info">
+              <p className="eyebrow">LATEST RELEASE / OCTOBER 4, 2026</p>
+              <h3>OUT OF ORDER</h3>
+              <p>DXXD GRVEZ · 6-TRACK EP · EXPLICIT</p>
+              <p>Gizzy Graves × DMONIX. Our debut EP under the DXXD GRVEZ name.</p>
+              <a className="metal-button" href="https://music.apple.com/us/album/out-of-order-ep/6820591312" target="_blank" rel="noreferrer">Listen to the full EP on Apple Music ↗</a>
+            </div>
+          </article>
+          <h3 className="dxxd-section-label">Featured tracks from the EP</h3>
+          <ol className="dxxd-tracklist">
+            <li><span>Withering</span><span>01</span></li>
+            <li><span>Out of Order</span><span>02</span></li>
+            <li><span>Presure Sick</span><span>03</span></li>
+          </ol>
+          <p className="dxxd-tracklist-note">Full six-track listing and playback available through the album link above.</p>
+          <h3 className="dxxd-section-label">Earlier DXXD GRVEZ releases</h3>
+          <div className="catalog-list"><div className="catalog-track"><span className="catalog-track-title">UNDER AND OVER</span><span className="catalog-track-artist">EARLIER RELEASE</span></div><div className="catalog-track"><span className="catalog-track-title">HEAD NOISE</span><span className="catalog-track-artist">EARLIER RELEASE</span></div></div>
+          <p className="dxxd-tracklist-note">Songwriting: Sheldyn Gruhn</p>
+        </section>
         <section className="archive-note"><p className="eyebrow">CONNECTED</p><h2>Within the Vault</h2><div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginTop: '1rem' }}><Link to="/about/gizzy-graves" className="metal-button">Gizzy Graves</Link><Link to="/about/dmonix" className="metal-button secondary">DMONIX</Link><Link to="/music" className="metal-button secondary">All Releases</Link></div></section>
       </div>
     </section>
