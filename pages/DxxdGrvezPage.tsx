@@ -13,7 +13,7 @@ export function DxxdGrvezPage() {
           <h1 id="dxxd-heading">DXXD GRVEZ</h1>
           <p>DXXD GRVEZ is a dark alternative and heavy music project formed by Gizzy Graves and DMONIX under the GRVEZ VAULT umbrella. The project brings the two creative identities together as a single unit rather than presenting DMONIX as simply a featured collaborator on Gizzy Graves material.</p>
         </div>
-        <section id="out-of-order" className="out-of-order-band-feature">
+        <section id="out-of-order" className="out-of-order-band-feature"><img src="/out-of-order-cover.webp" alt="Out of Order EP artwork" style={{width:"min(100%, 440px)",aspectRatio:"1",objectFit:"cover",margin:"0 auto 2rem"}} onError={(event) => { event.currentTarget.onerror = null; event.currentTarget.src = "/DXXD_GRVEZ.PNG"; }} />
           <p className="eyebrow">DEBUT EP / OUT NOW</p>
           <h2>OUT OF ORDER</h2>
           <p className="out-of-order-promo-byline">DXXD GRVEZ — GIZZY GRAVES × DMONIX</p>
