@@ -39,16 +39,15 @@ export function DxxdGrvezPage() {
               <a className="metal-button" href="https://music.apple.com/us/album/out-of-order-ep/6820591312" target="_blank" rel="noreferrer">Listen to the full EP on Apple Music ↗</a>
             </div>
           </article>
-          <h3 className="dxxd-section-label">OUT OF ORDER · EP TRACKS</h3>
-          <p className="dxxd-tracklist-note">All of the songs below belong to OUT OF ORDER. They are not separate earlier releases.</p>
-          <ul className="dxxd-tracklist">
-            <li><span>Withering</span></li>
-            <li><span>Out of Order</span></li>
-            <li><span>Pressure Sick</span></li>
-            <li><span>Under and Over</span></li>
-            <li><span>Head Noise</span></li>
-          </ul>
-          <p className="dxxd-tracklist-note">Six-track EP — visit Apple Music for the complete official track order.</p>
+          <h3 className="dxxd-section-label">OUT OF ORDER · OFFICIAL TRACKLIST</h3>
+          <ol className="dxxd-tracklist">
+            <li><span>Head Noise</span><span>01</span></li>
+            <li><span>Withering</span><span>02</span></li>
+            <li><span>Out of Order</span><span>03</span></li>
+            <li><span>Warning Sign</span><span>04</span></li>
+            <li><span>Under and Over</span><span>05</span></li>
+            <li><span>Presure Sick</span><span>06</span></li>
+          </ol>
           <p className="dxxd-tracklist-note">Songwriting: Sheldyn Gruhn</p>
         </section>
         <section className="archive-note"><p className="eyebrow">CONNECTED</p><h2>Within the Vault</h2><div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginTop: '1rem' }}><Link to="/about/gizzy-graves" className="metal-button">Gizzy Graves</Link><Link to="/about/dmonix" className="metal-button secondary">DMONIX</Link><Link to="/music" className="metal-button secondary">All Releases</Link></div></section>
