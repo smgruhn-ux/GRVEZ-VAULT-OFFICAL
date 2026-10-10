@@ -13,7 +13,7 @@ export function DxxdGrvezPage() {
           <h1 id="dxxd-heading">DXXD GRVEZ</h1>
           <p>DXXD GRVEZ is a dark alternative and heavy music project formed by Gizzy Graves and DMONIX under the GRVEZ VAULT umbrella. The project brings the two creative identities together as a single unit rather than presenting DMONIX as simply a featured collaborator on Gizzy Graves material.</p>
         </div>
-        <section id="out-of-order" className="out-of-order-band-feature"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/35/8a/ed/358aed46-8ded-cd04-28a6-b9105fe598c6/708208127139_cover.jpg/1200x1200bb.jpg" alt="Out of Order EP artwork" style={{width:"min(100%, 440px)",aspectRatio:"1",objectFit:"cover",margin:"0 auto 2rem"}} onError={(event) => { event.currentTarget.onerror = null; event.currentTarget.src = "/DXXD_GRVEZ.PNG"; }} />
+        <section id="out-of-order" className="out-of-order-band-feature"><img src="/842255732_17906498292591284_1690210242918157018_n.jpg" alt="Out of Order EP artwork" style={{width:"min(100%, 440px)",aspectRatio:"1",objectFit:"cover",margin:"0 auto 2rem"}} onError={(event) => { event.currentTarget.onerror = null; event.currentTarget.src = "/DXXD_GRVEZ.PNG"; }} />
           <p className="eyebrow">DEBUT EP / OUT NOW</p>
           <h2>OUT OF ORDER</h2>
           <p className="out-of-order-promo-byline">DXXD GRVEZ — GIZZY GRAVES × DMONIX</p>
@@ -30,7 +30,7 @@ export function DxxdGrvezPage() {
           <p className="eyebrow">OFFICIAL DISCOGRAPHY</p>
           <h2 id="dxxd-discography-title">Releases</h2>
           <article className="dxxd-discography-release">
-            <img src="https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/35/8a/ed/358aed46-8ded-cd04-28a6-b9105fe598c6/708208127139_cover.jpg/1200x1200bb.jpg" alt="Out of Order EP cover" loading="lazy" />
+            <img src="/842255732_17906498292591284_1690210242918157018_n.jpg" alt="Out of Order EP cover" loading="lazy" />
             <div className="dxxd-discography-info">
               <p className="eyebrow">LATEST RELEASE / OCTOBER 4, 2026</p>
               <h3>OUT OF ORDER</h3>
